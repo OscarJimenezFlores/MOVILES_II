@@ -1,0 +1,14 @@
+# Entregas de los estudiantes. No se versionan: llevan datos personales
+# y ocupan mucho. Cada equipo sube su PDF al aula virtual, no aquí.
+entregas/
+ENTREGAS/
+*.pdf
+
+# Temporales que deja Word al abrir las plantillas de PLANTILLAS/
+~$*
+.~lock.*#
+
+# Ruido del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
