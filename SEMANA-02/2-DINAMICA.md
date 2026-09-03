@@ -132,7 +132,7 @@ clase PantallaListadoPedidos extiende Vista {
 | Problema identificado | Línea o bloque | Qué principio viola | Dónde debería vivir |
 |---|---|---|---|
 
-Más el **diagrama del rediseño** en MVVM, con las tres piezas y sus responsabilidades.
+Más el **diagrama del rediseño** en MVVM (*Model-View-ViewModel*), con las tres piezas y sus responsabilidades.
 
 **Producto 2 — El costo del cambio.**
 

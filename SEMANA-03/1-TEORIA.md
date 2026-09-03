@@ -96,6 +96,22 @@ flowchart TD
 
 > **El Sprint Goal es el artefacto más ignorado y el más útil.** No es la lista de historias: es **el objetivo único que da sentido al sprint** y permite negociar el alcance sin perder el rumbo. Si a mitad del sprint una historia resulta más costosa de lo previsto, el equipo puede reducir su alcance **siempre que el Sprint Goal siga siendo alcanzable**.
 
+**Lo que este curso usa y no está en la Scrum Guide.** La guía es deliberadamente incompleta, y por eso la industria le agregó prácticas encima. Son útiles, se van a usar en el curso y hay que saberlas — pero **no son Scrum**, y conviene tenerlo claro antes de que un colega o un cliente se lo discuta.
+
+| Lo que usa este curso | ¿Está en la *Scrum Guide 2020*? | De dónde viene |
+|---|---|---|
+| Product Backlog · Sprint Backlog · Incremento | **Sí** | *Scrum Guide* |
+| Product Goal · Sprint Goal · Definition of Done | **Sí** | *Scrum Guide* |
+| Elemento del Product Backlog y su refinamiento | **Sí** | *Scrum Guide* |
+| **Historia de usuario** | **No** | Extreme Programming |
+| **Épica** | **No** | Práctica de la industria; se difundió con *User Stories Applied* (Mike Cohn, 2004) y con las herramientas de gestión |
+| **INVEST** | **No** | Bill Wake, 2003 |
+| **Puntos de historia** y **Planning Poker** | **No** | Extreme Programming |
+| **Velocidad** | **No** | Práctica ágil general |
+| **Gherkin**, *Dado / Cuando / Entonces* | **No** | Desarrollo guiado por comportamiento; el lenguaje viene de Cucumber |
+
+> **Por qué importa.** La *Scrum Guide* **no dice cómo se escribe un elemento del Product Backlog.** Solo exige que el backlog sea una lista **ordenada** y **emergente**, y que sus elementos estén lo bastante refinados para caber en un sprint. La historia de usuario y la épica son **una forma** de cumplirlo, no la única: un equipo que ordena su backlog con casos de uso o con especificaciones también hace Scrum. En este curso se usan historias y épicas porque son las que va a encontrar en cualquier equipo y en cualquier herramienta.
+
 ## Refinamiento y estimación del Product Backlog
 
 **La historia de usuario** —formato y calidad:

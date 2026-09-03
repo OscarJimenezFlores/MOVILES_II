@@ -11,7 +11,7 @@
 ## Qué se trabaja en esta sesión
 
 - Por qué la arquitectura es una decisión económica.
-- Los patrones de presentación MVC, MVP, MVVM y MVI.
+- Los patrones de presentación MVC, MVP, MVVM (*Model-View-ViewModel*) y MVI.
 - Clean Architecture aplicada a móviles.
 - La Definition of Done y el ADR.
 

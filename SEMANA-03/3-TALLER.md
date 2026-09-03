@@ -95,6 +95,8 @@ Construcción de los artefactos de Scrum del proyecto — formulación del Produ
 
 > *«Al término del semestre, <nombre de la app> permitirá a <segmento> <acción de valor> desde su teléfono, sin <la fricción actual>, y estará publicada en Google Play y en la App Store.»*
 
+> **Sobre la palabra «épica».** Agrupar historias en épicas **no es vocabulario de la *Scrum Guide*** —lo vimos en la teoría de esta semana—, pero es el término que va a encontrar en Jira, Azure DevOps y GitHub Projects, y el que le van a pedir en cualquier equipo. Se usa aquí por eso. Si prefiere llamarlo «tema» o «bloque de valor», es igual de correcto: lo que se califica es que el backlog esté **agrupado y ordenado**, no la etiqueta.
+
 **Estructura del backlog en tres niveles:**
 
 ```
@@ -308,7 +310,7 @@ Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.*
 | # | Resultado esperado | Verificación |
 |---|---|---|
 | 1 | **Product Goal** formulado, derivado de la visión de producto | `PRODUCT_GOAL.md` |
-| 2 | Product Backlog con **≥ 25 elementos**, organizado en épicas | `PRODUCT_BACKLOG.csv` |
+| 2 | Product Backlog con **≥ 25 elementos**, agrupado en épicas o bloques de valor | `PRODUCT_BACKLOG.csv` |
 | 3 | Backlog ordenado por valor **y riesgo**, con el índice calculado | Salida del script |
 | 4 | **Cero historias de 13 puntos o más** sin dividir | Salida del script |
 | 5 | Historias de los sprints 1 y 2 refinadas, cumpliendo **INVEST** | Revisión del backlog |

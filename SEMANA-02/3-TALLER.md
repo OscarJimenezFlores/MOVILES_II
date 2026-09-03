@@ -42,7 +42,7 @@ flowchart TD
 
 ### 1.1. Título del evento práctico
 
-Construcción del esqueleto de la aplicación con separación de capas y una funcionalidad vertical completa, documentación de las decisiones de arquitectura y de stack mediante ADR, y formalización de la Definition of Done del equipo.
+Construcción del esqueleto de la aplicación con separación de capas y una funcionalidad vertical completa, documentación de las decisiones de arquitectura y de stack mediante ADR (*Architecture Decision Record*, registro de decisión de arquitectura), y formalización de la Definition of Done del equipo.
 
 ### 1.2. Objetivos
 

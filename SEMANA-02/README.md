@@ -36,7 +36,7 @@
 
 **Contenido conceptual.** Arquitectura de aplicaciones móviles.
 
-**Contenido procedimental.** Implementación de una arquitectura básica para una aplicación móvil (MVC, MVVM).
+**Contenido procedimental.** Implementación de una arquitectura básica para una aplicación móvil (MVC, MVVM (*Model-View-ViewModel*)).
 
 ## Materiales de esta semana
 

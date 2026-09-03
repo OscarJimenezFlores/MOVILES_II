@@ -96,7 +96,7 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 | **Multiplataforma con interfaz nativa** (React Native, .NET MAUI) | Una base de código; se mapea a componentes nativos | Equipos con experiencia web o .NET; interfaz nativa | Complejidad del puente con el código nativo |
 | **Lógica compartida, interfaz nativa** (Kotlin Multiplatform) | Se comparte la lógica; cada plataforma tiene su interfaz | Se quiere reutilizar la lógica sin renunciar a la interfaz nativa | Requiere competencia en ambas plataformas |
 
-**Los criterios de decisión** que el equipo debe evaluar y documentar en el ADR de la Semana 02:
+**Los criterios de decisión** que el equipo debe evaluar y documentar en el ADR (*Architecture Decision Record*, registro de decisión de arquitectura) de la Semana 02:
 
 | Criterio | Pregunta |
 |---|---|

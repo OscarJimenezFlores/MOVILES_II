@@ -31,7 +31,7 @@ Anote ambos en la matriz. En la Semana 13 se vuelven a medir y se comparan.
 
 Sin código. `ADR-001` lenguaje y framework, `ADR-002` arquitectura, `ADR-003` gestión de estado.
 
-> **En `ADR-003` no basta con «usamos Riverpod».** Debe decir qué alternativas se descartaron y con qué criterio. Un ADR sin alternativas no es una decisión, es un anuncio.
+> **En `ADR-003` no basta con «usamos Riverpod».** Debe decir qué alternativas se descartaron y con qué criterio. Un ADR (*Architecture Decision Record*, registro de decisión de arquitectura) sin alternativas no es una decisión, es un anuncio.
 
 ---
 

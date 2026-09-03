@@ -340,7 +340,7 @@ jobs:
 | Bocetar en Figma las **3 pantallas principales** | Bocetos de baja fidelidad |
 | Listar las **capacidades del móvil** que la app usará | Justificación de por qué es una app |
 | Investigar el **backend**: propio o de terceros | Decisión preliminar |
-| Investigar los **stacks candidatos** para el ADR de la Semana 02 | Tabla comparativa preliminar |
+| Investigar los **stacks candidatos** para el ADR (*Architecture Decision Record*, registro de decisión de arquitectura) de la Semana 02 | Tabla comparativa preliminar |
 | Verificar el acceso a macOS y a cuentas de desarrollador | Plan de publicación preliminar |
 
 ---
@@ -444,7 +444,7 @@ Mínimo tres. Líneas argumentales esperadas:
 - JetBrains. *Kotlin Multiplatform documentation*. https://kotlinlang.org/docs/multiplatform.html
 - Microsoft. *.NET MAUI documentation*. https://learn.microsoft.com/dotnet/maui/
 - Conventional Commits. *Specification v1.0.0*. https://www.conventionalcommits.org/
-- OWASP Foundation. *Mobile Application Security*. https://mas.owasp.org/
+- OWASP (*Open Worldwide Application Security Project*) Foundation. *Mobile Application Security*. https://mas.owasp.org/
 - Ley 29733 y D. S. 016-2024-JUS — tratamiento de datos en entrevistas de validación. https://www.gob.pe/institucion/anpd
 - Nolasco Valenzuela, J. S. (2019). *Desarrollo de aplicaciones con Android*. Ra-Ma.
 

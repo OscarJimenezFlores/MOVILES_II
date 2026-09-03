@@ -9,7 +9,7 @@
   Facultad de Ingeniería · Escuela Profesional de Ingeniería de Sistemas
 </p>
 
-<h1 align="center">Semana 01 · Introducción al desarrollo de aplicaciones móviles</h1>
+<h1 align="center">Semana 04 · Consumo de Servicios Web REST</h1>
 
 <p align="center">
   <strong>SI-988 · Soluciones Móviles II</strong><br>
@@ -27,33 +27,33 @@
 | **Ciclo** | IX · 04 horas semanales · 04 créditos · Electivo |
 | **Prerrequisito** | SI-883 Soluciones Móviles I |
 | **Unidad** | I — Consumo de servicios web SOAP y REST |
-| **Semana** | 01 de 17 |
+| **Semana** | 04 de 17 |
 | **Duración** | 4 horas académicas de 50 min · aula: teoría 60 + dinámica 35 + cierre 5 · laboratorio: taller 60 + avance asistido 40 |
 | **Resultados de aprendizaje** | **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil · **RA2** Propone el plan de desarrollo de su app con metodologías ágiles |
-| **Artefacto del proyecto** | Equipo Scrum conformado · **Visión de producto** y Lean Canvas · Repositorio con CI |
+| **Artefacto del proyecto** | **Sprint 1** · capa de datos completa · Incremento con consumo REST real |
 
 ### Lo que indica el sílabo
 
-**Contenido conceptual.** Introducción al desarrollo de aplicaciones móviles.
+**Contenido conceptual.** Consumo de servicios web REST.
 
-**Contenido procedimental.** Desarrolla su prueba de entrada al curso. Familiarización con entornos de desarrollo móvil (VS Code, Android Studio, Xcode).
+**Contenido procedimental.** Implementación de una app móvil con consumo de servicios RESTful.
 
 ## Materiales de esta semana
 
 | | Documento | Qué encontrarás | Dónde y cuánto dura |
 |---|---|---|---|
-| 1 | **[Teoría](1-TEORIA.md)** | Qué distingue a Soluciones Móviles II · El panorama técnico y la decisión de stack · La propuesta de valor con el Lean Canvas | Aula · 100 min |
-| 2 | **[Dinámica de aula](2-DINAMICA.md)** | Tres apps que no debieron existir, con su material, su ejemplo resuelto y su rúbrica | Aula · dentro de los 100 min de la sesión de teoría |
-| 3 | **[Taller de laboratorio](3-TALLER.md)** | Entornos, equipo Scrum, Lean Canvas y repositorio con integración continua | Laboratorio · 100 min |
+| 1 | **[Teoría](1-TEORIA.md)** | Qué es REST y qué se implementa en la práctica · La capa de datos de una app móvil · Rendimiento, batería y consumo de datos en el móvil | Aula · 100 min |
+| 2 | **[Dinámica de aula](2-DINAMICA.md)** | El pedido que se creó dos veces, con su material, su ejemplo resuelto y su rúbrica | Aula · dentro de los 100 min de la sesión de teoría |
+| 3 | **[Taller de laboratorio](3-TALLER.md)** | Capa de datos con cliente HTTP, repositorio, caché y manejo de errores | Laboratorio · 100 min |
 
 ## Ruta de la semana
 
 ```mermaid
 flowchart LR
     A["<b>Sesión 1 · Aula</b><br/>Teoría · 100 min"]
-    B["<b>Dinámica de aula</b><br/>Tres apps que no debieron<br/>existir<br/><i>nota cognitiva</i>"]
-    C["<b>Sesión 2 · Laboratorio</b><br/>Entornos, equipo Scrum, Lean<br/>Canvas y repositorio con<br/>integración continua<br/><i>nota procedimental</i>"]
-    D["<b>Entregables</b><br/>de la semana 01"]
+    B["<b>Dinámica de aula</b><br/>El pedido que se creó dos<br/>veces<br/><i>nota cognitiva</i>"]
+    C["<b>Sesión 2 · Laboratorio</b><br/>Capa de datos: cliente HTTP,<br/>repositorio, caché y manejo de<br/>errores<br/><i>nota procedimental</i>"]
+    D["<b>Entregables</b><br/>de la semana 04"]
     A --> B --> C --> D
     classDef aula fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
     classDef lab fill:#E9F6F2,stroke:#0F766E,stroke-width:1px,color:#0F4C46;
@@ -67,10 +67,9 @@ flowchart LR
 
 | Entregable | Formato y nombre del archivo | Vence |
 |---|---|---|
-| **Dinámica de aula** · Tres apps que no debieron existir | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S01-DINAMICA-Grupo<N>.pdf` | Antes de cerrar la sesión de teoría |
-| **Informe del taller de laboratorio N.º 01** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S01-TALLER-Grupo<N>.pdf` | 48 h después del taller |
-| Repositorio con CI en verde | URL, con el docente como colaborador | Fin del taller |
-| Lean Canvas, validación y visión del producto | Commit en el repositorio | 48 h después del taller |
+| **Dinámica de aula** · El pedido que se creó dos veces | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S04-DINAMICA-Grupo<N>.pdf` | Hasta 24 h después de la sesión de teoría |
+| **Informe del taller de laboratorio N.º 04** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S04-TALLER-Grupo<N>.pdf` | 48 h después del taller |
+| Capa de datos con sus pruebas en verde | Commit en el repositorio, CI en verde | 48 h después del taller |
 
 > Ambos se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
 
@@ -78,16 +77,16 @@ flowchart LR
 
 | Criterio | Instrumento | Peso |
 |---|---|---|
-| Cognitivo | Rúbrica del análisis de apps + exposición de 10 min en la Semana 02 | 25 % |
+| Cognitivo | Rúbrica del contrato de API + exposición de 10 min en la Semana 05 | 25 % |
 | Procedimental | Lista de cotejo de los 14 resultados del laboratorio | 35 % |
-| Actitudinal | Cumplimiento de los acuerdos de trabajo y consentimiento informado en las entrevistas | 15 % |
+| Actitudinal | Daily realizada con foco en el Sprint Goal y respeto del límite de trabajo en curso | 15 % |
 
-## Preparación para la Semana 02
+## Preparación para la Semana 05
 
-- **Leer.** Documentación oficial de arquitectura del stack candidato — [Guía de arquitectura de Android](https://developer.android.com/topic/architecture) o la equivalente de su framework.
-- **Leer.** Clean Architecture aplicada a móviles y el patrón MVVM (*Model-View-ViewModel*).
-- Traer la **tabla comparativa preliminar de stacks** con al menos tres candidatos evaluados.
-- Traer los **bocetos de las tres pantallas principales**.
+- **Leer.** [W3C SOAP 1.2](https://www.w3.org/TR/soap12-part1/) — estructura del Envelope, Header y Body.
+- **Leer.** Daigneau, *Service Design Patterns* — capítulos de SOAP/WSDL.
+- Identificar un **servicio SOAP público con WSDL** para el laboratorio, o el que use la organización de su caso.
+- Continuar el **Sprint 1**. La Review es en la Semana 06 y debe demostrarse software funcionando.
 
 ---
 
