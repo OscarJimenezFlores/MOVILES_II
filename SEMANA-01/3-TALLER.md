@@ -2,7 +2,9 @@
 
 # Taller de laboratorio 01 · Entornos, equipo Scrum, Lean Canvas y repositorio con integración continua
 
-**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 2 en laboratorio · 2 h · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 2 en laboratorio · 60 min de taller + 40 de avance · calificación **procedimental**
+
+> ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
 
@@ -10,10 +12,10 @@
 
 ```mermaid
 flowchart TD
-    PA["<b>Paso A</b><br/>Verificar el entorno<br/><i>25 min</i>"]
-    PB["<b>Paso B</b><br/>Conformar el equipo Scrum<br/><i>20 min</i>"]
-    PC["<b>Paso C</b><br/>Lean Canvas y validación del<br/>problema<br/><i>40 min</i>"]
-    PD["<b>Paso D</b><br/>Repositorio e integración<br/>continua<br/><i>35 min</i>"]
+    PA["<b>Paso A</b><br/>Verificar el entorno<br/><i>10 min</i>"]
+    PB["<b>Paso B</b><br/>Conformar el equipo Scrum<br/><i>10 min</i>"]
+    PC["<b>Paso C</b><br/>Lean Canvas y validación del<br/>problema<br/><i>20 min</i>"]
+    PD["<b>Paso D</b><br/>Repositorio e integración<br/>continua<br/><i>20 min</i>"]
     PA --> PB --> PC --> PD
     classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
     class PA,PB,PC,PD paso;
@@ -34,7 +36,7 @@ flowchart TD
 
 ---
 
-**La sesión de laboratorio dura 2 h.** El avance del proyecto lo ejecuta el equipo fuera de la sesión.
+**La sesión de laboratorio dura 100 minutos: 60 de taller guiado y 40 de avance asistido.** El avance del proyecto lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -53,7 +55,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 
 ### 1.3. Tiempo de duración
 
-**02 horas** de trabajo en laboratorio.
+**100 minutos de laboratorio:** 60 min de taller guiado y 40 min de avance asistido del producto del curso.
 
 ### 1.4. Resultados de Aprendizaje (RA)
 
@@ -85,7 +87,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 | **Kotlin / JDK 17** *(nativo Android)* | Compilación de la aplicación Android. *Apache 2.0 / GPL-2.0 con excepción* | https://adoptium.net/temurin/releases/ |
 | **Node.js LTS** *(React Native)* | Entorno de ejecución de las herramientas. *MIT* | https://nodejs.org/en/download |
 | **Figma** | Bocetos de la interfaz y prototipo navegable. *Nivel gratuito* | https://www.figma.com/downloads/ |
-| **Taiga**, **Wekan** o **GitHub Projects** | Tablero Scrum del equipo. *AGPL / MIT* | https://taiga.io/ · https://wekan.github.io/ |
+| **GitHub Projects** | Tablero Scrum del equipo. **Obligatorio**: es donde el docente hace el seguimiento. *AGPL / MIT* | https://taiga.io/ · https://wekan.github.io/ |
 
 **Cuentas de tienda que el proyecto necesitará** (no se pagan esta semana; se presupuestan desde ahora)
 
@@ -109,7 +111,17 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 
 ## 2. Procedimiento o Metodología
 
-### Paso A — Verificar el entorno (25 min)
+### Paso A — Verificar el entorno
+
+> **Guías de instalación paso a paso.** El entorno se instala **antes** de esta sesión, no durante. Están en [`GUIAS/`](../GUIAS/):
+>
+> | Stack | Guía |
+> |---|---|
+> | **Flutter** | [Guía práctica · Flutter con Google Antigravity](../GUIAS/GUIA-ANTIGRAVITY-FLUTTER.md) |
+> | **Kotlin Multiplatform** | [Guía práctica · KMP con Google Antigravity](../GUIAS/GUIA-ANTIGRAVITY-KOTLIN.md) |
+>
+> Cada guía lleva de cero a una app corriendo en el emulador: instalación de Antigravity, del SDK, de Android Studio, creación del emulador y el primer artefacto dirigiendo al agente. **La elección de stack es provisional** y se somete a evaluación con datos medidos en el `ADR-004` de la Semana 13.
+
 
 ```bash
 # --- Android ---
@@ -139,7 +151,7 @@ Crear el emulador es parte del paso. En Android Studio, **Device Manager → Cre
 
 > Si algún integrante trae su propio teléfono y quiere usarlo, puede hacerlo, pero **no es requisito ni sustituye la evidencia en el emulador**. Conectar un teléfono por USB, habilitar la depuración y autorizar el equipo consume tiempo de sesión y no siempre funciona en las máquinas del laboratorio.
 
-### Paso B — Conformar el equipo Scrum (20 min)
+### Paso B — Conformar el equipo Scrum
 
 `docs/equipo/EQUIPO.md`:
 
@@ -164,9 +176,16 @@ Crear el emulador es parte del paso. En Android Studio, **Device Manager → Cre
 - Cómo se reparte el trabajo. Por capa, por funcionalidad o por parejas.
 - Qué ocurre si un integrante no cumple un compromiso.
 
-> **Los acuerdos de trabajo son el artefacto más subestimado de Scrum.** La mayoría de los equipos que fracasan no lo hacen por incompetencia técnica: lo hacen porque nunca acordaron cómo trabajar juntos.
+> **Acuerdos de trabajo del equipo.** La mayoría de los equipos que fracasan no lo hacen por incompetencia técnica: lo hacen porque nunca acordaron cómo trabajar juntos.
 
-### Paso C — Lean Canvas y validación del problema (40 min)
+### Paso C — Lean Canvas y validación del problema
+
+> **Antes de inventar desde cero, mire el [catálogo de dominios](../CATALOGO-APPS/README.md).** Hay **diez ejemplos desarrollados** hasta el nivel que el curso exige: problema, segmento, por qué tiene que ser una app, alcance de cinco sprints, datos personales, permisos, contrato de API y un backlog semilla de 25 historias.
+>
+> La elección sigue siendo **libre**: su equipo puede proponer su propia app. El catálogo está para que sepa **qué profundidad se espera** y para que quien nunca construyó una app no arranque frente a una hoja en blanco. Lo que no puede hacer es entregar uno de los ejemplos tal como está.
+>
+> **Dos equipos no pueden tomar el mismo dominio.** Se registra en la Semana 01, por orden de propuesta aprobada.
+
 
 **C.1 — Lean Canvas** (`docs/producto/LEAN_CANVAS.md`), completado en el orden 1 → 9.
 
@@ -194,7 +213,7 @@ Crear el emulador es parte del paso. En Android Studio, **Device Manager → Cre
 
 > *«Para <segmento de clientes> que <necesidad o problema>, <nombre de la app> es una <categoría> que <beneficio clave>. A diferencia de <alternativa actual>, nuestro producto <diferencia principal>.»*
 
-### Paso D — Repositorio e integración continua (35 min)
+### Paso D — Repositorio e integración continua
 
 ```bash
 mkdir -p <nombre-app> && cd <nombre-app> && git init
@@ -313,7 +332,7 @@ jobs:
 
 ### Trabajo del equipo fuera de la sesión — Avance de proyecto
 
-> Este avance **no ocupa las 2 horas de laboratorio**. El equipo lo ejecuta por su cuenta durante la semana y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
+> Este avance excede los 40 min de avance asistido. Lo que no alcance a completarse en laboratorio lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
 
 | Actividad | Producto |
 |---|---|
@@ -326,7 +345,46 @@ jobs:
 
 ---
 
+
+### Avance asistido · Avance de sprint asistido
+
+Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.** Queda disponible para consultas y observa el reparto real del trabajo.
+
+| | |
+|---|---|
+| **Qué se trabaja** | las historias del Sprint en curso, según el Sprint Backlog de la semana |
+| **Quién decide qué hacer** | El equipo. El docente no asigna tareas en este tramo |
+| **Dónde se registra** | GitHub Projects, con cada elemento asignado a una persona |
+| **Para qué sirve la presencia del docente** | Resolver bloqueos en el momento, no revisar entregables |
+
+> **Se registra la contribución individual.** Lo trabajado en este tramo queda en el repositorio con su autoría. Es la evidencia del atributo **AG-I03 Trabajo Individual y en Equipo** que se mide en las semanas de cierre de unidad.
+
 ## 3. Resultados
+
+> **Evidencia obligatoria en GitHub.** Todo resultado de este taller se versiona en el repositorio del equipo. El informe **no consigna capturas sueltas**: consigna la **URL** del artefacto en GitHub. Una captura no permite verificar autoría, fecha ni contenido; un enlace sí.
+>
+> | Qué se entrega | Dónde vive | Qué se escribe en el informe |
+> |---|---|---|
+> | Código y archivos de configuración | Rama del taller, fusionada a `develop` vía Pull Request | URL del Pull Request |
+> | Documentos y matrices | `docs/`, en formato de texto versionable | URL del archivo en la rama |
+> | Capturas y videos que el taller exija | `docs/evidencias/S01/` | URL del archivo |
+> | Salida de comandos | `docs/evidencias/S01/salidas/*.txt` | URL del archivo |
+>
+> **Etiqueta del taller.** Al cerrar el taller se crea la etiqueta `taller-01` sobre el commit entregado:
+>
+> ```bash
+> git tag -a taller-01 -m "Taller 01 · SI988"
+> git push origin taller-01
+> ```
+>
+> La URL que se consigna en el informe apunta a esa etiqueta:
+> `https://github.com/<organizacion>/<repositorio>/tree/taller-01`
+>
+> **Sin la URL, el resultado no se califica.** El docente evalúa sobre el repositorio, no sobre el PDF.
+
+### 3.1. Tabla de resultados
+
+
 
 | # | Resultado esperado | Verificación |
 |---|---|---|
@@ -345,6 +403,28 @@ jobs:
 | 13 | Tres pantallas bocetadas y capacidades del móvil justificadas | Figma y documento |
 | 14 | Tablero del equipo creado | Captura |
 
+
+## Rúbrica procedimental (20 puntos)
+
+Se aplica sobre el informe entregado y la evidencia enlazada en el repositorio. **Cada criterio se califica de forma independiente.**
+
+| Criterio | 4 — Logrado | 2 — En proceso | 0 — Insuficiente |
+|---|---|---|---|
+| **Lean Canvas y validación del problema** | Completo y correcto, con la evidencia que lo respalda | Completo con errores menores, o correcto pero sin toda la evidencia | Incompleto, o entregado sin ejecutar |
+| **Repositorio e integración continua** | Completo y correcto, con la evidencia que lo respalda | Completo con errores menores, o correcto pero sin toda la evidencia | Incompleto, o entregado sin ejecutar |
+| **Evidencia verificable en el repositorio** | Cada resultado tiene su URL sobre la etiqueta `taller-NN`, y el enlace abre lo que dice | La mayoría tiene URL; alguna evidencia es una captura suelta | Se declaran resultados sin enlace, o el enlace no corresponde |
+| **Rigor técnico de la implementación** | El código compila, las pruebas pasan y el análisis estático sale limpio | Compila y funciona, con avisos del análisis sin resolver | No compila, o se entregó sin ejecutar |
+| **Informe en formato EPIS** | Las seis secciones completas; los resultados se sustentan con la evidencia enlazada | Secciones completas con sustento parcial | Faltan secciones o los resultados se afirman sin evidencia |
+
+| Puntaje | Equivalencia |
+|---|---|
+| 18 – 20 | Destacado |
+| 14 – 17 | Logrado |
+| 6 – 13 | En proceso |
+| 0 – 5 | Insuficiente |
+
+> **Un resultado declarado sin evidencia enlazada no puntúa**, aunque el trabajo se haya hecho. La tabla de la sección 3.1 es la lista de cotejo; esta rúbrica es lo que determina la nota.
+
 ## 4. Conclusiones
 
 Mínimo tres. Líneas argumentales esperadas:
@@ -353,17 +433,7 @@ Mínimo tres. Líneas argumentales esperadas:
 2. La justificación de por qué el producto debe ser una aplicación móvil —y no una web— se sostiene en una capacidad propia del dispositivo; sin ella, la decisión de plataforma es arbitraria.
 3. La integración continua y la verificación de secretos desde el primer día convierten los problemas acumulables en problemas atendibles uno a uno, y evitan el error de seguridad más costoso de revertir en un repositorio Git.
 
-## 5. Cuestionario
-
-1. Responde las cinco preguntas de producto para su propia app y señala cuál le costó más responder.
-2. ¿Qué capacidad propia del móvil aprovecha tu aplicación? Si no aprovecha ninguna, argumenta por qué debe ser una app.
-3. De sus cinco entrevistas, ¿cuántas confirmaron el problema con un hecho concreto? ¿Qué hará si fueron menos de tres?
-4. Explica por qué no se describe la solución antes de la pregunta 6 del guion de entrevista.
-5. Diferencia **activación** de **descarga** y explica cuál es la métrica que define si tu app vive.
-6. Tu equipo no tiene acceso a macOS. ¿Qué decisiones del proyecto condiciona y desde cuándo?
-7. ¿Por qué el archivo de firma (`.jks`) nunca debe versionarse? ¿Qué haría si descubre que ya está en el historial de Git?
-
-## 6. Referencias Bibliográficas
+## 5. Referencias Bibliográficas
 
 - Schwaber, K. y Sutherland, J. (2020). *The Scrum Guide*. https://scrumguides.org/
 - Maurya, A. (2012). *Running Lean: Iterate from Plan A to a Plan That Works* (2.ª ed.). O'Reilly. — Lean Canvas.
@@ -378,7 +448,7 @@ Mínimo tres. Líneas argumentales esperadas:
 - Ley 29733 y D. S. 016-2024-JUS — tratamiento de datos en entrevistas de validación. https://www.gob.pe/institucion/anpd
 - Nolasco Valenzuela, J. S. (2019). *Desarrollo de aplicaciones con Android*. Ra-Ma.
 
-## 7. Anexos
+## 6. Anexos
 
 - `anexo_A_entorno.pdf` — capturas de verificación por integrante
 - `anexo_B_lean_canvas.pdf`

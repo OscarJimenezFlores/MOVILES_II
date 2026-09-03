@@ -2,7 +2,9 @@
 
 # Dinámica de aula · Tres apps que no debieron existir
 
-**SI-988 · Soluciones Móviles II** · Semana 01 · Actividad en aula, **dentro de las 2 h de teoría** · calificación **cognitiva**
+**SI-988 · Soluciones Móviles II** · Semana 01 · Actividad en aula, **dentro de los 100 min de la sesión de teoría** · calificación **cognitiva**
+
+> ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
 
@@ -29,7 +31,7 @@ flowchart LR
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 01» |
 | **Cuándo vence** | Antes de cerrar la sesión de teoría |
-| **Exposición** | 10 minutos por grupo en la sesión de teoría de la Semana 02 |
+| **Exposición** | 10 minutos por grupo en la sesión de teoría de la Semana 02, con una o dos diapositivas hechas a partir de este documento |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
 
@@ -42,7 +44,7 @@ flowchart LR
 
 ## Producto
 
-**Diapositiva 1 — El análisis comparado.**
+**Producto 1 — El análisis comparado.**
 
 | | App excelente | App mediocre | App que no debió existir |
 |---|---|---|---|
@@ -54,7 +56,7 @@ flowchart LR
 | Calificación y volumen de reseñas | | | |
 | **Veredicto y por qué** | | | |
 
-**Diapositiva 2 — La lección aplicada.** Las tres decisiones de diseño que el equipo **copiará** de la app excelente y las tres que **evitará** de la mediocre, cada una justificada con evidencia de la ficha de tienda o de las reseñas.
+**Producto 2 — La lección aplicada.** Las tres decisiones de diseño que el equipo **copiará** de la app excelente y las tres que **evitará** de la mediocre, cada una justificada con evidencia de la ficha de tienda o de las reseñas.
 
 ## Ejemplo resuelto
 

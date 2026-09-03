@@ -2,7 +2,9 @@
 
 # Dinámica de aula · El cambio que duele
 
-**SI-988 · Soluciones Móviles II** · Semana 02 · Actividad en aula, **dentro de las 2 h de teoría** · calificación **cognitiva**
+**SI-988 · Soluciones Móviles II** · Semana 02 · Actividad en aula, **dentro de los 100 min de la sesión de teoría** · calificación **cognitiva**
+
+> ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
 
@@ -29,7 +31,7 @@ flowchart LR
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 02» |
 | **Cuándo vence** | Antes de cerrar la sesión de teoría |
-| **Exposición** | 10 minutos por grupo en la sesión de teoría de la Semana 03 |
+| **Exposición** | 10 minutos por grupo en la sesión de teoría de la Semana 03, con una o dos diapositivas hechas a partir de este documento |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
 
@@ -125,14 +127,14 @@ clase PantallaListadoPedidos extiende Vista {
 
 ## Producto
 
-**Diapositiva 1 — Diagnóstico y rediseño.**
+**Producto 1 — Diagnóstico y rediseño.**
 
 | Problema identificado | Línea o bloque | Qué principio viola | Dónde debería vivir |
 |---|---|---|---|
 
 Más el **diagrama del rediseño** en MVVM, con las tres piezas y sus responsabilidades.
 
-**Diapositiva 2 — El costo del cambio.**
+**Producto 2 — El costo del cambio.**
 
 | Cambio solicitado | Archivos a tocar hoy | Archivos a tocar con MVVM | ¿Se puede probar sin emulador? |
 |---|---|---|---|

@@ -1,0 +1,26 @@
+id,sprint,epica,historia,puntos,riesgo,dato_personal,estado,criterio_aceptacion
+H01,1,Acceso,Como apoderado quiero registrarme con correo y contraseña para tener mi cuenta,5,Medio,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H02,1,Acceso,Como apoderado quiero iniciar sesión y que mi sesión se mantenga para no escribir la clave cada vez,3,Medio,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H03,1,Acceso,Como apoderado quiero recuperar mi contraseña para no perder el acceso,3,Bajo,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H04,1,Estudiante,Como apoderado quiero ver la lista de estudiantes registrados para ubicar el que me corresponde,5,Bajo,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H05,1,Estudiante,Como apoderado quiero ver el detalle de un estudiante para conocer toda su información,3,Bajo,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H06,2,Evento de recojo,Como apoderado quiero consultar el estado actual de mi evento de recojo para actuar a tiempo,8,Alto,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H07,2,Vehículo,Como apoderado quiero que la información se actualice sola para no recargar a mano,5,Alto,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H08,2,Ubicación,Como apoderado quiero ver la ubicación en el mapa para orientarme,8,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H09,2,Datos,Como apoderado quiero que la app funcione sin conexión para seguir usándola con mala señal,8,Alto,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H10,2,Datos,Como apoderado quiero saber cuándo se actualizaron los datos para no confiar en información vieja,3,Bajo,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H11,3,Evento de recojo,Como apoderado quiero registrar un evento de recojo para dejar constancia de lo ocurrido,8,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H12,3,Evento de recojo,Como apoderado quiero adjuntar una foto al evento de recojo para respaldarlo,5,Medio,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H13,3,Evento de recojo,Como apoderado quiero editar o anular un evento de recojo propio para corregir errores,5,Medio,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H14,3,Evento de recojo,Como apoderado quiero ver el historial de mis eventos de recojo para revisar lo que hice,5,Bajo,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H15,3,Privacidad,Como apoderado quiero leer qué datos míos se guardan y para qué antes de aceptar,3,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H16,4,Avisos,Como apoderado quiero recibir un aviso cuando su hijo sea recogido o llegue al colegio para no estar revisando,8,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H17,4,Avisos,Como apoderado quiero elegir qué avisos recibir para que no me molesten de más,5,Bajo,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H18,4,Avisos,Como apoderado quiero ver los avisos pasados para no perderme ninguno,3,Bajo,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H19,4,Seguridad,Como apoderado quiero que mis datos viajen cifrados para que nadie los intercepte,5,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H20,4,Seguridad,Como apoderado quiero cerrar sesión en todos mis dispositivos si pierdo el teléfono,5,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H21,5,Ruta,Como coordinador del colegio quiero un panel con el resumen de rutas y recojos del día para tomar decisiones,8,Medio,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H22,5,Ruta,Como coordinador del colegio quiero filtrar por fecha y por estado para encontrar lo que busco,5,Bajo,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H23,5,Ruta,Como coordinador del colegio quiero exportar el reporte para usarlo fuera de la app,5,Bajo,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H24,5,Calidad,Como apoderado quiero que la app abra en menos de 2 segundos para no perder tiempo,5,Medio,No,Pendiente,Por refinar en la Semana 03 con formato Gherkin
+H25,5,Privacidad,Como apoderado quiero eliminar mi cuenta y mis datos para ejercer mi derecho de supresión,5,Alto,Sí,Pendiente,Por refinar en la Semana 03 con formato Gherkin

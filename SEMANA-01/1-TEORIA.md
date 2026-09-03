@@ -2,7 +2,9 @@
 
 # Teoría · Introducción al desarrollo de aplicaciones móviles
 
-**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 1 en aula · 2 h, con la dinámica incluida
+**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 1 en aula · 2 horas académicas, 100 min, con la dinámica incluida
+
+> ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
 
@@ -12,6 +14,17 @@
 - El panorama técnico y la decisión de stack.
 - La propuesta de valor con el Lean Canvas.
 - Encuadre del curso y cierre.
+
+## Distribución del tiempo
+
+| Bloque | Minutos |
+|---|---|
+| Prueba de entrada | 10 |
+| Qué distingue a Soluciones Móviles II | 10 |
+| El panorama técnico y la decisión de stack | 20 |
+| La propuesta de valor con el Lean Canvas | 10 |
+| Encuadre del curso y cierre | 15 |
+| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -44,11 +57,11 @@ flowchart TD
 
 ---
 
-## Prueba de entrada (20 min)
+## Prueba de entrada
 
 Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de partida. **Ejes.** Ciclo de vida de una actividad y de un *view controller*, gestión de estado, asincronía y concurrencia, consumo de una API REST, control de versiones con ramas, pruebas unitarias, y firma de una aplicación. El resultado agregado define los refuerzos de las semanas 2 a 4.
 
-## Qué distingue a Soluciones Móviles II (25 min)
+## Qué distingue a Soluciones Móviles II
 
 **El salto respecto de Soluciones Móviles I.**
 
@@ -60,7 +73,7 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 | Arquitectura | Suficiente para que funcione | **Decidida, documentada y sostenible** |
 | Proceso | Entregas por tema | **5 sprints de Scrum con todos sus artefactos** |
 | Calidad | Que compile y corra | **Pruebas automatizadas, seguridad verificada, accesibilidad** |
-| Cierre | Un `.apk` que se muestra | **Aplicación publicada en Google Play y en la App Store** |
+| Cierre | Un `.apk` que se muestra | ****Aplicación publicada en una tienda oficial**** |
 
 **Por qué el producto va antes que el código.** La mayoría de las aplicaciones que se abandonan no fallan por su tecnología: fallan porque **nadie las necesitaba**. Antes de escribir la primera línea, el equipo debe poder responder:
 
@@ -72,7 +85,7 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 
 > **La pregunta 3 elimina la mitad de las propuestas.** Una app se justifica cuando aprovecha algo que solo el móvil ofrece: **ubicación, cámara, sensores, notificaciones, uso sin conexión, biometría o disponibilidad permanente en el bolsillo**. Si la propuesta no usa ninguna de esas capacidades, probablemente debía ser una página web.
 
-## El panorama técnico y la decisión de stack (35 min)
+## El panorama técnico y la decisión de stack
 
 **Las cuatro rutas y su decisión real.**
 
@@ -106,7 +119,7 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 | **VS Code** | Editor liviano para Flutter, React Native y edición general | Cualquier sistema |
 | **Emuladores y dispositivos** | Prueba. **Al menos un dispositivo físico por equipo**: el emulador no reproduce fielmente rendimiento, batería, sensores ni permisos | |
 
-## La propuesta de valor con el Lean Canvas (25 min)
+## La propuesta de valor con el Lean Canvas
 
 El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa en el orden numerado, que no es el orden visual:
 
@@ -132,7 +145,33 @@ El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa
 | **Tiempo hasta el valor** | Cuánto tarda el usuario en obtener el primer beneficio | Cada pantalla previa pierde usuarios |
 | **Tasa de fallos** | Sesiones sin error, por versión | Un fallo en el primer uso es una desinstalación |
 
-## Encuadre del curso y cierre (15 min)
+**Ejemplo trabajado — la misma idea, reformulada hasta que sobrevive.** Idea presentada por un equipo: *«una app para restaurantes»*. Se somete a las cinco preguntas y al Lean Canvas.
+
+| Bloque | Primera versión | Versión que sobrevive |
+|---|---|---|
+| **1 Problema** | «Los restaurantes no tienen presencia digital» | El comensal que llega a un menú del día quiere saber **qué hay hoy** y si queda; el restaurante lo publica en una historia que caduca en 24 h y nadie encuentra |
+| **2 Segmento** | «Restaurantes y clientes» | Trabajadores de oficina del centro de Tacna que almuerzan fuera de lunes a viernes. *Early adopter:* los 40 comensales habituales de 6 menús del cercado |
+| **3 Propuesta única** | «La mejor app de restaurantes» | «El menú de hoy de los sitios donde ya almuerzas, con el plato agotado marcado en tiempo real» |
+| **4 Solución** | Reservas, delivery, pagos, reseñas, fidelización, chat | Tres cosas: publicar el menú del día en menos de 60 segundos, marcar agotado, y avisar por notificación a quien sigue ese local |
+| **5 Canales** | «La subimos a la tienda» | QR impreso en la mesa de los 6 locales piloto; el local reparte la app a su propia clientela |
+| **6 Ingresos** | — | Sin ingreso en el piloto; costo asumido. Se declara el modelo posterior: suscripción mensual por local |
+| **7 Costos** | — | Backend gestionado en capa gratuita, cuenta de Play (USD 25 única) y de Apple (USD 99 anuales), notificaciones sin costo en el volumen del piloto |
+| **8 Métricas** | «Número de descargas» | Activación: % que sigue al menos un local el primer día · **Retención D7** · menús publicados por local y semana |
+| **9 Ventaja injusta** | *(vacío)* | El acuerdo con los 6 locales del piloto y la costumbre del comensal de abrir la app a las 12:30 |
+
+**La pregunta 3 aplicada a esta idea:** *¿por qué una app y no una web?* Porque el valor está en la **notificación** a las 12:15 y en abrirla **sin conexión estable** en la calle. Si el equipo hubiera respondido «para que se vea moderno», la propuesta se reformula.
+
+> **La primera versión no era una idea mala: era una idea sin dueño.** «Restaurantes y clientes» no es un segmento, «la mejor app» no es una propuesta de valor y seis funcionalidades no caben en cinco sprints. **La versión que sobrevive es más pequeña, y por eso es la única publicable en 17 semanas.**
+
+**Preguntas para la sesión**
+
+| Pregunta | Qué debe contener una buena respuesta |
+|---|---|
+| ¿Por qué «número de descargas» no sirve como métrica clave? | Porque mide la campaña, no el producto. Una app puede tener 500 descargas y retención D7 del 2 %: eso significa que 490 personas la probaron y la abandonaron |
+| El equipo no cobra nada. ¿Se salta el bloque de ingresos? | No. Se declara que el piloto no cobra y cuál sería el modelo. Un producto sin idea de cómo se sostiene no supera el primer mes fuera del curso |
+| ¿Cómo se sabe si el problema duele de verdad? | Por lo que la gente **hace hoy** para resolverlo. Si ya publica historias que caducan, hay conducta; si nadie hace nada, el problema es del equipo, no del segmento |
+
+## Encuadre del curso y cierre
 
 Reglas del proyecto, composición de los equipos, roles Scrum y calendario de los 5 sprints. Se explicita el **requisito de la prueba cerrada de Google Play**. 12 testers durante 14 días continuos antes de solicitar producción, razón por la cual la prueba cerrada se inicia en la **Semana 14**.
 

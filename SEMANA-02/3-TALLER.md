@@ -2,7 +2,9 @@
 
 # Taller de laboratorio 02 · Esqueleto por capas, decisiones de arquitectura y Definition of Done
 
-**SI-988 · Soluciones Móviles II** · Semana 02 · Sesión 2 en laboratorio · 2 h · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 02 · Sesión 2 en laboratorio · 60 min de taller + 40 de avance · calificación **procedimental**
+
+> ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
 
@@ -10,10 +12,10 @@
 
 ```mermaid
 flowchart TD
-    PA["<b>Paso A</b><br/>Evaluar los stacks y decidir<br/><i>30 min</i>"]
-    PB["<b>Paso B</b><br/>Redactar los ADR<br/><i>25 min</i>"]
-    PC["<b>Paso C</b><br/>Esqueleto y funcionalidad<br/>vertical<br/><i>45 min</i>"]
-    PD["<b>Paso D</b><br/>Definition of Done y CI<br/>ampliada<br/><i>20 min</i>"]
+    PA["<b>Paso A</b><br/>Evaluar los stacks y decidir<br/><i>15 min</i>"]
+    PB["<b>Paso B</b><br/>Redactar los ADR<br/><i>10 min</i>"]
+    PC["<b>Paso C</b><br/>Esqueleto y funcionalidad<br/>vertical<br/><i>25 min</i>"]
+    PD["<b>Paso D</b><br/>Definition of Done y CI<br/>ampliada<br/><i>10 min</i>"]
     PA --> PB --> PC --> PD
     classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
     class PA,PB,PC,PD paso;
@@ -34,7 +36,7 @@ flowchart TD
 
 ---
 
-**La sesión de laboratorio dura 2 h.** El avance de Avance de proyecto lo ejecuta el equipo fuera de la sesión.
+**La sesión de laboratorio dura 100 minutos: 60 de taller guiado y 40 de avance asistido.** El avance de Avance de proyecto lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -54,7 +56,7 @@ Construcción del esqueleto de la aplicación con separación de capas y una fun
 
 ### 1.3. Tiempo de duración
 
-**02 horas** de trabajo en laboratorio.
+**100 minutos de laboratorio:** 60 min de taller guiado y 40 min de avance asistido del producto del curso.
 
 ### 1.4. Resultados de Aprendizaje (RA)
 
@@ -85,7 +87,7 @@ Construcción del esqueleto de la aplicación con separación de capas y una fun
 
 ## 2. Procedimiento o Metodología
 
-### Paso A — Evaluar los stacks y decidir (30 min)
+### Paso A — Evaluar los stacks y decidir
 
 `docs/decisiones/evaluacion_stacks.csv` — **evaluación con evidencia, no con preferencia**:
 
@@ -103,7 +105,7 @@ Construcción del esqueleto de la aplicación con separación de capas y una fun
 
 > **Regla de decisión.** Si el equipo no logra la prueba de humo de la capacidad crítica en un stack durante esos 30 minutos, ese stack **queda descartado**. No porque sea peor, sino porque el equipo no puede sostenerlo en cinco sprints.
 
-### Paso B — Redactar los ADR (25 min)
+### Paso B — Redactar los ADR
 
 `docs/decisiones/ADR-001-arquitectura.md`:
 
@@ -144,7 +146,7 @@ capa de datos; cada pantalla sigue el mismo patrón, reduciendo el factor bus.
 
 `docs/decisiones/ADR-002-stack.md`, con la tabla de evaluación, el resultado de la prueba de humo, la decisión, y —obligatorio— **el plan de salida**. Qué costaría migrar a otro stack, qué parte del código sería reutilizable y en qué condiciones se reconsideraría.
 
-### Paso C — Esqueleto y funcionalidad vertical (45 min)
+### Paso C — Esqueleto y funcionalidad vertical
 
 **Estructura de carpetas** (se adapta al stack; el principio es el mismo):
 
@@ -228,7 +230,7 @@ test('emite Empty cuando el repositorio responde sin elementos', () async {
 
 > **Si esta prueba requiere arrancar un emulador, la arquitectura no está bien implementada.** Es el criterio de aceptación del laboratorio.
 
-### Paso D — Definition of Done y CI ampliada (20 min)
+### Paso D — Definition of Done y CI ampliada
 
 `docs/equipo/DEFINITION_OF_DONE.md`, con la tabla de la sección 1.5, **adaptada por el equipo** y con la columna «cómo se verifica» completa en cada criterio.
 
@@ -267,7 +269,7 @@ jobs:
 
 ### Trabajo del equipo fuera de la sesión — Avance de proyecto
 
-> Este avance **no ocupa las 2 horas de laboratorio**. El equipo lo ejecuta por su cuenta durante la semana y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
+> Este avance excede los 40 min de avance asistido. Lo que no alcance a completarse en laboratorio lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
 
 | Actividad | Producto |
 |---|---|
@@ -279,7 +281,46 @@ jobs:
 
 ---
 
+
+### Avance asistido · Avance de sprint asistido
+
+Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.** Queda disponible para consultas y observa el reparto real del trabajo.
+
+| | |
+|---|---|
+| **Qué se trabaja** | las historias del Sprint en curso, según el Sprint Backlog de la semana |
+| **Quién decide qué hacer** | El equipo. El docente no asigna tareas en este tramo |
+| **Dónde se registra** | GitHub Projects, con cada elemento asignado a una persona |
+| **Para qué sirve la presencia del docente** | Resolver bloqueos en el momento, no revisar entregables |
+
+> **Se registra la contribución individual.** Lo trabajado en este tramo queda en el repositorio con su autoría. Es la evidencia del atributo **AG-I03 Trabajo Individual y en Equipo** que se mide en las semanas de cierre de unidad.
+
 ## 3. Resultados
+
+> **Evidencia obligatoria en GitHub.** Todo resultado de este taller se versiona en el repositorio del equipo. El informe **no consigna capturas sueltas**: consigna la **URL** del artefacto en GitHub. Una captura no permite verificar autoría, fecha ni contenido; un enlace sí.
+>
+> | Qué se entrega | Dónde vive | Qué se escribe en el informe |
+> |---|---|---|
+> | Código y archivos de configuración | Rama del taller, fusionada a `develop` vía Pull Request | URL del Pull Request |
+> | Documentos y matrices | `docs/`, en formato de texto versionable | URL del archivo en la rama |
+> | Capturas y videos que el taller exija | `docs/evidencias/S02/` | URL del archivo |
+> | Salida de comandos | `docs/evidencias/S02/salidas/*.txt` | URL del archivo |
+>
+> **Etiqueta del taller.** Al cerrar el taller se crea la etiqueta `taller-02` sobre el commit entregado:
+>
+> ```bash
+> git tag -a taller-02 -m "Taller 02 · SI988"
+> git push origin taller-02
+> ```
+>
+> La URL que se consigna en el informe apunta a esa etiqueta:
+> `https://github.com/<organizacion>/<repositorio>/tree/taller-02`
+>
+> **Sin la URL, el resultado no se califica.** El docente evalúa sobre el repositorio, no sobre el PDF.
+
+### 3.1. Tabla de resultados
+
+
 
 | # | Resultado esperado | Verificación |
 |---|---|---|
@@ -298,6 +339,28 @@ jobs:
 | 13 | Rama `main` protegida con PR, CI y revisión obligatoria | Configuración |
 | 14 | Diagrama de la arquitectura decidida | `docs/arquitectura/` |
 
+
+## Rúbrica procedimental (20 puntos)
+
+Se aplica sobre el informe entregado y la evidencia enlazada en el repositorio. **Cada criterio se califica de forma independiente.**
+
+| Criterio | 4 — Logrado | 2 — En proceso | 0 — Insuficiente |
+|---|---|---|---|
+| **Evaluar los stacks y decidir** | Completo y correcto, con la evidencia que lo respalda | Completo con errores menores, o correcto pero sin toda la evidencia | Incompleto, o entregado sin ejecutar |
+| **Esqueleto y funcionalidad vertical** | Completo y correcto, con la evidencia que lo respalda | Completo con errores menores, o correcto pero sin toda la evidencia | Incompleto, o entregado sin ejecutar |
+| **Evidencia verificable en el repositorio** | Cada resultado tiene su URL sobre la etiqueta `taller-NN`, y el enlace abre lo que dice | La mayoría tiene URL; alguna evidencia es una captura suelta | Se declaran resultados sin enlace, o el enlace no corresponde |
+| **Rigor técnico de la implementación** | El código compila, las pruebas pasan y el análisis estático sale limpio | Compila y funciona, con avisos del análisis sin resolver | No compila, o se entregó sin ejecutar |
+| **Informe en formato EPIS** | Las seis secciones completas; los resultados se sustentan con la evidencia enlazada | Secciones completas con sustento parcial | Faltan secciones o los resultados se afirman sin evidencia |
+
+| Puntaje | Equivalencia |
+|---|---|
+| 18 – 20 | Destacado |
+| 14 – 17 | Logrado |
+| 6 – 13 | En proceso |
+| 0 – 5 | Insuficiente |
+
+> **Un resultado declarado sin evidencia enlazada no puntúa**, aunque el trabajo se haya hecho. La tabla de la sección 3.1 es la lista de cotejo; esta rúbrica es lo que determina la nota.
+
 ## 4. Conclusiones
 
 Mínimo tres. Líneas argumentales esperadas:
@@ -306,17 +369,7 @@ Mínimo tres. Líneas argumentales esperadas:
 2. Que el ViewModel pueda probarse sin arrancar un emulador es la evidencia objetiva de que la separación de capas existe; si la prueba requiere el emulador, la separación es nominal.
 3. Una Definition of Done cuyos criterios no son verificables automáticamente se degrada a los dos sprints; la que la integración continua verifica se sostiene sola.
 
-## 5. Cuestionario
-
-1. Explica por qué el DTO y la entidad de dominio deben ser clases distintas, y qué ocurre en el sprint 4 si son la misma.
-2. Tu ViewModel importa una clase del framework de interfaz. ¿Qué principio viola y cómo lo corrige?
-3. Justifica la arquitectura elegida por tu equipo en función del número de pantallas y de la experiencia del equipo.
-4. ¿Por qué el estado «vacío» debe distinguirse del estado «éxito con datos»? Dé un ejemplo de su app.
-5. ¿Qué debe contener el plan de salida del ADR-002 y por qué una decisión sin salida documentada es una dependencia irreversible?
-6. Un criterio de su DoD no puede verificarse automáticamente. ¿Lo mantiene? ¿Cómo evita que se degrade?
-7. La prueba de humo de la capacidad crítica falló en un stack. ¿Significa que ese stack es peor? Fundamenta la regla de decisión.
-
-## 6. Referencias Bibliográficas
+## 5. Referencias Bibliográficas
 
 - Google. *Guide to app architecture*. https://developer.android.com/topic/architecture
 - Google. *App architecture: UI layer* y *Data layer*. https://developer.android.com/topic/architecture/ui-layer
@@ -330,7 +383,7 @@ Mínimo tres. Líneas argumentales esperadas:
 - Chopra, D. D. y Khurana, R. (2023). *Flutter and Dart: Up and Running*. BPB Publications.
 - Smyth, N. (2022). *SwiftUI Essentials*. Payload Media.
 
-## 7. Anexos
+## 6. Anexos
 
 - `anexo_A_evaluacion_stacks.xlsx`
 - `anexo_B_prueba_humo.pdf` — evidencia de ambos stacks finalistas

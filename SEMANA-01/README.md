@@ -13,7 +13,7 @@
 
 <p align="center">
   <strong>SI-988 · Soluciones Móviles II</strong><br>
-  4 h semanales · 2 h de teoría en aula, con la dinámica incluida · 2 h de taller en laboratorio
+  4 horas académicas de 50 min · aula: teoría 60 + dinámica 35 + cierre 5 · laboratorio: taller 60 + avance asistido 40
 </p>
 
 ---
@@ -28,7 +28,7 @@
 | **Prerrequisito** | SI-883 Soluciones Móviles I |
 | **Unidad** | I — Consumo de servicios web SOAP y REST |
 | **Semana** | 01 de 17 |
-| **Duración** | 4 h semanales · 2 h de teoría en aula, con la dinámica incluida · 2 h de taller en laboratorio |
+| **Duración** | 4 horas académicas de 50 min · aula: teoría 60 + dinámica 35 + cierre 5 · laboratorio: taller 60 + avance asistido 40 |
 | **Resultados de aprendizaje** | **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil · **RA2** Propone el plan de desarrollo de su app con metodologías ágiles |
 | **Artefacto del proyecto** | Equipo Scrum conformado · **Visión de producto** y Lean Canvas · Repositorio con CI |
 
@@ -42,15 +42,15 @@
 
 | | Documento | Qué encontrarás | Dónde y cuánto dura |
 |---|---|---|---|
-| 1 | **[Teoría](1-TEORIA.md)** | Qué distingue a Soluciones Móviles II · El panorama técnico y la decisión de stack · La propuesta de valor con el Lean Canvas | Aula · 2 h |
-| 2 | **[Dinámica de aula](2-DINAMICA.md)** | Tres apps que no debieron existir, con su material, su ejemplo resuelto y su rúbrica | Aula · dentro de las 2 h de teoría |
-| 3 | **[Taller de laboratorio](3-TALLER.md)** | Entornos, equipo Scrum, Lean Canvas y repositorio con integración continua | Laboratorio · 2 h |
+| 1 | **[Teoría](1-TEORIA.md)** | Qué distingue a Soluciones Móviles II · El panorama técnico y la decisión de stack · La propuesta de valor con el Lean Canvas | Aula · 100 min |
+| 2 | **[Dinámica de aula](2-DINAMICA.md)** | Tres apps que no debieron existir, con su material, su ejemplo resuelto y su rúbrica | Aula · dentro de los 100 min de la sesión de teoría |
+| 3 | **[Taller de laboratorio](3-TALLER.md)** | Entornos, equipo Scrum, Lean Canvas y repositorio con integración continua | Laboratorio · 100 min |
 
 ## Ruta de la semana
 
 ```mermaid
 flowchart LR
-    A["<b>Sesión 1 · Aula</b><br/>Teoría · 2 h"]
+    A["<b>Sesión 1 · Aula</b><br/>Teoría · 100 min"]
     B["<b>Dinámica de aula</b><br/>Tres apps que no debieron<br/>existir<br/><i>nota cognitiva</i>"]
     C["<b>Sesión 2 · Laboratorio</b><br/>Entornos, equipo Scrum, Lean<br/>Canvas y repositorio con<br/>integración continua<br/><i>nota procedimental</i>"]
     D["<b>Entregables</b><br/>de la semana 01"]

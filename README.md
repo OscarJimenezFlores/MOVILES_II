@@ -32,14 +32,14 @@ Escribe al correo institucional para consultas del curso. Indica en el asunto la
 |---|---|
 | **Asignatura** | SI-988 · Soluciones Móviles II |
 | **Ciclo** | IX |
-| **Horas semanales** | 04 horas · 2 h de teoría en aula, con la dinámica incluida, y 2 h de taller en laboratorio |
+| **Horas semanales** | 04 horas académicas de 50 min · 2 en aula: teoría 60 + dinámica 35 + cierre 5 · 2 en laboratorio: taller 60 + avance asistido 40 |
 | **Créditos** | 04 |
 | **Tipo** | Electivo |
 | **Prerrequisito** | SI-883 Soluciones Móviles I |
 | **Área curricular** | Ingeniería de Software |
 | **Duración** | 17 semanas, organizadas en 3 unidades |
 | **Unidades** | **I** Consumo de Servicios Web SOAP y REST · **II** Geolocalización, Seguridad y Permisos · **III** Publicación y Distribución de la Aplicación |
-| **Producto final** | Aplicación móvil propia publicada en Google Play y en la App Store |
+| **Producto final** | Aplicación móvil propia publicada en al menos una tienda oficial |
 
 ## En este documento
 
@@ -53,7 +53,8 @@ Escribe al correo institucional para consultas del curso. Indica en el asunto la
 8. [Cómo se entregan los trabajos](#cómo-se-entregan-los-trabajos)
 9. [Plan de evaluación](#plan-de-evaluación)
 10. [Herramientas del curso](#herramientas-del-curso)
-11. [Bibliografía y fuentes del curso](#bibliografía-y-fuentes-del-curso)
+11. [Glosario técnico](#glosario-técnico)
+12. [Bibliografía y fuentes del curso](#bibliografía-y-fuentes-del-curso)
 
 ## Competencia de la asignatura
 
@@ -76,7 +77,7 @@ flowchart LR
     U1["<b>Unidad I</b><br/>Semanas 01 a 06<br/>Consumo de Servicios Web SOAP y REST"]
     U2["<b>Unidad II</b><br/>Semanas 07 a 12<br/>Geolocalización, Seguridad y Permisos"]
     U3["<b>Unidad III</b><br/>Semanas 13 a 17<br/>Publicación y Distribución de la Aplicación"]
-    PF["<b>Producto final</b><br/>Aplicación móvil propia publicada en Google Play y en la App Store"]
+    PF["<b>Producto final</b><br/>Aplicación móvil propia publicada en al menos una tienda oficial"]
     U1 --> U2
     U2 --> U3
     U3 --> PF
@@ -128,8 +129,53 @@ Cada semana es una carpeta con cuatro documentos — la portada, la teoría de l
 |---|---|---|
 | `README.md` | Portada de la semana con los datos de la asignatura, la ruta de trabajo, los entregables y la forma de evaluación | Antes de la clase |
 | `1-TEORIA.md` | Desarrollo conceptual de la sesión de aula, con el mapa de la sesión y las fuentes citadas | Sesión 1, en aula |
-| `2-DINAMICA.md` | Actividad en equipo con su consigna, su producto y su rúbrica, evaluada como nota cognitiva | Sesión 1, dentro de las 2 h |
+| `2-DINAMICA.md` | Actividad en equipo con su consigna, su producto y su rúbrica, evaluada como nota cognitiva | Sesión 1, dentro de los 100 min |
 | `3-TALLER.md` | Guía de laboratorio en formato EPIS, evaluada como nota procedimental | Sesión 2, en laboratorio |
+
+## Qué construye el equipo y cuándo
+
+La app es del equipo de principio a fin. Los talleres no imponen qué construir: enseñan **la técnica** y el equipo la aplica **a su propio dominio**. Cuando un taller muestra una entidad `Producto` o un endpoint `/items`, es un marcador de posición: el equipo lo sustituye por su entidad y su endpoint.
+
+| Semana | El taller construye | Lo decide |
+|---|---|---|
+| **01** | Entorno, equipo Scrum, Lean Canvas, repositorio | **El equipo**: qué app, para quién, con qué stack |
+| **02** | Esqueleto por capas y ADR | **El equipo**: arquitectura y gestión de estado |
+| **03** | Product Goal, Product Backlog y Sprint 1 | **El equipo**: sus 25+ historias, su orden, sus criterios |
+| **04** | Capa de datos de su app | **El equipo**: su contrato de API y sus entidades |
+| **05** | *Ejercicio sobre un servicio SOAP provisto* | Única semana que no toca la app. Ver el aviso del taller |
+| **06** | Serialización y persistencia de su app | **El equipo**: qué se guarda y con qué estrategia |
+| **07–12** | Ubicación, permisos, privacidad, cifrado, autenticación, TLS **de su app** | **El equipo**: qué permisos necesita, qué datos trata, cómo los protege |
+| **13–16** | Evaluación del stack, interfaz adaptativa, pruebas, publicación **de su app** | **El equipo**: su ficha de tienda, su cobertura, su release |
+| **17** | Cierre, documentación y sustentación | **El equipo** |
+
+**Dieciséis de los diecisiete talleres construyen la app del equipo.** Solo la Semana 05 trabaja sobre un servicio provisto, y el taller lo declara al inicio con su razón.
+
+### Dónde entra el trabajo libre del sprint
+
+El taller cubre la parte técnica difícil de cada capa, con el docente presente. Las historias restantes del sprint son trabajo del equipo:
+
+| Momento | Duración | Qué se hace |
+|---|---|---|
+| Laboratorio · taller guiado | 60 min | La técnica de la semana, aplicada a la app del equipo |
+| Laboratorio · avance de sprint | 40 min | **Las historias del backlog propio**, con el docente disponible para consultas |
+| Fuera de sesión | Según el equipo | Lo que el sprint requiera. Se registra en GitHub Projects |
+
+Los 40 minutos de avance asistido son el espacio donde el equipo trabaja **su** backlog y puede consultar. El docente no dirige ese tramo: observa, responde y toma nota de la contribución individual para la medición del **AG-I03** de las Semanas 06 y 12.
+
+## Cómo se elige la app y la tecnología
+
+**La app la propone el equipo.** No se asigna. Pero nadie arranca frente a una hoja en blanco: el [catálogo de dominios](CATALOGO-APPS/README.md) trae **diez ejemplos desarrollados** —problema, segmento, por qué tiene que ser una app, alcance de cinco sprints, datos personales, permisos, contrato de API y un backlog semilla de 25 historias cada uno—. Sirven de referencia de profundidad; entregarlos tal cual, no.
+
+**La tecnología también la elige el equipo**, entre dos stacks. Cada taller tiene su versión para cada una.
+
+| Stack | Guía de arranque |
+|---|---|
+| **Flutter** | [Guía práctica · Flutter con Google Antigravity](GUIAS/GUIA-ANTIGRAVITY-FLUTTER.md) |
+| **Kotlin Multiplatform** | [Guía práctica · KMP con Google Antigravity](GUIAS/GUIA-ANTIGRAVITY-KOTLIN.md) |
+
+Las dos guías llevan de cero a una app corriendo en el emulador, e incluyen cómo **dirigir a un agente de código** y, sobre todo, cómo rechazar lo que produce mal. La elección de la Semana 01 es **provisional**: en la Semana 13 se somete a evaluación con datos medidos del propio proyecto en el `ADR-004`.
+
+> **El tablero es GitHub Projects, obligatorio.** Es donde el docente sigue el avance del equipo y la contribución de cada integrante durante las 17 semanas. Cada historia se asigna a una persona y se vincula a su rama y a su Pull Request.
 
 ## Cómo se entregan los trabajos
 
@@ -149,7 +195,7 @@ Las reglas completas de entrega están en [`PLANTILLAS/`](PLANTILLAS/).
 | Cognitivo | 25 % | Dinámica de aula, su producto y la exposición del equipo |
 | Procedimental | 35 % | Guía de laboratorio y sus entregables verificables |
 | Actitudinal | 15 % | Participación, puntualidad y trabajo en equipo |
-| Examen de unidad | 25 % | Evaluación escrita al cierre de la unidad |
+| Examen de unidad | 25 % | **Teórico** (40 min en aula, alternativas) y **práctico** (100 min en laboratorio, sobre los productos de los talleres, con IA permitida) |
 
 Peso de cada unidad en la nota del curso. **Unidad I 25 %**, **Unidad II 35 %** y **Unidad III 40 %**.
 
@@ -165,7 +211,7 @@ Todas son libres, gratuitas o de uso académico sin costo. El requisito base del
 | Herramientas de prueba del stack elegido | JUnit · XCTest · flutter_test · Jest | 02 |
 | **Mermaid** o draw.io | Diagrama de arquitectura | 02 |
 | **Scrum Guide 2020** | https://scrumguides.org/ · versión en español en https://scrumguides.org/download.html | 03, 06 |
-| **Taiga** (Docker) o **GitHub Projects** | Tablero y backlog | 03 |
+| **GitHub Projects** | Tablero Scrum y backlog del equipo. **Obligatorio** — https://docs.github.com/issues/planning-and-tracking-with-projects | 01–17 |
 | **Planning Poker** | Cartas físicas o https://planningpokeronline.com/ | 03 |
 | Visión de producto y Lean Canvas | Semana 01 | 03 |
 | ADR-001 y ADR-002 | Semana 02 | 03 |
@@ -195,12 +241,14 @@ Todas son libres, gratuitas o de uso académico sin costo. El requisito base del
 | **MapLibre** | https://maplibre.org/ | 07 |
 | **OpenStreetMap** y su política de uso de teselas | https://www.openstreetmap.org/ · https://operations.osmfoundation.org/policies/tiles/ | 07 |
 | **Nominatim** (geocodificación) y su política de uso | https://nominatim.org/release-docs/latest/api/Overview/ | 07 |
+| Emulador con ubicación simulada | Se define en Android Studio limitando RAM y núcleos. Es el patrón de medición del laboratorio | 07, 12, 13 |
 | Herramienta de perfilado de batería | Android Studio Energy Profiler · Xcode Instruments | 07 |
 | **Android — Permissions overview** | https://developer.android.com/guide/topics/permissions/overview | 08 |
 | **Android — Request location permissions** | https://developer.android.com/develop/sensors-and-location/location/permissions | 08 |
 | **Apple — Requesting authorization to use location services** | https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services | 08 |
 | **Apple — Protecting the user's privacy** | https://developer.apple.com/documentation/uikit/protecting-the-user-s-privacy | 08 |
 | **Google Play — Location permissions policy** | https://support.google.com/googleplay/android-developer/answer/9799150 | 08 |
+| Emulador de Android | Entorno del laboratorio. Reproduce cinco de los ocho escenarios de permiso | 08 |
 | Biblioteca de permisos del stack | permission_handler · react-native-permissions · Accompanist Permissions | 08 |
 | **Ley 29733** y **D. S. 016-2024-JUS** | https://www.gob.pe/institucion/anpd | 09 |
 | **RGPD** | https://gdpr-info.eu/ | 09 |
@@ -259,6 +307,10 @@ Todas son libres, gratuitas o de uso académico sin costo. El requisito base del
 | **Google Play Console** y **App Store Connect** | Estado de la revisión y retroalimentación | 17 |
 | **Python 3.11+** con `pandas`, `matplotlib` | Consolidación de métricas | 17 |
 | **Markdown** y **Pandoc** | Documentación de traspaso | 17 |
+
+## Glosario técnico
+
+Todo término, sigla y norma que aparece en el curso está definido en el [**glosario técnico**](GLOSARIO.md). Los términos en inglés se conservan cuando así se usan en el trabajo profesional: es como se encuentran en la documentación y en el código.
 
 ## Bibliografía y fuentes del curso
 
@@ -399,7 +451,7 @@ Reunidas de las guías de laboratorio de las 17 semanas. Son normas técnicas, m
 - Scrum.org. *La Guía Scrum 2020 en español*. https://www.scrum.org/resources/blog/la-guia-scrum-2020-scrum-guide-2020
 - Smyth, N. (2022). *SwiftUI Essentials*. Payload Media.
 - Snider, E. y Ortinau, D. (2020). *Mastering Xamarin.Forms App Architecture Techniques* (3.ª ed.). Packt Publishing.
-- Taiga. *Documentation*. https://docs.taiga.io/
+- GitHub. *About Projects*. https://docs.github.com/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
 - W3C. *Mobile Accessibility: How WCAG 2.x and UAAG 2.0 Apply to Mobile*. https://www.w3.org/TR/mobile-accessibility-mapping/
 - W3C. *SOAP Version 1.2 Part 1: Messaging Framework*. https://www.w3.org/TR/soap12-part1/
 - W3C. *Web Content Accessibility Guidelines (WCAG) 2.2*. https://www.w3.org/TR/WCAG22/
