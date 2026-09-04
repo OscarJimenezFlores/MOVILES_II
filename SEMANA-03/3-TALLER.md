@@ -2,7 +2,7 @@
 
 # Taller de laboratorio 03 · Product Goal, Product Backlog, estimación y Sprint 1 Planning
 
-**SI-988 · Soluciones Móviles II** · Semana 03 · Sesión 2 en laboratorio · 60 min de taller + 40 de avance · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 03 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
@@ -29,7 +29,7 @@ flowchart TD
 | **Archivo** | `SI988-S03-TALLER-Grupo<N>.pdf` |
 | **Plantilla obligatoria** | [SI988-PLANTILLA-TALLER.docx](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) |
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
-| **Qué va dentro** | Las siete secciones del formato EPIS. La sección **3. Resultados** se califica contra la tabla de resultados esperados de esta guía, y cada resultado necesita su evidencia |
+| **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 03» |
 | **Cuándo vence** | 48 horas después de la sesión de laboratorio |
 
@@ -37,7 +37,7 @@ flowchart TD
 
 ---
 
-**La sesión de laboratorio dura 100 minutos: 60 de taller guiado y 40 de avance asistido.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
+**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -58,7 +58,7 @@ Construcción de los artefactos de Scrum del proyecto — formulación del Produ
 
 ### 1.3. Tiempo de duración
 
-**100 minutos de laboratorio:** 60 min de taller guiado y 40 min de avance asistido del producto del curso.
+**100 minutos.**
 
 ### 1.4. Resultados de Aprendizaje (RA)
 
@@ -95,9 +95,9 @@ Construcción de los artefactos de Scrum del proyecto — formulación del Produ
 
 > *«Al término del semestre, <nombre de la app> permitirá a <segmento> <acción de valor> desde su teléfono, sin <la fricción actual>, y estará publicada en Google Play y en la App Store.»*
 
-> **Sobre la palabra «épica».** Agrupar historias en épicas **no es vocabulario de la *Scrum Guide*** —lo vimos en la teoría de esta semana—, pero es el término que va a encontrar en Jira, Azure DevOps y GitHub Projects, y el que le van a pedir en cualquier equipo. Se usa aquí por eso. Si prefiere llamarlo «tema» o «bloque de valor», es igual de correcto: lo que se califica es que el backlog esté **agrupado y ordenado**, no la etiqueta.
+> **Sobre la palabra «épica».** Agrupar historias en épicas **no es vocabulario de la *Scrum Guide*** —lo vimos en la teoría de esta semana—, pero es el término que va a encontrar en Jira, Azure DevOps y GitHub Projects, y el que le van a pedir en cualquier equipo. Se usa aquí por eso. Si prefiere llamarlo «tema» o «bloque de valor», es igual de correcto. Lo que se califica es que el backlog esté **agrupado y ordenado**, no la etiqueta.
 
-**Estructura del backlog en tres niveles:**
+**Estructura del backlog en tres niveles.**
 
 ```
 PRODUCT GOAL
@@ -122,7 +122,7 @@ PRODUCT GOAL
 | TD-01 | — | Deuda técnica | Configurar la inyección de dependencias para permitir pruebas con dobles | Ver criterios | — | 4 | 3 | 3 | No | No | 1 |
 | SP-01 | Integración | Spike | Investigar cómo consumir el servicio SOAP de <proveedor> desde el stack elegido, con límite de 4 horas | Documento de conclusión | — | 5 | 3 | 4 | No | No | 1 |
 
-**Ordenamiento por valor y riesgo.** No se ordena solo por valor: **el riesgo alto se aborda temprano**, cuando aún hay sprints para reaccionar.
+**Ordenamiento por valor y riesgo.** No se ordena solo por valor. **El riesgo alto se aborda temprano**, cuando aún hay sprints para reaccionar.
 
 ```python
 # scripts/priorizar_backlog.py
@@ -181,7 +181,7 @@ Característica: Ver la lista de <elementos>
     Y ve un botón para reintentar
 ```
 
-> **Regla del curso.** Toda historia que muestre datos debe tener, como mínimo, los **cuatro escenarios**: con datos, vacío, sin conexión y error del servidor. Son los cuatro estados de interfaz de la Semana 02, expresados como criterios de aceptación.
+> **Regla del curso.** Toda historia que muestre datos debe tener, como mínimo, los **cuatro escenarios** — con datos, vacío, sin conexión y error del servidor. Son los cuatro estados de interfaz de la Semana 02, expresados como criterios de aceptación.
 
 ### Paso D — Planning Poker y Sprint 1 Planning
 
@@ -205,7 +205,7 @@ se sobreestima. Regla del curso: comprometer entre 8 y 13 puntos en el sprint 1.
 
 > *«Al final del Sprint 1, un usuario podrá <acción de valor> consumiendo datos reales del servicio, con la app funcionando en el emulador y verificada además en un teléfono real.»*
 
-**Prueba del Sprint Goal:** ¿si se elimina una historia del sprint, el objetivo sigue siendo alcanzable? Si la respuesta es no para todas, el objetivo es solo la suma de las historias y no cumple su función.
+**Prueba del Sprint Goal.** ¿Si se elimina una historia del sprint, el objetivo sigue siendo alcanzable? Si la respuesta es no para todas, el objetivo es solo la suma de las historias y no cumple su función.
 
 **D.4 — Sprint Backlog** (`docs/sprints/sprint-01/SPRINT_BACKLOG.md`):
 
@@ -221,9 +221,9 @@ se sobreestima. Regla del curso: comprometer entre 8 y 13 puntos en el sprint 1.
 
 ### Paso E — Tablero con límites de trabajo en curso
 
-El tablero es **GitHub Projects**, en el mismo repositorio del equipo. No es una preferencia. Es donde el docente sigue el avance y las contribuciones de cada integrante durante todo el semestre.
+El tablero es **GitHub Projects**, en el mismo repositorio del equipo. No es una preferencia. Es donde queda registrado el avance y las contribuciones de cada integrante durante todo el semestre.
 
-**Creación del tablero:**
+**Creación del tablero.**
 
 1. En el repositorio del equipo pestaña **Projects → New project → Board**.
 2. Nómbrelo `Sprint Board — <nombre de la app>`.
@@ -253,11 +253,11 @@ Se configuran las columnas de la sección 1.4 con sus límites de WIP, y las **p
 
 ### Trabajo del equipo fuera de la sesión — Sprint 1
 
-> Este avance excede los 40 min de avance asistido. Lo que no alcance a completarse en laboratorio lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
+> Lo que no alcance a completarse en la sesión lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
 
-Se inicia el desarrollo. El docente actúa como **Scrum Master en formación**, observando y devolviendo:
+Se inicia el desarrollo. Estas son las desviaciones que se corrigen sobre la marcha.
 
-| Observación del docente | Qué se corrige |
+| Desviación observada | Qué se corrige |
 |---|---|
 | Un Developer con tres historias en progreso | Se aplica el límite de WIP |
 | Una historia sin criterios verificados que ya está en «Listo» | Se devuelve a «En pruebas» |
@@ -267,22 +267,10 @@ Se inicia el desarrollo. El docente actúa como **Scrum Master en formación**, 
 ---
 
 
-### Avance asistido · Avance de sprint asistido
-
-Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.** Queda disponible para consultas y observa el reparto real del trabajo.
-
-| | |
-|---|---|
-| **Qué se trabaja** | las historias del Sprint en curso, según el Sprint Backlog de la semana |
-| **Quién decide qué hacer** | El equipo. El docente no asigna tareas en este tramo |
-| **Dónde se registra** | GitHub Projects, con cada elemento asignado a una persona |
-| **Para qué sirve la presencia del docente** | Resolver bloqueos en el momento, no revisar entregables |
-
-> **Se registra la contribución individual.** Lo trabajado en este tramo queda en el repositorio con su autoría. Es la evidencia del atributo **AG-I03 Trabajo Individual y en Equipo** que se mide en las semanas de cierre de unidad.
 
 ## 3. Resultados
 
-> **Evidencia obligatoria en GitHub.** Todo resultado de este taller se versiona en el repositorio del equipo. El informe **no consigna capturas sueltas**: consigna la **URL** del artefacto en GitHub. Una captura no permite verificar autoría, fecha ni contenido; un enlace sí.
+> **Evidencia obligatoria en GitHub.** Todo resultado de este taller se versiona en el repositorio del equipo. El informe **no consigna capturas sueltas**. Consigna la **URL** del artefacto en GitHub. Una captura no permite verificar autoría, fecha ni contenido; un enlace sí.
 >
 > | Qué se entrega | Dónde vive | Qué se escribe en el informe |
 > |---|---|---|
@@ -301,7 +289,7 @@ Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.*
 > La URL que se consigna en el informe apunta a esa etiqueta:
 > `https://github.com/<organizacion>/<repositorio>/tree/taller-03`
 >
-> **Sin la URL, el resultado no se califica.** El docente evalúa sobre el repositorio, no sobre el PDF.
+> **El informe es lo que se califica; el repositorio es lo que lo prueba.** Cada resultado de la sección 3 del informe lleva la URL con la que se verifica, y **un resultado sin su URL se califica como no logrado**, por bien redactado que esté. Lo que no se puede abrir no se puede dar por hecho.
 
 ### 3.1. Tabla de resultados
 
@@ -334,7 +322,7 @@ Se aplica sobre el informe entregado y la evidencia enlazada en el repositorio. 
 | **Planning Poker y Sprint 1 Planning** | Completo y correcto, con la evidencia que lo respalda | Completo con errores menores, o correcto pero sin toda la evidencia | Incompleto, o entregado sin ejecutar |
 | **Evidencia verificable en el repositorio** | Cada resultado tiene su URL sobre la etiqueta `taller-NN`, y el enlace abre lo que dice | La mayoría tiene URL; alguna evidencia es una captura suelta | Se declaran resultados sin enlace, o el enlace no corresponde |
 | **Rigor técnico de la implementación** | El código compila, las pruebas pasan y el análisis estático sale limpio | Compila y funciona, con avisos del análisis sin resolver | No compila, o se entregó sin ejecutar |
-| **Informe en formato EPIS** | Las seis secciones completas; los resultados se sustentan con la evidencia enlazada | Secciones completas con sustento parcial | Faltan secciones o los resultados se afirman sin evidencia |
+| **La evidencia entregada** | Las secciones de la plantilla completas; los resultados se sustentan con la evidencia enlazada | Secciones completas con sustento parcial | Faltan secciones o los resultados se afirman sin evidencia |
 
 | Puntaje | Equivalencia |
 |---|---|
@@ -343,7 +331,7 @@ Se aplica sobre el informe entregado y la evidencia enlazada en el repositorio. 
 | 6 – 13 | En proceso |
 | 0 – 5 | Insuficiente |
 
-> **Un resultado declarado sin evidencia enlazada no puntúa**, aunque el trabajo se haya hecho. La tabla de la sección 3.1 es la lista de cotejo; esta rúbrica es lo que determina la nota.
+> **Un resultado declarado sin evidencia enlazada no se califica**, aunque el trabajo se haya hecho. La tabla de la sección 3.1 es la lista de cotejo; esta rúbrica es lo que determina la nota.
 
 ## 4. Conclusiones
 

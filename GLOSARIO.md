@@ -18,7 +18,7 @@
 
 ---
 
-Los términos en inglés se conservan cuando así se usan en el trabajo profesional: es como los va a encontrar en la documentación, en las ofertas de empleo y en el código de sus compañeros. Traducirlos dificultaría buscarlos.
+Los términos en inglés se conservan cuando así se usan en el trabajo profesional. Es como los va a encontrar en la documentación, en las ofertas de empleo y en el código de sus compañeros. Traducirlos dificultaría buscarlos.
 
 ## Proceso y gestión del proyecto
 

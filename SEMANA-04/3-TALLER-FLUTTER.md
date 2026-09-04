@@ -25,10 +25,10 @@ dev_dependencies:
 
 ## Paso A — Contrato en OpenAPI (15 min)
 
-> **El contrato es el de su app.** `/items` es un marcador de posición: el equipo define los recursos de su propio dominio en `docs/api/openapi.yaml`. El mock server sirve **ese** contrato, no uno genérico.
+> **El contrato es el de su app.** `/items` es un marcador de posición. El equipo define los recursos de su propio dominio en `docs/api/openapi.yaml`. El mock server sirve **ese** contrato, no uno genérico.
 
 
-Sin código específico del stack: el contrato está en el [taller](3-TALLER.md), en `docs/api/openapi.yaml`. Levante el mock server:
+Sin código específico del stack el contrato está en el [taller](3-TALLER.md), en `docs/api/openapi.yaml`. Levante el mock server:
 
 ```bash
 docker run --rm -p 4010:4010 -v "$PWD/docs/api:/api" \
@@ -110,7 +110,7 @@ class _RegistroInterceptor extends Interceptor {
 }
 ```
 
-> **Dos reglas.** El `assert` hace que el registro **desaparezca en release**, no solo se silencie. Y **nunca se registra el cuerpo de la respuesta**: ahí van los datos personales. Este es uno de los siete puntos que se auditan en la Semana 10.
+> **Dos reglas.** El `assert` hace que el registro **desaparezca en release**, no solo se silencie. Y **nunca se registra el cuerpo de la respuesta** ahí van los datos personales. Este es uno de los siete puntos que se auditan en la Semana 10.
 
 ### B.3 Reintento — solo donde corresponde
 
@@ -288,7 +288,7 @@ void main() {
 }
 ```
 
-**Los tres casos obligatorios:** un `4xx` que no se reintenta, un `429` que respeta `Retry-After`, y la degradación a caché sin red.
+**Los tres casos obligatorios.** Un `4xx` que no se reintenta, un `429` que respeta `Retry-After`, y la degradación a caché sin red.
 
 ---
 
@@ -324,7 +324,7 @@ Con las DevTools abiertas, pestaña **Network**, compruebe:
 
 ## Con Antigravity
 
-> «Implementa el cliente HTTP con `dio` contra `docs/api/openapi.yaml`: tiempo de espera de 10 s, interceptor de autenticación que lee el token de `String.fromEnvironment`, interceptor de registro que **enmascara `Authorization` y nunca registra el cuerpo**, e interceptor de reintento que solo reintenta `429` y `5xx`, respetando `Retry-After`. Mapea los códigos a los fallos de `lib/domain/failures.dart`. **No agregues dependencias fuera de `dio`.** Muéstrame el plan antes de escribir código.»
+> «Implementa el cliente HTTP con `dio` contra `docs/api/openapi.yaml` — tiempo de espera de 10 s, interceptor de autenticación que lee el token de `String.fromEnvironment`, interceptor de registro que **enmascara `Authorization` y nunca registra el cuerpo**, e interceptor de reintento que solo reintenta `429` y `5xx`, respetando `Retry-After`. Mapea los códigos a los fallos de `lib/domain/failures.dart`. **No agregues dependencias fuera de `dio`.** Muéstrame el plan antes de escribir código.»
 
 **Verifique a mano** que el registro no imprime cuerpos y que ningún `4xx` distinto de `429` se reintenta. Son los dos errores que el agente comete aquí.
 

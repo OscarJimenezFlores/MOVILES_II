@@ -134,7 +134,7 @@ Cada semana es una carpeta con cuatro documentos — la portada, la teoría de l
 
 ## Qué construye el equipo y cuándo
 
-La app es del equipo de principio a fin. Los talleres no imponen qué construir: enseñan **la técnica** y el equipo la aplica **a su propio dominio**. Cuando un taller muestra una entidad `Producto` o un endpoint `/items`, es un marcador de posición: el equipo lo sustituye por su entidad y su endpoint.
+La app es del equipo de principio a fin. Los talleres no imponen qué construir. Enseñan **la técnica** y el equipo la aplica **a su propio dominio**. Cuando un taller muestra una entidad `Producto` o un endpoint `/items`, es un marcador de posición. El equipo lo sustituye por su entidad y su endpoint.
 
 | Semana | El taller construye | Lo decide |
 |---|---|---|
@@ -160,11 +160,11 @@ El taller cubre la parte técnica difícil de cada capa, con el docente presente
 | Laboratorio · avance de sprint | 40 min | **Las historias del backlog propio**, con el docente disponible para consultas |
 | Fuera de sesión | Según el equipo | Lo que el sprint requiera. Se registra en GitHub Projects |
 
-Los 40 minutos de avance asistido son el espacio donde el equipo trabaja **su** backlog y puede consultar. El docente no dirige ese tramo: observa, responde y toma nota de la contribución individual para la medición del **AG-I03** de las Semanas 06 y 12.
+Los 40 minutos de avance asistido son el espacio donde el equipo trabaja **su** backlog y puede consultar. El docente no dirige ese tramo. Observa, responde y toma nota de la contribución individual para la medición del **AG-I03** de las Semanas 06 y 12.
 
 ## Cómo se elige la app y la tecnología
 
-**La app la propone el equipo.** No se asigna. Pero nadie arranca frente a una hoja en blanco: el [catálogo de dominios](CATALOGO-APPS/README.md) trae **diez ejemplos desarrollados** —problema, segmento, por qué tiene que ser una app, alcance de cinco sprints, datos personales, permisos, contrato de API y un backlog semilla de 25 historias cada uno—. Sirven de referencia de profundidad; entregarlos tal cual, no.
+**La app la propone el equipo.** No se asigna. Pero nadie arranca frente a una hoja en blanco — el [catálogo de dominios](CATALOGO-APPS/README.md) trae **diez ejemplos desarrollados** —problema, segmento, por qué tiene que ser una app, alcance de cinco sprints, datos personales, permisos, contrato de API y un backlog semilla de 25 historias cada uno—. Sirven de referencia de profundidad; entregarlos tal cual, no.
 
 **La tecnología también la elige el equipo**, entre dos stacks. Cada taller tiene su versión para cada una.
 
@@ -173,7 +173,7 @@ Los 40 minutos de avance asistido son el espacio donde el equipo trabaja **su** 
 | **Flutter** | [Guía práctica · Flutter con Google Antigravity](GUIAS/GUIA-ANTIGRAVITY-FLUTTER.md) |
 | **Kotlin Multiplatform** | [Guía práctica · KMP con Google Antigravity](GUIAS/GUIA-ANTIGRAVITY-KOTLIN.md) |
 
-Las dos guías llevan de cero a una app corriendo en el emulador, e incluyen cómo **dirigir a un agente de código** y, sobre todo, cómo rechazar lo que produce mal. La elección de la Semana 01 es **provisional**: en la Semana 13 se somete a evaluación con datos medidos del propio proyecto en el `ADR-004`.
+Las dos guías llevan de cero a una app corriendo en el emulador, e incluyen cómo **dirigir a un agente de código** y, sobre todo, cómo rechazar lo que produce mal. La elección de la Semana 01 es **provisional**. En la Semana 13 se somete a evaluación con datos medidos del propio proyecto en el `ADR-004`.
 
 > **El tablero es GitHub Projects, obligatorio.** Es donde el docente sigue el avance del equipo y la contribución de cada integrante durante las 17 semanas. Cada historia se asigna a una persona y se vincula a su rama y a su Pull Request.
 
@@ -310,7 +310,7 @@ Todas son libres, gratuitas o de uso académico sin costo. El requisito base del
 
 ## Glosario técnico
 
-Todo término, sigla y norma que aparece en el curso está definido en el [**glosario técnico**](GLOSARIO.md). Los términos en inglés se conservan cuando así se usan en el trabajo profesional: es como se encuentran en la documentación y en el código.
+Todo término, sigla y norma que aparece en el curso está definido en el [**glosario técnico**](GLOSARIO.md). Los términos en inglés se conservan cuando así se usan en el trabajo profesional. Es como se encuentran en la documentación y en el código.
 
 ## Bibliografía y fuentes del curso
 

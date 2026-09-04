@@ -77,9 +77,9 @@ flowchart TD
 | `PATCH` | Modificar parcialmente | No | No necesariamente | Reintentar con cuidado |
 | `DELETE` | Eliminar | No | Sí | Reintentable; el segundo intento devuelve 404 y eso es correcto |
 
-> **El problema del `POST` en móviles.** La conectividad móvil es intermitente. Si el usuario envía un pedido, pierde la señal antes de recibir la respuesta y la app reintenta, **se crean dos pedidos**. La solución profesional es la **clave de idempotencia**: el cliente genera un identificador único por operación y lo envía en una cabecera; el servidor, si ya procesó esa clave, devuelve el resultado anterior sin duplicar.
+> **El problema del `POST` en móviles.** La conectividad móvil es intermitente. Si el usuario envía un pedido, pierde la señal antes de recibir la respuesta y la app reintenta, **se crean dos pedidos**. La solución profesional es la **clave de idempotencia** — el cliente genera un identificador único por operación y lo envía en una cabecera; el servidor, si ya procesó esa clave, devuelve el resultado anterior sin duplicar.
 
-**Códigos de estado que el cliente debe distinguir:**
+**Códigos de estado que el cliente debe distinguir.**
 
 | Rango | Significado | Qué hace la app |
 |---|---|---|
@@ -96,7 +96,7 @@ flowchart TD
 
 ## La capa de datos de una app móvil
 
-**El principio de fuente única de verdad.** La interfaz nunca consulta la red directamente: consulta al **repositorio**, que decide de dónde vienen los datos.
+**El principio de fuente única de verdad.** La interfaz nunca consulta la red directamente. Consulta al **repositorio**, que decide de dónde vienen los datos.
 
 ```
    ViewModel ──► Repositorio ──┬──► Fuente remota (API)
@@ -108,7 +108,7 @@ flowchart TD
                                    la red la actualiza.
 ```
 
-**Las tres estrategias de sincronización:**
+**Las tres estrategias de sincronización.**
 
 | Estrategia | Cómo funciona | Cuándo conviene | Costo |
 |---|---|---|---|
@@ -118,7 +118,7 @@ flowchart TD
 
 > **La estrategia se decide por historia, no para toda la app.** El catálogo puede ser caché primero; el saldo de una cuenta debe ser solo red; el registro de una visita en campo debe ser sin conexión primero.
 
-**El manejo de errores: del `Exception` al mensaje del usuario.** El error técnico nunca llega a la pantalla:
+**El manejo de errores. Del `Exception` al mensaje del usuario.** El error técnico nunca llega a la pantalla:
 
 ```
    Excepción de red / HTTP        ← capa de datos
@@ -141,7 +141,7 @@ flowchart TD
 | `ErrorValidacion` | El mensaje del campo específico | Corregir el campo |
 | `ErrorServidor` | «Tuvimos un problema. Ya lo estamos revisando.» | Reintentar más tarde |
 
-**Prohibido:** mostrar `SocketTimeoutException`, códigos HTTP crudos o trazas de pila al usuario. Eso va al registro de errores, no a la pantalla.
+**Prohibido.** Mostrar `SocketTimeoutException`, códigos HTTP crudos o trazas de pila al usuario. Eso va al registro de errores, no a la pantalla.
 
 **Reintentos con retroceso exponencial.** Reintentar de inmediato ante un `5xx` empeora la situación del servidor:
 
@@ -174,7 +174,7 @@ La variación aleatoria evita que miles de clientes reintenten simultáneamente.
 | `422 Unprocessable Entity` | **No** | El plato ya no está disponible: se muestra el error del campo y se ofrece elegir otro |
 | `409 Conflict` | **No automáticamente** | El menú cambió desde que se cargó: se recarga y se pide confirmar |
 
-> **Reintentar un `422` es el error más caro de esta semana**, porque no falla: reintenta indefinidamente una petición que **nunca** va a tener éxito, consumiendo batería y datos del usuario mientras la pantalla muestra un girador eterno. **La regla es de una línea: solo se reintenta 408, 429 y 5xx.**
+> **Reintentar un `422` es el error más caro de esta semana**, porque no falla. Reintenta indefinidamente una petición que **nunca** va a tener éxito, consumiendo batería y datos del usuario mientras la pantalla muestra un girador eterno. **La regla es de una línea. Solo se reintenta 408, 429 y 5xx.**
 
 **Preguntas para la sesión**
 

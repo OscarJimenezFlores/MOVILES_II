@@ -73,9 +73,9 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 | Arquitectura | Suficiente para que funcione | **Decidida, documentada y sostenible** |
 | Proceso | Entregas por tema | **5 sprints de Scrum con todos sus artefactos** |
 | Calidad | Que compile y corra | **Pruebas automatizadas, seguridad verificada, accesibilidad** |
-| Cierre | Un `.apk` que se muestra | ****Aplicación publicada en una tienda oficial**** |
+| Cierre | Un `.apk` que se muestra | **Aplicación publicada en una tienda oficial** |
 
-**Por qué el producto va antes que el código.** La mayoría de las aplicaciones que se abandonan no fallan por su tecnología: fallan porque **nadie las necesitaba**. Antes de escribir la primera línea, el equipo debe poder responder:
+**Por qué el producto va antes que el código.** La mayoría de las aplicaciones que se abandonan no fallan por su tecnología. Fallan porque **nadie las necesitaba**. Antes de escribir la primera línea, el equipo debe poder responder:
 
 1. ¿**Quién** tiene este problema? Con nombra de segmento, no «la gente».
 2. ¿**Qué hace hoy** para resolverlo? Si no hace nada, el problema no le duele.
@@ -83,7 +83,7 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 4. ¿Qué hace que valga la pena **abrirla una segunda vez**?
 5. ¿Cómo sabremos que **funcionó**? Con una métrica, no con una impresión.
 
-> **La pregunta 3 elimina la mitad de las propuestas.** Una app se justifica cuando aprovecha algo que solo el móvil ofrece: **ubicación, cámara, sensores, notificaciones, uso sin conexión, biometría o disponibilidad permanente en el bolsillo**. Si la propuesta no usa ninguna de esas capacidades, probablemente debía ser una página web.
+> **La pregunta 3 elimina la mitad de las propuestas.** Una app se justifica cuando aprovecha algo que solo el móvil ofrece. **Ubicación, cámara, sensores, notificaciones, uso sin conexión, biometría o disponibilidad permanente en el bolsillo**. Si la propuesta no usa ninguna de esas capacidades, probablemente debía ser una página web.
 
 ## El panorama técnico y la decisión de stack
 
@@ -110,7 +110,7 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 
 > **La restricción de macOS es la que más condiciona a los equipos.** Sin acceso a un equipo macOS, la compilación y firma para iOS debe hacerse mediante un servicio de compilación en la nube. Se resuelve en la Semana 16, pero la decisión de stack de la Semana 02 debe tomarla en cuenta.
 
-**El entorno de desarrollo:**
+**El entorno de desarrollo.**
 
 | Herramienta | Para qué | Requisito |
 |---|---|---|
@@ -135,7 +135,7 @@ El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa
 | **8** | **Métricas clave** | Los 3 números que dirán si funciona | «Número de descargas» |
 | **9** | **Ventaja injusta** | Lo que no puede copiarse fácilmente | Dejarlo vacío |
 
-**Las métricas que importan en una app.** No es la descarga: es lo que ocurre después.
+**Las métricas que importan en una app.** No es la descarga. Es lo que ocurre después.
 
 | Métrica | Qué mide | Por qué importa |
 |---|---|---|
@@ -145,7 +145,7 @@ El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa
 | **Tiempo hasta el valor** | Cuánto tarda el usuario en obtener el primer beneficio | Cada pantalla previa pierde usuarios |
 | **Tasa de fallos** | Sesiones sin error, por versión | Un fallo en el primer uso es una desinstalación |
 
-**Ejemplo trabajado — la misma idea, reformulada hasta que sobrevive.** Idea presentada por un equipo: *«una app para restaurantes»*. Se somete a las cinco preguntas y al Lean Canvas.
+**Ejemplo trabajado — la misma idea, reformulada hasta que sobrevive.** Idea presentada por un equipo. *«Una app para restaurantes»*. Se somete a las cinco preguntas y al Lean Canvas.
 
 | Bloque | Primera versión | Versión que sobrevive |
 |---|---|---|
@@ -159,9 +159,9 @@ El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa
 | **8 Métricas** | «Número de descargas» | Activación: % que sigue al menos un local el primer día · **Retención D7** · menús publicados por local y semana |
 | **9 Ventaja injusta** | *(vacío)* | El acuerdo con los 6 locales del piloto y la costumbre del comensal de abrir la app a las 12:30 |
 
-**La pregunta 3 aplicada a esta idea:** *¿por qué una app y no una web?* Porque el valor está en la **notificación** a las 12:15 y en abrirla **sin conexión estable** en la calle. Si el equipo hubiera respondido «para que se vea moderno», la propuesta se reformula.
+**La pregunta 3 aplicada a esta idea.** *¿Por qué una app y no una web?* Porque el valor está en la **notificación** a las 12:15 y en abrirla **sin conexión estable** en la calle. Si el equipo hubiera respondido «para que se vea moderno», la propuesta se reformula.
 
-> **La primera versión no era una idea mala: era una idea sin dueño.** «Restaurantes y clientes» no es un segmento, «la mejor app» no es una propuesta de valor y seis funcionalidades no caben en cinco sprints. **La versión que sobrevive es más pequeña, y por eso es la única publicable en 17 semanas.**
+> **La primera versión no era una idea mala. Era una idea sin dueño.** «Restaurantes y clientes» no es un segmento, «la mejor app» no es una propuesta de valor y seis funcionalidades no caben en cinco sprints. **La versión que sobrevive es más pequeña, y por eso es la única publicable en 17 semanas.**
 
 **Preguntas para la sesión**
 

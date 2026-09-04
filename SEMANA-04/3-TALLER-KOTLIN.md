@@ -36,10 +36,10 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 ## Paso A — Contrato en OpenAPI (15 min)
 
-> **El contrato es el de su app.** `/items` es un marcador de posición: el equipo define los recursos de su propio dominio en `docs/api/openapi.yaml`. El mock server sirve **ese** contrato, no uno genérico.
+> **El contrato es el de su app.** `/items` es un marcador de posición. El equipo define los recursos de su propio dominio en `docs/api/openapi.yaml`. El mock server sirve **ese** contrato, no uno genérico.
 
 
-Sin código específico del stack: el contrato está en el [taller](3-TALLER.md). Levante el mock server:
+Sin código específico del stack el contrato está en el [taller](3-TALLER.md). Levante el mock server:
 
 ```bash
 docker run --rm -p 4010:4010 -v "$PWD/docs/api:/api" \
@@ -111,7 +111,7 @@ fun crearHttpClient(engine: HttpClientEngine, baseUrl: String, esDebug: Boolean)
     }
 ```
 
-> **Tres decisiones que se evalúan.** `LogLevel.HEADERS`, nunca `ALL`: `ALL` imprime el cuerpo, y ahí van los datos personales. `sanitizeHeader` enmascara el token. Y `retryIf` **solo** cubre `429` y `5xx`: reintentar un `400` es repetir el mismo error, y reintentar un `401` puede bloquear la cuenta.
+> **Tres decisiones que se evalúan.** `LogLevel.HEADERS`, nunca `ALL` — `ALL` imprime el cuerpo, y ahí van los datos personales. `sanitizeHeader` enmascara el token. Y `retryIf` **solo** cubre `429` y `5xx`. Reintentar un `400` es repetir el mismo error, y reintentar un `401` puede bloquear la cuenta.
 
 ### B.1 El token, fuera del código
 
@@ -271,7 +271,7 @@ class ItemRepositoryTest {
 }
 ```
 
-**Los tres casos obligatorios:** un `4xx` que no se reintenta, un `429` que respeta el reintento, y la degradación a caché sin red.
+**Los tres casos obligatorios.** Un `4xx` que no se reintenta, un `429` que respeta el reintento, y la degradación a caché sin red.
 
 ---
 
@@ -307,7 +307,7 @@ adb logcat -s HttpClient
 
 ## Con Antigravity
 
-> «Implementa el cliente Ktor en `commonMain` contra `docs/api/openapi.yaml`: `HttpTimeout` de 10 s, negociación de contenido con `kotlinx.serialization`, `Logging` con `LogLevel.HEADERS` y `sanitizeHeader` sobre `Authorization`, y `HttpRequestRetry` que **solo** reintente `429` y `5xx`. Mapea los códigos a `Fallo`. El motor entra por parámetro: `okhttp` en `androidMain`. **No agregues dependencias fuera de Ktor.** Muéstrame el plan antes de escribir código.»
+> «Implementa el cliente Ktor en `commonMain` contra `docs/api/openapi.yaml` — `HttpTimeout` de 10 s, negociación de contenido con `kotlinx.serialization`, `Logging` con `LogLevel.HEADERS` y `sanitizeHeader` sobre `Authorization`, y `HttpRequestRetry` que **solo** reintente `429` y `5xx`. Mapea los códigos a `Fallo`. El motor entra por parámetro. `Okhttp` en `androidMain`. **No agregues dependencias fuera de Ktor.** Muéstrame el plan antes de escribir código.»
 
 **Verifique a mano** que el nivel de registro no es `ALL`, que ningún `4xx` distinto de `429` se reintenta, y que nada cayó en `androidMain` salvo el motor.
 

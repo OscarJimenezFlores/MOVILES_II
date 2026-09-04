@@ -2,7 +2,7 @@
 
 # Taller de laboratorio 01 · Entornos, equipo Scrum, Lean Canvas y repositorio con integración continua
 
-**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 2 en laboratorio · 60 min de taller + 40 de avance · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
@@ -28,7 +28,7 @@ flowchart TD
 | **Archivo** | `SI988-S01-TALLER-Grupo<N>.pdf` |
 | **Plantilla obligatoria** | [SI988-PLANTILLA-TALLER.docx](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) |
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
-| **Qué va dentro** | Las siete secciones del formato EPIS. La sección **3. Resultados** se califica contra la tabla de resultados esperados de esta guía, y cada resultado necesita su evidencia |
+| **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 01» |
 | **Cuándo vence** | 48 horas después de la sesión de laboratorio |
 
@@ -36,7 +36,7 @@ flowchart TD
 
 ---
 
-**La sesión de laboratorio dura 100 minutos: 60 de taller guiado y 40 de avance asistido.** El avance del proyecto lo ejecuta el equipo fuera de la sesión.
+**La sesión de laboratorio dura 100 minutos.** El avance del proyecto lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -55,7 +55,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 
 ### 1.3. Tiempo de duración
 
-**100 minutos de laboratorio:** 60 min de taller guiado y 40 min de avance asistido del producto del curso.
+**100 minutos.**
 
 ### 1.4. Resultados de Aprendizaje (RA)
 
@@ -87,7 +87,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 | **Kotlin / JDK 17** *(nativo Android)* | Compilación de la aplicación Android. *Apache 2.0 / GPL-2.0 con excepción* | https://adoptium.net/temurin/releases/ |
 | **Node.js LTS** *(React Native)* | Entorno de ejecución de las herramientas. *MIT* | https://nodejs.org/en/download |
 | **Figma** | Bocetos de la interfaz y prototipo navegable. *Nivel gratuito* | https://www.figma.com/downloads/ |
-| **GitHub Projects** | Tablero Scrum del equipo. **Obligatorio**: es donde el docente hace el seguimiento. *AGPL / MIT* | https://taiga.io/ · https://wekan.github.io/ |
+| **GitHub Projects** | Tablero Scrum del equipo. **Obligatorio**: es donde queda el seguimiento del avance. *AGPL / MIT* | https://taiga.io/ · https://wekan.github.io/ |
 
 **Cuentas de tienda que el proyecto necesitará** (no se pagan esta semana; se presupuestan desde ahora)
 
@@ -120,7 +120,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 > | **Flutter** | [Guía práctica · Flutter con Google Antigravity](../GUIAS/GUIA-ANTIGRAVITY-FLUTTER.md) |
 > | **Kotlin Multiplatform** | [Guía práctica · KMP con Google Antigravity](../GUIAS/GUIA-ANTIGRAVITY-KOTLIN.md) |
 >
-> Cada guía lleva de cero a una app corriendo en el emulador: instalación de Antigravity, del SDK, de Android Studio, creación del emulador y el primer artefacto dirigiendo al agente. **La elección de stack es provisional** y se somete a evaluación con datos medidos en el `ADR-004` de la Semana 13.
+> Cada guía lleva de cero a una app corriendo en el emulador — instalación de Antigravity, del SDK, de Android Studio, creación del emulador y el primer artefacto dirigiendo al agente. **La elección de stack es provisional** y se somete a evaluación con datos medidos en el `ADR-004` de la Semana 13.
 
 
 ```bash
@@ -176,13 +176,13 @@ Crear el emulador es parte del paso. En Android Studio, **Device Manager → Cre
 - Cómo se reparte el trabajo. Por capa, por funcionalidad o por parejas.
 - Qué ocurre si un integrante no cumple un compromiso.
 
-> **Acuerdos de trabajo del equipo.** La mayoría de los equipos que fracasan no lo hacen por incompetencia técnica: lo hacen porque nunca acordaron cómo trabajar juntos.
+> **Acuerdos de trabajo del equipo.** La mayoría de los equipos que fracasan no lo hacen por incompetencia técnica. Lo hacen porque nunca acordaron cómo trabajar juntos.
 
 ### Paso C — Lean Canvas y validación del problema
 
-> **Antes de inventar desde cero, mire el [catálogo de dominios](../CATALOGO-APPS/README.md).** Hay **diez ejemplos desarrollados** hasta el nivel que el curso exige: problema, segmento, por qué tiene que ser una app, alcance de cinco sprints, datos personales, permisos, contrato de API y un backlog semilla de 25 historias.
+> **Antes de inventar desde cero, mire el [catálogo de dominios](../CATALOGO-APPS/README.md).** Hay **diez ejemplos desarrollados** hasta el nivel que el curso exige — problema, segmento, por qué tiene que ser una app, alcance de cinco sprints, datos personales, permisos, contrato de API y un backlog semilla de 25 historias.
 >
-> La elección sigue siendo **libre**: su equipo puede proponer su propia app. El catálogo está para que sepa **qué profundidad se espera** y para que quien nunca construyó una app no arranque frente a una hoja en blanco. Lo que no puede hacer es entregar uno de los ejemplos tal como está.
+> La elección sigue siendo **libre**. Su equipo puede proponer su propia app. El catálogo está para que sepa **qué profundidad se espera** y para que quien nunca construyó una app no arranque frente a una hoja en blanco. Lo que no puede hacer es entregar uno de los ejemplos tal como está.
 >
 > **Dos equipos no pueden tomar el mismo dominio.** Se registra en la Semana 01, por orden de propuesta aprobada.
 
@@ -200,14 +200,14 @@ Crear el emulador es parte del paso. En Android Studio, **Device Manager → Cre
 | 5 | ¿Ha buscado alguna herramienta para eso? ¿Cuál? ¿Por qué la dejó? | Competencia y razones de abandono |
 | 6 | Si existiera algo que <propuesta de valor>, ¿lo usaría? ¿Cuándo fue la última vez que lo habría necesitado? | Intención contrastada con un hecho |
 
-> **Regla de la entrevista.** **No se describe la solución antes de la pregunta 6.** Describirla antes contamina las respuestas: la gente es amable y dirá que le gusta.
+> **Regla de la entrevista.** **No se describe la solución antes de la pregunta 6.** Describirla antes contamina las respuestas. La gente es amable y dirá que le gusta.
 
 `docs/producto/VALIDACION.md`:
 
 | Entrevistado (perfil, sin nombre) | Problema confirmado | Qué hace hoy | Costo declarado | ¿Usaría la solución? | **Cita textual relevante** |
 |---|---|---|---|---|---|
 
-**Veredicto de validación:** de las cinco entrevistas, **¿cuántas confirmaron el problema con un hecho concreto y no con una opinión?** Si son menos de tres, el equipo **reformula la propuesta esta misma semana**.
+**Veredicto de validación.** De las cinco entrevistas, **¿cuántas confirmaron el problema con un hecho concreto y no con una opinión?** Si son menos de tres, el equipo **reformula la propuesta esta misma semana**.
 
 **C.3 — Visión del producto** (`docs/producto/VISION.md`):
 
@@ -328,11 +328,11 @@ jobs:
       # - run: npm ci && npm run lint && npm test -- --coverage
 ```
 
-> **Por qué CI desde el primer día.** Un equipo que agrega integración continua en el sprint 4 descubre 40 problemas acumulados de golpe. Un equipo que la tiene desde el día 1 los corrige de a uno. **La verificación de secretos es obligatoria desde el inicio**: es el error de seguridad más frecuente y el más costoso de revertir en Git.
+> **Por qué CI desde el primer día.** Un equipo que agrega integración continua en el sprint 4 descubre 40 problemas acumulados de golpe. Un equipo que la tiene desde el día 1 los corrige de a uno. **La verificación de secretos es obligatoria desde el inicio**. Es el error de seguridad más frecuente y el más costoso de revertir en Git.
 
 ### Trabajo del equipo fuera de la sesión — Avance de proyecto
 
-> Este avance excede los 40 min de avance asistido. Lo que no alcance a completarse en laboratorio lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
+> Lo que no alcance a completarse en la sesión lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
 
 | Actividad | Producto |
 |---|---|
@@ -346,22 +346,10 @@ jobs:
 ---
 
 
-### Avance asistido · Avance de sprint asistido
-
-Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.** Queda disponible para consultas y observa el reparto real del trabajo.
-
-| | |
-|---|---|
-| **Qué se trabaja** | las historias del Sprint en curso, según el Sprint Backlog de la semana |
-| **Quién decide qué hacer** | El equipo. El docente no asigna tareas en este tramo |
-| **Dónde se registra** | GitHub Projects, con cada elemento asignado a una persona |
-| **Para qué sirve la presencia del docente** | Resolver bloqueos en el momento, no revisar entregables |
-
-> **Se registra la contribución individual.** Lo trabajado en este tramo queda en el repositorio con su autoría. Es la evidencia del atributo **AG-I03 Trabajo Individual y en Equipo** que se mide en las semanas de cierre de unidad.
 
 ## 3. Resultados
 
-> **Evidencia obligatoria en GitHub.** Todo resultado de este taller se versiona en el repositorio del equipo. El informe **no consigna capturas sueltas**: consigna la **URL** del artefacto en GitHub. Una captura no permite verificar autoría, fecha ni contenido; un enlace sí.
+> **Evidencia obligatoria en GitHub.** Todo resultado de este taller se versiona en el repositorio del equipo. El informe **no consigna capturas sueltas**. Consigna la **URL** del artefacto en GitHub. Una captura no permite verificar autoría, fecha ni contenido; un enlace sí.
 >
 > | Qué se entrega | Dónde vive | Qué se escribe en el informe |
 > |---|---|---|
@@ -380,7 +368,7 @@ Los últimos 40 minutos del laboratorio son del equipo. **El docente no dirige.*
 > La URL que se consigna en el informe apunta a esa etiqueta:
 > `https://github.com/<organizacion>/<repositorio>/tree/taller-01`
 >
-> **Sin la URL, el resultado no se califica.** El docente evalúa sobre el repositorio, no sobre el PDF.
+> **El informe es lo que se califica; el repositorio es lo que lo prueba.** Cada resultado de la sección 3 del informe lleva la URL con la que se verifica, y **un resultado sin su URL se califica como no logrado**, por bien redactado que esté. Lo que no se puede abrir no se puede dar por hecho.
 
 ### 3.1. Tabla de resultados
 
@@ -414,7 +402,7 @@ Se aplica sobre el informe entregado y la evidencia enlazada en el repositorio. 
 | **Repositorio e integración continua** | Completo y correcto, con la evidencia que lo respalda | Completo con errores menores, o correcto pero sin toda la evidencia | Incompleto, o entregado sin ejecutar |
 | **Evidencia verificable en el repositorio** | Cada resultado tiene su URL sobre la etiqueta `taller-NN`, y el enlace abre lo que dice | La mayoría tiene URL; alguna evidencia es una captura suelta | Se declaran resultados sin enlace, o el enlace no corresponde |
 | **Rigor técnico de la implementación** | El código compila, las pruebas pasan y el análisis estático sale limpio | Compila y funciona, con avisos del análisis sin resolver | No compila, o se entregó sin ejecutar |
-| **Informe en formato EPIS** | Las seis secciones completas; los resultados se sustentan con la evidencia enlazada | Secciones completas con sustento parcial | Faltan secciones o los resultados se afirman sin evidencia |
+| **La evidencia entregada** | Las secciones de la plantilla completas; los resultados se sustentan con la evidencia enlazada | Secciones completas con sustento parcial | Faltan secciones o los resultados se afirman sin evidencia |
 
 | Puntaje | Equivalencia |
 |---|---|
@@ -423,7 +411,7 @@ Se aplica sobre el informe entregado y la evidencia enlazada en el repositorio. 
 | 6 – 13 | En proceso |
 | 0 – 5 | Insuficiente |
 
-> **Un resultado declarado sin evidencia enlazada no puntúa**, aunque el trabajo se haya hecho. La tabla de la sección 3.1 es la lista de cotejo; esta rúbrica es lo que determina la nota.
+> **Un resultado declarado sin evidencia enlazada no se califica**, aunque el trabajo se haya hecho. La tabla de la sección 3.1 es la lista de cotejo; esta rúbrica es lo que determina la nota.
 
 ## 4. Conclusiones
 

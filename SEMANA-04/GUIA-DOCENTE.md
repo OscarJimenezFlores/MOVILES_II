@@ -1,6 +1,6 @@
 # Guía del docente · Semana 04 · «El pedido que se creó dos veces»
 
-**SI-988 · Soluciones Móviles II** · Uso interno. No se publica: está excluida en el `.gitignore` del curso.
+**SI-988 · Soluciones Móviles II** · Uso interno. No se publica. Está excluida en el `.gitignore` del curso.
 
 ---
 
@@ -20,22 +20,22 @@ Casi ningún equipo lo tiene resuelto en su app, y casi todos lo van a descubrir
 
 Es el mejor paso 0 de las tres asignaturas porque se puede **actuar**.
 
-**Escriba:**
+**Escriba.**
 
 ```
 POST /reservas        →  201 Created
                          Location: /reservas/8417
 ```
 
-**Lo que hace, en este orden:**
+**Lo que hace, en este orden.**
 
 1. *«El usuario toca Reservar.»* Dibuje una flecha del teléfono al servidor. *«Llega. El servidor crea la reserva 8417.»*
 2. Dibuje la flecha de vuelta y **córtela con una raya**. *«Aquí se cayó la señal. La respuesta nunca llegó.»*
-3. *«¿Qué sabe la app en este momento?»* Espere. La respuesta correcta es: **nada**. *«No puede distinguir "no llegó" de "llegó y no me enteré". Son idénticas desde el teléfono.»*
+3. *«¿Qué sabe la app en este momento?»* Espere. La respuesta correcta es. **Nada**. *«No puede distinguir "no llegó" de "llegó y no me enteré". Son idénticas desde el teléfono.»*
 4. *«¿Y qué hace toda app razonable? Reintenta.»* Dibuje la segunda flecha. *«Y el servidor crea la reserva 8418. Dos reservas. Dos cobros. Un cliente furioso.»*
 5. *«¿Lo arreglamos poniendo un `if` en el servidor que busque reservas parecidas?»* Deje que lo intenten. Siempre aparece alguien proponiendo comparar fecha, hora y usuario. *«¿Y si el usuario de verdad quiere dos horas seguidas? Lo acaban de romper.»*
-6. Escriba la solución: `Idempotency-Key: 7c2f...`. *«La app genera esta clave **una vez, cuando el usuario toca el botón**, no una por intento. El servidor guarda qué respondió a cada clave. Si la ve otra vez, devuelve lo mismo. No compara nada, no adivina nada.»*
-7. Cierre del paso 0: *«La regla es de la teoría. `GET`, `PUT` y `DELETE` se reintentan solos. `POST` no. Ahora busquen su `POST`.»*
+6. **Escriba la solución.** `Idempotency-Key: 7c2f...`. *«La app genera esta clave **una vez, cuando el usuario toca el botón**, no una por intento. El servidor guarda qué respondió a cada clave. Si la ve otra vez, devuelve lo mismo. No compara nada, no adivina nada.»*
+7. **Cierre del paso 0.** *«La regla es de la teoría. `GET`, `PUT` y `DELETE` se reintentan solos. `POST` no. Ahora busquen su `POST`.»*
 
 ---
 
@@ -61,7 +61,7 @@ No hay una respuesta única, pero sí **cuatro preguntas que resuelven casi todo
 | **5** Asistencia con QR | `POST /marcas` | `201` + `Location` | «Ya marcaste tu entrada hoy a las 8:02.» |
 | **6** Pasajes | `POST /compras` | `201` + `Location` | «Ese asiento acaba de venderse. Elige otro.» |
 
-> **La 5 es especial y vale la pena señalarla en la ronda.** Marcar asistencia **sí es idempotente por naturaleza**: marcar dos veces el mismo día debería dar el mismo resultado. Un equipo que llegue a eso solo merece el puntaje completo.
+> **La 5 es especial y vale la pena señalarla en la ronda.** Marcar asistencia **sí es idempotente por naturaleza**. Marcar dos veces el mismo día debería dar el mismo resultado. Un equipo que llegue a eso solo merece el puntaje completo.
 
 ### Los errores que se repiten
 
@@ -80,7 +80,7 @@ No hay una respuesta única, pero sí **cuatro preguntas que resuelven casi todo
 
 Pida a tres equipos **solo el mensaje del `422`**, leído en voz alta. El aula vota si un usuario cualquiera lo entendería. Es rápido, es divertido y es donde más se aprende.
 
-**Cierre, dos minutos:**
+**Cierre, dos minutos.**
 
 > *«Lo que hicieron hoy no es documentación: es la diferencia entre una app que se puede usar en un micro con mala señal y una que crea pedidos duplicados. En la Semana 15 va a aparecer un defecto que dice "al tocar enviar dos veces se crean dos pedidos". El equipo que hoy resolvió su clave de idempotencia no lo va a tener.»*
 

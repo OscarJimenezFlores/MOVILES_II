@@ -73,7 +73,7 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
 ```
 
-> **El catálogo de versiones es obligatorio.** Nadie escribe una versión suelta en un `build.gradle.kts`: se declara aquí una vez. Es lo que evita que dos integrantes compilen con dependencias distintas.
+> **El catálogo de versiones es obligatorio.** Nadie escribe una versión suelta en un `build.gradle.kts`. Se declara aquí una vez. Es lo que evita que dos integrantes compilen con dependencias distintas.
 
 Registre el dispositivo de referencia:
 
@@ -91,7 +91,7 @@ adb devices
 
 Sin código. Se completan `docs/equipo/EQUIPO.md` y `docs/equipo/ACUERDOS.md` según el [taller](3-TALLER.md).
 
-**Lo único técnico:** cada integrante confirma que puede clonar, sincronizar Gradle y ejecutar.
+**Lo único técnico.** Cada integrante confirma que puede clonar, sincronizar Gradle y ejecutar.
 
 ```bash
 git clone <url> && cd <repo> && ./gradlew :composeApp:assembleDebug

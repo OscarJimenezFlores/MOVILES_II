@@ -13,12 +13,13 @@
 ```mermaid
 flowchart LR
     C["<b>Consigna</b><br/>Tres apps que no debieron<br/>existir"]
-    P["<b>Producto</b><br/>1 o 2 diapositivas<br/>con el resultado del equipo"]
-    E["<b>Exposición</b><br/>10 minutos por equipo"]
+    P["<b>Producto</b><br/>el resultado de la actividad,<br/>en la plantilla de dinámica"]
+    E["<b>Exposición</b><br/>el grupo lee y explica<br/>su resultado, sin diapositivas"]
+    G["<b>Entrega</b><br/>PDF formateado,<br/>después de la clase"]
     R["<b>Rúbrica</b><br/>nota cognitiva"]
-    C --> P --> E --> R
+    C --> P --> E --> G --> R
     classDef d fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class C,P,E,R d;
+    class C,P,E,G,R d;
 ```
 
 ## Qué entregas
@@ -30,8 +31,8 @@ flowchart LR
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT y los apellidos, nombres y códigos de todos los integrantes |
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 01» |
-| **Cuándo vence** | Antes de cerrar la sesión de teoría |
-| **Exposición** | 10 minutos por grupo en la sesión de teoría de la Semana 02, con una o dos diapositivas hechas a partir de este documento |
+| **Cuándo vence** | Hasta 24 h después de la sesión de teoría. La tabla se resuelve en aula; el PDF se formatea y se sube después |
+| **Exposición** | En la ronda de cierre de **esta misma sesión**. El grupo **lee y explica su resultado** ante el aula, con el documento a la vista. No se usan diapositivas |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
 
@@ -41,6 +42,15 @@ flowchart LR
 
 > **«Tres apps que no debieron existir»**
 > Cada equipo analiza **tres aplicaciones reales** publicadas en Google Play o en la App Store —una que considere excelente, una mediocre y una que **no debió ser una app**— y las evalúa con las cinco preguntas de producto y las métricas de la sección 1.4.
+
+## Cómo se desarrolla · 35 minutos
+
+| | Bloque | Quién | Minutos |
+|---|---|---|---|
+| **1** | **Las tres apps.** Ya elegidas e instaladas antes de la sesión. Quién tiene el problema y qué hacía antes ese usuario | Equipo | 9 |
+| **2** | **La capacidad del móvil.** Cuál aprovecha cada una, **o declarar que ninguna** — que es el caso de la que no debió existir | Equipo | 9 |
+| **3** | **Veredicto y lección.** El veredicto de cada una y las seis decisiones para el producto propio | Equipo | 9 |
+| **4** | **Ronda en aula.** La app que no debió existir, de tres equipos, con la evidencia de su ficha de tienda | Todos | 8 |
 
 ## Producto
 
@@ -57,6 +67,8 @@ flowchart LR
 | **Veredicto y por qué** | | | |
 
 **Producto 2 — La lección aplicada.** Las tres decisiones de diseño que el equipo **copiará** de la app excelente y las tres que **evitará** de la mediocre, cada una justificada con evidencia de la ficha de tienda o de las reseñas.
+
+> **Dónde va.** Este producto se presenta en la **sección 2 de la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx)**, «El producto». No se copia la consigna ni la teoría. Solo el resultado y lo que lo sostiene.
 
 ## Ejemplo resuelto
 
@@ -96,11 +108,12 @@ flowchart LR
 
 ## Reglas
 
-- 35 min en aula. Entrega como `S01_<equipo>_analisis_apps.pdf`.
+- 35 min en aula, dentro de la sesión de teoría.
+- **Las tres aplicaciones se eligen y se instalan antes de la sesión.** Buscarlas en la tienda durante la clase consume el tiempo del análisis, que es lo que se califica.
 - Las tres aplicaciones deben estar **publicadas y ser verificables**. Se cita el enlace a su ficha.
 - La evidencia debe provenir de la **ficha de tienda y de las reseñas**, no de la opinión del equipo.
 - **Obligatorio** identificar qué capacidad propia del móvil aprovecha cada una, o declarar que ninguna.
-- Exposición de 10 min en la Semana 02.
+- La exposición es la ronda de cierre de esta misma sesión. El grupo **lee y explica su resultado**. No se usan diapositivas.
 
 ## Rúbrica cognitiva (20 puntos)
 

@@ -13,7 +13,7 @@
 
 <p align="center">
   <strong>SI-988 · Soluciones Móviles II</strong><br>
-  4 horas académicas de 50 min · aula: teoría 60 + dinámica 35 + cierre 5 · laboratorio: taller 60 + avance asistido 40
+  4 horas académicas de 50 min · 100 min de teoría con la dinámica incluida en aula · 100 min de taller en laboratorio
 </p>
 
 ---
@@ -28,15 +28,9 @@
 | **Prerrequisito** | SI-883 Soluciones Móviles I |
 | **Unidad** | I — Consumo de servicios web SOAP y REST |
 | **Semana** | 04 de 17 |
-| **Duración** | 4 horas académicas de 50 min · aula: teoría 60 + dinámica 35 + cierre 5 · laboratorio: taller 60 + avance asistido 40 |
+| **Duración** | 4 horas académicas de 50 min · 100 min de teoría con la dinámica incluida en aula · 100 min de taller en laboratorio |
 | **Resultados de aprendizaje** | **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil · **RA2** Propone el plan de desarrollo de su app con metodologías ágiles |
 | **Artefacto del proyecto** | **Sprint 1** · capa de datos completa · Incremento con consumo REST real |
-
-### Lo que indica el sílabo
-
-**Contenido conceptual.** Consumo de servicios web REST.
-
-**Contenido procedimental.** Implementación de una app móvil con consumo de servicios RESTful.
 
 ## Materiales de esta semana
 

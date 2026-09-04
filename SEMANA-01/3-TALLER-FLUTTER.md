@@ -43,7 +43,7 @@ flutter create --org pe.edu.upt.si988 \
 flutter run
 ```
 
-> `--org` fija el identificador del paquete (`pe.edu.upt.si988.<nombre_app>`). **Se decide ahora y no se cambia**: cambiarlo después de publicar significa una app nueva en la tienda.
+> `--org` fija el identificador del paquete (`pe.edu.upt.si988.<nombre_app>`). **Se decide ahora y no se cambia**. Cambiarlo después de publicar significa una app nueva en la tienda.
 
 ### A.3 Fijar la versión del SDK
 
@@ -71,7 +71,7 @@ flutter devices
 
 Sin código. Se completan `docs/equipo/EQUIPO.md` y `docs/equipo/ACUERDOS.md` según el [taller](3-TALLER.md).
 
-**Lo único técnico:** cada integrante confirma que puede clonar, compilar y ejecutar.
+**Lo único técnico.** Cada integrante confirma que puede clonar, compilar y ejecutar.
 
 ```bash
 git clone <url> && cd <repo> && flutter pub get && flutter run

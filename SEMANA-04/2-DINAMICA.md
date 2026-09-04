@@ -41,7 +41,7 @@ flowchart LR
 ## Consigna
 
 > **«El pedido que se creó dos veces»**
-> Su equipo toma **un solo endpoint de escritura** de su aplicación y lo deja bien contratado: método, código de éxito, **idempotencia**, tres errores traducidos a mensaje de usuario, y el `GET` que lo acompaña con su paginación y su caché.
+> Su equipo toma **un solo endpoint de escritura** de su aplicación y lo deja bien contratado — método, código de éxito, **idempotencia**, tres errores traducidos a mensaje de usuario, y el `GET` que lo acompaña con su paginación y su caché.
 
 Es el problema que la teoría señala como el propio del móvil. *El usuario envía, pierde la señal antes de la respuesta, la app reintenta y se crean dos pedidos.* Todo lo demás de hoy sirve para que eso no ocurra.
 
@@ -49,17 +49,16 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 
 | | Bloque | Quién | Minutos |
 |---|---|---|---|
-| **0** | **El docente contrata un endpoint en la pizarra.** El del ejemplo. Se escribe el `POST`, se rompe la conexión a mitad y se ve nacer el duplicado | Docente | 7 |
-| **1** | **El endpoint.** Método, ruta, código de éxito y la cabecera que lo acompaña | Equipo | 6 |
+| **1** | **El endpoint.** Método, ruta, código de éxito y la cabecera que lo acompaña | Equipo | 9 |
 | **2** | **Idempotencia y errores.** Cómo se evita el duplicado, y tres errores con su `Failure`, su mensaje y si se reintenta | Equipo | 10 |
-| **3** | **El `GET` que lo acompaña.** Paginación por cursor y valor de `Cache-Control`, con la razón | Equipo | 6 |
-| **4** | **Ronda en aula.** Tres equipos leen su mensaje de error del `422`. El aula juzga si un usuario lo entendería | Todos | 6 |
+| **3** | **El `GET` que lo acompaña.** Paginación por cursor y valor de `Cache-Control`, con la razón | Equipo | 8 |
+| **4** | **Ronda en aula.** Tres equipos leen su mensaje de error del `422`. El aula juzga si un usuario lo entendería | Todos | 8 |
 
 ## Material de trabajo
 
-**Se trabaja sobre la aplicación propia del equipo.** Elija **el endpoint de escritura más importante de su app**: el que crea la cosa que da sentido a la aplicación —el pedido, la reserva, el reporte, la visita, la publicación—. Uno solo.
+**Se trabaja sobre la aplicación propia del equipo.** Elija **el endpoint de escritura más importante de su app** — el que crea la cosa que da sentido a la aplicación —el pedido, la reserva, el reporte, la visita, la publicación—. Uno solo.
 
-**Si su equipo todavía no tiene la API definida**, tome una de estas seis y dígalo al empezar. No resta.
+**Si su equipo todavía no tiene la API definida**, tome una de estas seis y dígalo al empezar. No baja la nota.
 
 | # | Aplicación | El endpoint de escritura |
 |---|---|---|
@@ -76,7 +75,7 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 
 ## Producto
 
-**Una sola tabla**, más la tabla de los tres errores. Van en la sección 2.1 de la plantilla.
+**Una sola tabla**, más la tabla de los tres errores. Van en la sección 2 de la plantilla, «El producto».
 
 | | Contenido |
 |---|---|
@@ -86,6 +85,8 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 
 | Código | `Failure` de dominio | Mensaje al usuario | ¿Se reintenta? |
 |---|---|---|---|
+
+> **Dónde va.** Este producto se presenta en la **sección 2 de la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx)**, «El producto». No se copia la consigna ni la teoría. Solo el resultado y lo que lo sostiene.
 
 ## Ejemplo resuelto
 
@@ -124,9 +125,9 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 - **Un solo endpoint de escritura.** No tres.
 - El `Failure` debe ser uno de los **seis de la teoría**. No se inventan nombres nuevos.
 - El mensaje al usuario no lleva **ninguna** palabra técnica. Ni el código, ni el nombre del campo, ni «servidor».
-- Cada decisión de caché y de paginación va con **una línea de razón**. «Porque es mejor» no puntúa.
+- Cada decisión de caché y de paginación va con **una línea de razón**. «Porque es mejor» no se califica.
 - No se pide documentar en OpenAPI. Eso es del taller de laboratorio de esta semana.
-- La exposición es la ronda del paso 4, en esta misma sesión. No se usan diapositivas.
+- La exposición es la ronda de cierre de esta misma sesión. El grupo **lee y explica su resultado**. No se usan diapositivas.
 
 ## Rúbrica cognitiva (20 puntos)
 

@@ -68,7 +68,7 @@ flowchart TD
 | «Si cambiamos de proveedor de backend hay que reescribir todo» | El detalle de infraestructura filtrado a toda la app | Bloqueo tecnológico |
 | «Nadie entiende esta pantalla salvo quien la hizo» | Sin patrón consistente | Factor bus = 1 por pantalla |
 
-> **La arquitectura no se juzga por su elegancia sino por el costo del próximo cambio.** La pregunta que la valida es: *¿cuánto cuesta agregar una pantalla nueva? ¿Y cambiar el origen de un dato?*
+> **La arquitectura no se juzga por su elegancia sino por el costo del próximo cambio.** La pregunta que la valida es *¿cuánto cuesta agregar una pantalla nueva? ¿Y cambiar el origen de un dato?*
 
 ## Los patrones de presentación MVC, MVP, MVVM y MVI
 
@@ -96,7 +96,7 @@ Todos separan **datos**, **presentación** y **vista**. Difieren en quién habla
    emite eventos.
 ```
 
-**La prueba de que el MVVM está bien implementado:** *¿puedo escribir una prueba unitaria del ViewModel sin arrancar un emulador ni instanciar una vista?* Si la respuesta es no, la separación no existe.
+**La prueba de que el MVVM está bien implementado.** *¿Puedo escribir una prueba unitaria del ViewModel sin arrancar un emulador ni instanciar una vista?* Si la respuesta es no, la separación no existe.
 
 ## Clean Architecture aplicada a móviles
 
@@ -123,7 +123,7 @@ MVVM organiza la **presentación**; Clean Architecture organiza **toda la aplica
   inversión de dependencias: el dominio DEFINE la interfaz; datos la IMPLEMENTA.
 ```
 
-**Qué vive en cada capa:**
+**Qué vive en cada capa.**
 
 | Capa | Elementos | Ejemplo |
 |---|---|---|
@@ -162,12 +162,12 @@ MVVM organiza la **presentación**; Clean Architecture organiza **toda la aplica
 | 11 | Documentado en el README si cambia el arranque o la configuración | Revisión del PR |
 | 12 | Demostrable en la Review sin explicación previa | Ensayo del equipo |
 
-**El ADR — Architecture Decision Record.** Registro breve de una decisión arquitectónica, su contexto, las alternativas evaluadas y sus consecuencias. **Su valor está en el futuro**: cuando dentro de un año alguien pregunte «¿por qué se eligió esto?», el ADR responde sin depender de la memoria de quien decidió.
+**El ADR — Architecture Decision Record.** Registro breve de una decisión arquitectónica, su contexto, las alternativas evaluadas y sus consecuencias. **Su valor está en el futuro**. Cuando dentro de un año alguien pregunte «¿por qué se eligió esto?», el ADR responde sin depender de la memoria de quien decidió.
 
 **Ejemplo trabajado — un ADR completo, el que cada equipo entrega esta semana.**
 
 > **ADR-001 · Elección del stack de desarrollo**
-> **Estado:** aceptada · **Fecha:** sprint 0 · **Deciden:** los 4 integrantes del equipo
+> **Estado.** Aceptada · **Fecha.** Sprint 0 · **Deciden.** Los 4 integrantes del equipo
 >
 > **Contexto.** La app publica el menú del día de 6 locales y notifica a sus seguidores. Debe salir a Google Play y a la App Store en 17 semanas. El equipo sabe Kotlin (2 integrantes), algo de JavaScript (2) y nadie sabe Swift. Hay **un solo equipo macOS**, prestado, disponible por horas.
 >
@@ -182,14 +182,14 @@ MVVM organiza la **presentación**; Clean Architecture organiza **toda la aplica
 > | Bibliotecas para notificaciones y uso sin conexión | Maduras | Maduras | Maduras |
 > | Interfaz percibida como nativa | Sí | No, se aproxima | Sí |
 >
-> **Decisión.** **Flutter.** El factor determinante no es técnico: es la disponibilidad de un solo macOS prestado y la ausencia de competencia en Swift. Mantener dos bases de código consumiría los sprints 1 y 2 en aprendizaje, dejando tres para construir el producto.
+> **Decisión.** **Flutter.** El factor determinante no es técnico. Es la disponibilidad de un solo macOS prestado y la ausencia de competencia en Swift. Mantener dos bases de código consumiría los sprints 1 y 2 en aprendizaje, dejando tres para construir el producto.
 >
 > **Consecuencias.**
-> · **Positivas:** una base de código; el sprint 1 puede entregar pantallas reales; el macOS se necesita solo en la Semana 16, para firmar y enviar.
-> · **Negativas:** la interfaz no será nativa —aceptable para este producto, cuyo valor está en el contenido, no en la interacción—; se asume dependencia del ecosistema Flutter.
-> · **Qué invalidaría esta decisión:** que el producto requiera un widget de pantalla de inicio en iOS o procesamiento intensivo de cámara. Ninguno está en el alcance del MVP.
+> · **Positivas.** Una base de código; el sprint 1 puede entregar pantallas reales; el macOS se necesita solo en la Semana 16, para firmar y enviar.
+> · **Negativas.** La interfaz no será nativa —aceptable para este producto, cuyo valor está en el contenido, no en la interacción—; se asume dependencia del ecosistema Flutter.
+> · **Qué invalidaría esta decisión.** Que el producto requiera un widget de pantalla de inicio en iOS o procesamiento intensivo de cámara. Ninguno está en el alcance del MVP.
 
-> **El ADR se escribe en una página y se juzga por su sección de consecuencias negativas.** Un ADR que solo enumera ventajas no registró una decisión: escribió una justificación. **Lo que hace útil al documento dentro de un año es la última línea: bajo qué condición la decisión dejaría de ser correcta.**
+> **El ADR se escribe en una página y se juzga por su sección de consecuencias negativas.** Un ADR que solo enumera ventajas no registró una decisión. Escribió una justificación. **Lo que hace útil al documento dentro de un año es la última línea. Bajo qué condición la decisión dejaría de ser correcta.**
 
 **Preguntas para la sesión**
 

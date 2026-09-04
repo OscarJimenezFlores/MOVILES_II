@@ -12,7 +12,7 @@
 
 ## Paso A — Evaluar los stacks y decidir (25 min)
 
-Sin código: es la matriz de decisión del [taller](3-TALLER.md). Lo que sí se mide aquí, para que la decisión tenga datos:
+Sin código es la matriz de decisión del [taller](3-TALLER.md). Lo que sí se mide aquí, para que la decisión tenga datos:
 
 ```bash
 # Tamaño del artefacto de referencia
@@ -61,7 +61,7 @@ flutter pub get
 
 ### C.2 La capa de dominio — sin Flutter dentro
 
-> **`Item` es un marcador de posición.** Sustitúyalo por la entidad principal de su dominio: `Estudiante`, `Turno`, `Carga`, `Reporte`, la que corresponda a la app que su equipo propuso. Los nombres de archivos, clases y endpoints siguen a su dominio, no a este ejemplo.
+> **`Item` es un marcador de posición.** Sustitúyalo por la entidad principal de su dominio — `Estudiante`, `Turno`, `Carga`, `Reporte`, la que corresponda a la app que su equipo propuso. Los nombres de archivos, clases y endpoints siguen a su dominio, no a este ejemplo.
 
 `lib/domain/entities/<entidad>.dart`:
 
@@ -181,7 +181,7 @@ class ItemsController extends ChangeNotifier {
 }
 ```
 
-> **Los tres estados son obligatorios: cargando, error y listo.** Una pantalla que solo contempla el caso de éxito falla en la Semana 04, al incorporar la red.
+> **Los tres estados son obligatorios. Cargando, error y listo.** Una pantalla que solo contempla el caso de éxito falla en la Semana 04, al incorporar la red.
 
 `lib/presentation/items/items_page.dart`:
 
@@ -330,7 +330,7 @@ Se añade a el pipeline de la Semana 01 la verificación de la regla de dependen
 
 ## Con Antigravity
 
-> «Implementa la rebanada vertical descrita en `docs/adr/ADR-002.md`: entidad, contrato de repositorio, caso de uso, repositorio falso, controlador con tres estados y pantalla. **La capa de dominio no puede importar `package:flutter`.** Escribe la prueba del caso de uso con `mocktail`. Muéstrame el plan antes de escribir código.»
+> «Implementa la rebanada vertical descrita en `docs/adr/ADR-002.md` — entidad, contrato de repositorio, caso de uso, repositorio falso, controlador con tres estados y pantalla. **La capa de dominio no puede importar `package:flutter`.** Escribe la prueba del caso de uso con `mocktail`. Muéstrame el plan antes de escribir código.»
 
 Después **verifique usted mismo** el `grep` de la regla de dependencia. Es el error que el agente comete con más frecuencia.
 

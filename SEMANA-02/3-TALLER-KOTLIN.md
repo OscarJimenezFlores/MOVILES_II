@@ -12,7 +12,7 @@
 
 ## Paso A — Evaluar los stacks y decidir (25 min)
 
-Sin código: es la matriz de decisión del [taller](3-TALLER.md). Lo que sí se mide aquí:
+Sin código es la matriz de decisión del [taller](3-TALLER.md). Lo que sí se mide aquí:
 
 ```bash
 # Tamaño del artefacto de referencia
@@ -31,7 +31,7 @@ Anote ambos en la matriz. En la Semana 13 se vuelven a medir y se comparan.
 
 Sin código. `ADR-001` lenguaje y framework, `ADR-002` arquitectura, `ADR-003` gestión de estado.
 
-> **`ADR-002` debe declarar qué va en `commonMain` y qué no.** Es la decisión que define el proyecto: cuanto más suba al código compartido menos se duplica, pero más se aleja de lo nativo. Sin ese criterio escrito, el proyecto deriva solo.
+> **`ADR-002` debe declarar qué va en `commonMain` y qué no.** Es la decisión que define el proyecto — cuanto más suba al código compartido menos se duplica, pero más se aleja de lo nativo. Sin ese criterio escrito, el proyecto deriva solo.
 
 ---
 
@@ -78,7 +78,7 @@ kotlin {
 
 ### C.2 La capa de dominio — en `commonMain`, sin plataforma dentro
 
-> **`Item` es un marcador de posición.** Sustitúyalo por la entidad principal de su dominio: `Estudiante`, `Turno`, `Carga`, `Reporte`, la que corresponda a la app que su equipo propuso. Los nombres de archivos, clases y endpoints siguen a su dominio, no a este ejemplo.
+> **`Item` es un marcador de posición.** Sustitúyalo por la entidad principal de su dominio — `Estudiante`, `Turno`, `Carga`, `Reporte`, la que corresponda a la app que su equipo propuso. Los nombres de archivos, clases y endpoints siguen a su dominio, no a este ejemplo.
 
 `commonMain/.../domain/model/Item.kt`:
 
@@ -199,7 +199,7 @@ class ItemsViewModel(private val obtenerItems: ObtenerItems) : ViewModel() {
 }
 ```
 
-> **Los tres estados son obligatorios: cargando, error y listo.** Una pantalla que solo contempla el caso de éxito falla en la Semana 04, al incorporar la red.
+> **Los tres estados son obligatorios. Cargando, error y listo.** Una pantalla que solo contempla el caso de éxito falla en la Semana 04, al incorporar la red.
 
 `commonMain/.../presentation/items/ItemsScreen.kt`:
 
@@ -317,7 +317,7 @@ Se añade a el pipeline de la Semana 01 la verificación de la regla de dependen
 
 ## Con Antigravity
 
-> «Implementa la rebanada vertical descrita en `docs/adr/ADR-002.md`: modelo, interfaz de repositorio, caso de uso, repositorio falso, ViewModel con tres estados y pantalla Compose. **Todo en `commonMain`; la capa de dominio no puede importar `android.*` ni Compose.** Escribe la prueba del caso de uso en `commonTest` con `runTest`. Muéstrame el plan antes de escribir código.»
+> «Implementa la rebanada vertical descrita en `docs/adr/ADR-002.md` — modelo, interfaz de repositorio, caso de uso, repositorio falso, ViewModel con tres estados y pantalla Compose. **Todo en `commonMain`; la capa de dominio no puede importar `android.*` ni Compose.** Escribe la prueba del caso de uso en `commonTest` con `runTest`. Muéstrame el plan antes de escribir código.»
 
 Después **verifique usted mismo** el `grep` de la regla de dependencia y que nada haya caído en `androidMain`. Son los dos errores que el agente comete con más frecuencia en KMP.
 

@@ -54,9 +54,9 @@ flowchart TD
 
 ## Scrum según la guía y sus desviaciones habituales
 
-**Scrum es un marco, no una metodología.** La *Scrum Guide 2020* lo define como un marco liviano que ayuda a generar valor mediante soluciones adaptativas para problemas complejos. Es **deliberadamente incompleto**: define solo lo indispensable y deja el resto a la inteligencia del equipo.
+**Scrum es un marco, no una metodología.** La *Scrum Guide 2020* lo define como un marco liviano que ayuda a generar valor mediante soluciones adaptativas para problemas complejos. Es **deliberadamente incompleto** define solo lo indispensable y deja el resto a la inteligencia del equipo.
 
-**Los tres pilares del control empírico:**
+**Los tres pilares del control empírico.**
 
 | Pilar | Qué significa | Sin él |
 |---|---|---|
@@ -64,9 +64,9 @@ flowchart TD
 | **Inspección** | Los artefactos y el avance se inspeccionan con frecuencia | Los problemas se descubren tarde |
 | **Adaptación** | Si algo se desvía, se ajusta cuanto antes | Se repite lo que no funciona |
 
-**Los cinco valores:** compromiso, foco, apertura, respeto y coraje. **El coraje es el que más falta**: es el que permite decir «esto no va a estar listo» en la Daily y no en la Review.
+**Los cinco valores.** Compromiso, foco, apertura, respeto y coraje. **El coraje es el que más falta**. Es el que permite decir «esto no va a estar listo» en la Daily y no en la Review.
 
-**El equipo Scrum — un solo equipo, sin subequipos:**
+**El equipo Scrum — un solo equipo, sin subequipos.**
 
 | Rendición de cuentas | Responsabilidad | Deformación frecuente |
 |---|---|---|
@@ -76,7 +76,7 @@ flowchart TD
 
 > **La regla que casi todos rompen.** El Product Owner es **una persona**, no un comité. Y **nadie puede obligar a los Developers a trabajar sobre requisitos distintos de los del Sprint Backlog**, que ellos mismos definieron.
 
-**Los cinco eventos:**
+**Los cinco eventos.**
 
 | Evento | Duración máxima (sprint de 2 semanas) | Propósito | Deformación frecuente |
 |---|---|---|---|
@@ -94,7 +94,7 @@ flowchart TD
 | **Sprint Backlog** | Sprint Goal + elementos seleccionados + plan para entregarlos | **Sprint Goal** | Da foco y coherencia al sprint |
 | **Incremento** | Paso concreto hacia el Product Goal | **Definition of Done** | Define qué significa «utilizable» |
 
-> **El Sprint Goal es el artefacto más ignorado y el más útil.** No es la lista de historias: es **el objetivo único que da sentido al sprint** y permite negociar el alcance sin perder el rumbo. Si a mitad del sprint una historia resulta más costosa de lo previsto, el equipo puede reducir su alcance **siempre que el Sprint Goal siga siendo alcanzable**.
+> **El Sprint Goal es el artefacto más ignorado y el más útil.** No es la lista de historias. Es **el objetivo único que da sentido al sprint** y permite negociar el alcance sin perder el rumbo. Si a mitad del sprint una historia resulta más costosa de lo previsto, el equipo puede reducir su alcance **siempre que el Sprint Goal siga siendo alcanzable**.
 
 **Lo que este curso usa y no está en la Scrum Guide.** La guía es deliberadamente incompleta, y por eso la industria le agregó prácticas encima. Son útiles, se van a usar en el curso y hay que saberlas — pero **no son Scrum**, y conviene tenerlo claro antes de que un colega o un cliente se lo discuta.
 
@@ -110,7 +110,7 @@ flowchart TD
 | **Velocidad** | **No** | Práctica ágil general |
 | **Gherkin**, *Dado / Cuando / Entonces* | **No** | Desarrollo guiado por comportamiento; el lenguaje viene de Cucumber |
 
-> **Por qué importa.** La *Scrum Guide* **no dice cómo se escribe un elemento del Product Backlog.** Solo exige que el backlog sea una lista **ordenada** y **emergente**, y que sus elementos estén lo bastante refinados para caber en un sprint. La historia de usuario y la épica son **una forma** de cumplirlo, no la única: un equipo que ordena su backlog con casos de uso o con especificaciones también hace Scrum. En este curso se usan historias y épicas porque son las que va a encontrar en cualquier equipo y en cualquier herramienta.
+> **Por qué importa.** La *Scrum Guide* **no dice cómo se escribe un elemento del Product Backlog.** Solo exige que el backlog sea una lista **ordenada** y **emergente**, y que sus elementos estén lo bastante refinados para caber en un sprint. La historia de usuario y la épica son **una forma** de cumplirlo, no la única. Un equipo que ordena su backlog con casos de uso o con especificaciones también hace Scrum. En este curso se usan historias y épicas porque son las que va a encontrar en cualquier equipo y en cualquier herramienta.
 
 ## Refinamiento y estimación del Product Backlog
 
@@ -138,7 +138,7 @@ Criterios de aceptación (Gherkin):
 | **S** | Pequeña | ¿Cabe holgadamente en un sprint? |
 | **T** | Verificable | ¿Los criterios de aceptación permiten decir sí o no sin discusión? |
 
-**Historias que no cumplen INVEST y cómo se corrigen:**
+**Historias que no cumplen INVEST y cómo se corrigen.**
 
 | Historia defectuosa | Defecto | Corrección |
 |---|---|---|
@@ -147,7 +147,7 @@ Criterios de aceptación (Gherkin):
 | «Como usuario quiero que la app sea rápida» | No verificable | «La lista de pedidos carga en menos de 1,5 s con 100 elementos, en un dispositivo de gama media» |
 | «Como desarrollador quiero refactorizar» | No es historia de usuario | Es deuda técnica: entra al backlog como tal, con su justificación de valor |
 
-**Estimación relativa con puntos de historia.** No se estima en horas: se estima en **tamaño relativo**, que integra complejidad, esfuerzo e incertidumbre.
+**Estimación relativa con puntos de historia.** No se estima en horas — se estima en **tamaño relativo**, que integra complejidad, esfuerzo e incertidumbre.
 
 | Puntos | Referencia |
 |---|---|
@@ -159,13 +159,13 @@ Criterios de aceptación (Gherkin):
 | 13 | **Demasiado grande: se divide antes de entrar al sprint** |
 | ? | Falta información: requiere una investigación acotada (*spike*) |
 
-**Planning Poker.** Se estima en conjunto; **la discusión importa más que el número**. Cuando dos integrantes dan estimaciones muy distintas, es porque entienden la historia de forma distinta: **esa conversación es el valor del ejercicio**.
+**Planning Poker.** Se estima en conjunto; **la discusión importa más que el número**. Cuando dos integrantes dan estimaciones muy distintas, es porque entienden la historia de forma distinta. **Esa conversación es el valor del ejercicio**.
 
 **Velocidad.** Puntos completados por sprint. **No se compara entre equipos** —los puntos no son una unidad universal— y no se usa como indicador de productividad individual. Su único uso legítimo es **proyectar cuánto cabe en el próximo sprint**.
 
-**Ejemplo trabajado — de una historia inservible a un sprint con foco.** Historia tal como la trajo el equipo al refinamiento: *«Como usuario quiero ver los menús»*.
+**Ejemplo trabajado — de una historia inservible a un sprint con foco.** Historia tal como la trajo el equipo al refinamiento. *«Como usuario quiero ver los menús»*.
 
-**Paso 1 — se somete a INVEST:**
+**Paso 1 — se somete a INVEST.**
 
 | Letra | ¿Cumple? | Por qué |
 |---|---|---|
@@ -176,7 +176,7 @@ Criterios de aceptación (Gherkin):
 | S Pequeña | **No** | Incluye lista, detalle, imágenes, caché y estado agotado |
 | T Verificable | **No** | No hay criterio que permita decir sí o no |
 
-**Paso 2 — se divide en historias que sí cumplen:**
+**Paso 2 — se divide en historias que sí cumplen.**
 
 | Historia | Puntos | Criterio de aceptación (extracto) |
 |---|---|---|
@@ -186,7 +186,7 @@ Criterios de aceptación (Gherkin):
 | **H-04** Distinguir los platos agotados | 3 | *Dado* un plato marcado agotado por el local, *cuando* veo el detalle, *entonces* aparece tachado y con etiqueta «agotado» |
 | **H-05** Subir foto del menú desde la cámara *(local)* | **13** | **No entra**: se divide o se convierte en *spike* |
 
-**Paso 3 — el Sprint Goal, que es lo que da sentido al conjunto:**
+**Paso 3 — el Sprint Goal, que es lo que da sentido al conjunto.**
 
 > *«Que un comensal pueda decidir dónde almuerza hoy abriendo la app una sola vez, incluso sin conexión.»*
 
@@ -211,7 +211,7 @@ Criterios de aceptación (Gherkin):
 | Roles | PO, SM, Developers | No los define |
 | Cuándo conviene | Desarrollo de producto con objetivos por iteración | Soporte, mantenimiento, trabajo de llegada impredecible |
 
-**Las prácticas de Kanban que este curso adopta dentro de Scrum:**
+**Las prácticas de Kanban que este curso adopta dentro de Scrum.**
 
 | Práctica | Aplicación |
 |---|---|
@@ -220,9 +220,9 @@ Criterios de aceptación (Gherkin):
 | **Gestionar el flujo** | Medir el tiempo de ciclo de cada historia y atacar los cuellos de botella |
 | **Hacer explícitas las políticas** | La Definition of Done y los criterios de paso entre columnas, escritos en el tablero |
 
-> **Por qué limitar el trabajo en curso.** Un equipo con seis historias «en progreso» y ninguna terminada no avanza: **acumula trabajo sin entregar**. El límite de WIP fuerza a terminar antes de empezar, y es lo que convierte un tablero lleno en un incremento entregable.
+> **Por qué limitar el trabajo en curso.** Un equipo con seis historias «en progreso» y ninguna terminada no avanza. **Acumula trabajo sin entregar**. El límite de WIP fuerza a terminar antes de empezar, y es lo que convierte un tablero lleno en un incremento entregable.
 
-**Columnas del tablero del curso:**
+**Columnas del tablero del curso.**
 
 ```
  Product   │ Sprint   │ En       │ En       │ En        │ Listo
