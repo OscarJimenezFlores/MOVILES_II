@@ -38,7 +38,6 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 > **El contrato es el de su app.** `/items` es un marcador de posición. El equipo define los recursos de su propio dominio en `docs/api/openapi.yaml`. El mock server sirve **ese** contrato, no uno genérico.
 
-
 Sin código específico del stack el contrato está en el [taller](3-TALLER.md). Levante el mock server:
 
 ```bash

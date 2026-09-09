@@ -16,9 +16,11 @@ flowchart TD
     PB["<b>Paso B</b><br/>Redactar los ADR<br/><i>10 min</i>"]
     PC["<b>Paso C</b><br/>Esqueleto y funcionalidad<br/>vertical<br/><i>25 min</i>"]
     PD["<b>Paso D</b><br/>Definition of Done y CI<br/>ampliada<br/><i>10 min</i>"]
-    PA --> PB --> PC --> PD
+    PE["<b>Paso E</b><br/>Validar y corregir<br/><i>25 min</i>"]
+    PF["<b>Paso F</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
+    PA --> PB --> PC --> PD --> PE --> PF
     classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD paso;
+    class PA,PB,PC,PD,PE,PF paso;
 ```
 
 ## Qué entregas
@@ -37,6 +39,14 @@ flowchart TD
 ---
 
 **La sesión de laboratorio dura 100 minutos.** El avance de Avance de proyecto lo ejecuta el equipo fuera de la sesión.
+
+## El reto
+
+| | |
+|---|---|
+| **Situación** | Elegir el stack por preferencia condena al equipo a defender esa preferencia todo el semestre. La decisión hay que poder deshacerla. |
+| **Misión** | Evaluar los stacks con una prueba de humo sobre la capacidad crítica, redactar los dos ADR y levantar una funcionalidad vertical que atraviese las tres capas. |
+| **Criterio de éxito** | El ADR del stack incluye un **plan de salida**, y el dominio no importa nada de datos ni de presentación. |
 
 ## 1. Información sobre el evento práctico
 
@@ -87,14 +97,21 @@ Construcción del esqueleto de la aplicación con separación de capas y una fun
 
 ## 2. Procedimiento o Metodología
 
+**El código de cada paso está en la guía de su stack.** El enunciado, los tiempos y los resultados esperados son los mismos para las dos; lo que cambia es la implementación.
+
+| Stack | Guía |
+|---|---|
+| **Flutter** | [Taller 02 · Implementación en Flutter](3-TALLER-FLUTTER.md) |
+| **Kotlin Multiplatform** | [Taller 02 · Implementación en KMP](3-TALLER-KOTLIN.md) |
+
 ### Paso A — Evaluar los stacks y decidir
 
 `docs/decisiones/evaluacion_stacks.csv` — **evaluación con evidencia, no con preferencia**:
 
 | Criterio | Peso | Flutter | React Native | Kotlin Multiplatform | Nativo | **Evidencia de la calificación** |
 |---|---|---|---|---|---|---|
-| Competencia actual del equipo | 25 % | | | | | Encuesta interna: N integrantes con experiencia previa |
-| Soporte de las capacidades requeridas | 20 % | | | | | Se verifica biblioteca madura para: mapas, biometría, cámara |
+| Competencia actual del equipo | 25 % | | | | | **Encuesta interna.** N integrantes con experiencia previa |
+| Soporte de las capacidades requeridas | 20 % | | | | | Se verifica biblioteca madura para mapas, biometría, cámara |
 | Madurez del ecosistema para el dominio | 15 % | | | | | N.º de bibliotecas mantenidas en los últimos 6 meses |
 | Rendimiento requerido | 10 % | | | | | Según los requisitos del producto |
 | Viabilidad sin macOS | 10 % | | | | | Ruta de compilación disponible |
@@ -277,11 +294,25 @@ jobs:
 | Escribir las tres pruebas del ViewModel | Suite en verde |
 | Diagramar la arquitectura decidida | `docs/arquitectura/arquitectura.md` con Mermaid |
 | Preparar el borrador del Product Backlog | Lista de historias candidatas |
-| Definir el backend: propio, de terceros o simulado | Decisión con su justificación |
+| **Definir el backend.** Propio, de terceros o simulado | Decisión con su justificación |
 
 ---
 
+### Paso E — Validar y corregir (25 min)
 
+El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
+
+1. Comprobar que la prueba de humo se ejecutó de verdad en los **dos** finalistas, sobre la capacidad crítica y no sobre un «hola mundo».
+2. Verificar la regla de dependencia leyendo los `import` del dominio. Si aparece uno de datos o de presentación, está roto.
+3. Comprobar que los cuatro estados —cargando, con datos, vacío y error con reintento— se demuestran en el dispositivo, no solo en el código.
+
+> Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
+
+### Paso F — Registrar la evidencia y cerrar (15 min)
+
+Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
+
+---
 
 ## 3. Resultados
 
@@ -306,9 +337,19 @@ jobs:
 >
 > **El informe es lo que se califica; el repositorio es lo que lo prueba.** Cada resultado de la sección 3 del informe lleva la URL con la que se verifica, y **un resultado sin su URL se califica como no logrado**, por bien redactado que esté. Lo que no se puede abrir no se puede dar por hecho.
 
-### 3.1. Tabla de resultados
+### 3.1. Los tres resultados que se califican
 
+Son los que la rúbrica evalúa. El resto de la lista tiene que existir, pero no se califica fila por fila.
 
+| Resultado | Qué demuestra | Dónde está |
+|---|---|---|
+| **La decisión con evidencia** | ADR-002 con la evaluación, la decisión y el plan de salida del stack | `ADR-002-stack.md` |
+| **La regla de dependencia** | El dominio sin importaciones de datos ni de presentación | Revisión del código |
+| **La funcionalidad vertical** | Atraviesa las tres capas y muestra los cuatro estados | Demostración en dispositivo |
+
+### 3.2. Lista de comprobación del taller
+
+Todo esto debe existir al cerrar la sesión.
 
 | # | Resultado esperado | Verificación |
 |---|---|---|
@@ -317,16 +358,15 @@ jobs:
 | 3 | **ADR-001** con contexto, tres alternativas, decisión y consecuencias | `ADR-001-arquitectura.md` |
 | 4 | **ADR-002** con la evaluación, la decisión y el **plan de salida** del stack | `ADR-002-stack.md` |
 | 5 | Estructura de carpetas por capas creada | Repositorio |
-| 6 | **Regla de dependencia respetada**: el dominio no importa nada de datos ni de presentación | Revisión del código |
+| 6 | **Regla de dependencia respetada**. El dominio no importa nada de datos ni de presentación | Revisión del código |
 | 7 | DTO y entidad de dominio como **clases distintas**, con mapeador | Repositorio |
 | 8 | Funcionalidad vertical completa que atraviesa las tres capas | Demostración en dispositivo |
-| 9 | **Los cuatro estados** implementados: cargando, con datos, vacío y error con reintento | Demostración |
+| 9 | **Los cuatro estados** implementados — cargando, con datos, vacío y error con reintento | Demostración |
 | 10 | **Tres pruebas del ViewModel en verde, ejecutadas sin emulador** | Salida de la CI |
 | 11 | Definition of Done con los 12 criterios y su forma de verificación | `DEFINITION_OF_DONE.md` |
 | 12 | CI que verifica secretos, linter, pruebas y **umbral de cobertura** | Ejecución en verde |
 | 13 | Rama `main` protegida con PR, CI y revisión obligatoria | Configuración |
 | 14 | Diagrama de la arquitectura decidida | `docs/arquitectura/` |
-
 
 ## Rúbrica procedimental (20 puntos)
 

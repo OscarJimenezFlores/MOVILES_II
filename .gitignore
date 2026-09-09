@@ -4,11 +4,66 @@ entregas/
 ENTREGAS/
 *.pdf
 
-# Temporales que deja Word al abrir las plantillas de PLANTILLAS/
+# Guias del docente: traen el solucionario de las dinamicas. No se publican.
+GUIA-DOCENTE.md
+**/GUIA-DOCENTE.md
+
+# ---------------------------------------------------------------------------
+# Ruido del sistema de archivos
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.apdisk
+__MACOSX/
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+.directory
+.Trash-*
+
+# Temporales de ofimática y de editores
 ~$*
 .~lock.*#
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
 
-# Ruido del sistema
-.DS_Store
-Thumbs.db
-desktop.ini
+# Restos de Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---------------------------------------------------------------------------
+# Exámenes de unidad. No se publican — el alumno los recibe en la sesión.
+# Cubre el banco teórico, el examen práctico y sus dos solucionarios.
+# ---------------------------------------------------------------------------
+4-EXAMEN-TEORICO.md
+5-EXAMEN-PRACTICO.md
+**/4-EXAMEN-*.md
+**/5-EXAMEN-*.md
+
+# ---------------------------------------------------------------------------
+# Plan de Assessment ICACIT. Material institucional del docente, con registros
+# por estudiante. Se conserva en local y no se sube.
+# ---------------------------------------------------------------------------
+ASSESSMENT/
+**/ASSESSMENT/

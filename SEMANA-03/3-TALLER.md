@@ -17,9 +17,11 @@ flowchart TD
     PC["<b>Paso C</b><br/>Refinamiento y criterios de<br/>aceptación<br/><i>10 min</i>"]
     PD["<b>Paso D</b><br/>Planning Poker y Sprint 1<br/>Planning<br/><i>20 min</i>"]
     PE["<b>Paso E</b><br/>Tablero con límites de trabajo<br/>en curso<br/><i>5 min</i>"]
-    PA --> PB --> PC --> PD --> PE
+    PF["<b>Paso F</b><br/>Validar y corregir<br/><i>25 min</i>"]
+    PG["<b>Paso G</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
+    PA --> PB --> PC --> PD --> PE --> PF --> PG
     classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE paso;
+    class PA,PB,PC,PD,PE,PF,PG paso;
 ```
 
 ## Qué entregas
@@ -38,6 +40,14 @@ flowchart TD
 ---
 
 **La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
+
+## El reto
+
+| | |
+|---|---|
+| **Situación** | Un backlog ordenado por gusto produce un sprint que entrega lo fácil y deja el riesgo para el final, cuando ya no hay tiempo. |
+| **Misión** | Ordenar el backlog por valor y riesgo con un índice calculado, refinar con criterios en Gherkin y formular el Sprint Goal antes de elegir historias. |
+| **Criterio de éxito** | El Sprint Goal se formuló antes de seleccionar las historias y supera su prueba, y ninguna historia de trece puntos quedó sin dividir. |
 
 ## 1. Información sobre el evento práctico
 
@@ -132,7 +142,7 @@ b["valor"] = pd.to_numeric(b["Valor (1–5)"], errors="coerce").fillna(3)
 b["riesgo"] = pd.to_numeric(b["Riesgo (1–5)"], errors="coerce").fillna(3)
 b["puntos"] = pd.to_numeric(b["Puntos"], errors="coerce")
 
-# El riesgo alto se aborda temprano: suma, no resta
+# El riesgo alto se aborda temprano · suma, no resta
 b["indice"] = (b.valor * 0.6 + b.riesgo * 0.4).round(2)
 b = b.sort_values("indice", ascending=False)
 print(b[["id","Historia de usuario","valor","riesgo","puntos","indice"]].head(15).to_string(index=False))
@@ -189,7 +199,7 @@ Característica: Ver la lista de <elementos>
 
 | Historia | Estimaciones individuales | Consenso | **Discrepancia** | Qué reveló la discusión |
 |---|---|---|---|---|
-| US-01 | 3, 3, 8, 5 | 5 | 3 vs. 8 | Un integrante asumía que el backend ya validaba el correo; otro contaba la verificación por enlace. **La historia no estaba clara**: se agregó un criterio de aceptación |
+| US-01 | 3, 3, 8, 5 | 5 | 3 vs. 8 | Un integrante asumía que el backend ya validaba el correo; otro contaba la verificación por enlace. **La historia no estaba clara**. Se agregó un criterio de aceptación |
 
 **D.2 — Capacidad del sprint.** Antes de seleccionar, el equipo calcula cuánto puede comprometer:
 
@@ -233,14 +243,14 @@ El tablero es **GitHub Projects**, en el mismo repositorio del equipo. No es una
 **Volcado del backlog.** Cada elemento del `PRODUCT_BACKLOG.csv` se crea como *issue* del repositorio y se agrega al tablero. Se crean los campos personalizados **Sprint**, **Puntos**, **Riesgo** y **Dato personal**, que son las columnas del CSV.
 
 ```bash
-# Volcado del backlog con GitHub CLI — requiere: gh auth login
+# Volcado del backlog con GitHub CLI — requiere · gh auth login
 while IFS=, read -r id sprint epica historia puntos riesgo dp resto; do
   [ "$id" = "id" ] && continue
   gh issue create --title "$id · $historia"                   --body "Épica: $epica · Sprint: $sprint · Puntos: $puntos · Riesgo: $riesgo · Dato personal: $dp"                   --label "sprint-$sprint"
 done < docs/sprints/PRODUCT_BACKLOG.csv
 ```
 
-> **Cada historia se asigna a un integrante y se vincula a su rama y a su Pull Request.** Es lo que permite ver quién construyó qué, y es la evidencia del atributo **AG-I03 Trabajo Individual y en Equipo** que se mide en las Semanas 06 y 12. Un tablero movido siempre por la misma persona indica un reparto de trabajo desigual.
+> **Cada historia se asigna a un integrante y se vincula a su rama y a su Pull Request.** Es lo que permite ver **quién construyó qué**, y es la base con la que se valora la contribución individual en las exposiciones de avance de las Semanas 06 y 12. Un tablero movido siempre por la misma persona indica un reparto de trabajo desigual.
 
 Se configuran las columnas de la sección 1.4 con sus límites de WIP, y las **políticas explícitas de paso entre columnas** escritas en el tablero:
 
@@ -262,11 +272,25 @@ Se inicia el desarrollo. Estas son las desviaciones que se corrigen sobre la mar
 | Un Developer con tres historias en progreso | Se aplica el límite de WIP |
 | Una historia sin criterios verificados que ya está en «Listo» | Se devuelve a «En pruebas» |
 | El Sprint Goal no se menciona en la conversación del equipo | Se retoma: es el foco del sprint |
-| Un impedimento no registrado | Se anota en el tablero: lo que no está visible no se resuelve |
+| Un impedimento no registrado | Se anota en el tablero. Lo que no está visible no se resuelve |
 
 ---
 
+### Paso F — Validar y corregir (25 min)
 
+El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
+
+1. Comprobar en el historial que el Sprint Goal se escribió **antes** de la selección de historias.
+2. Ejecutar el script y verificar que devuelve **cero** historias de trece puntos o más sin dividir.
+3. Revisar que las historias que tratan datos personales están marcadas en el backlog, porque de ahí sale el trabajo de la Semana 09.
+
+> Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
+
+### Paso G — Registrar la evidencia y cerrar (15 min)
+
+Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
+
+---
 
 ## 3. Resultados
 
@@ -291,9 +315,19 @@ Se inicia el desarrollo. Estas son las desviaciones que se corrigen sobre la mar
 >
 > **El informe es lo que se califica; el repositorio es lo que lo prueba.** Cada resultado de la sección 3 del informe lleva la URL con la que se verifica, y **un resultado sin su URL se califica como no logrado**, por bien redactado que esté. Lo que no se puede abrir no se puede dar por hecho.
 
-### 3.1. Tabla de resultados
+### 3.1. Los tres resultados que se califican
 
+Son los que la rúbrica evalúa. El resto de la lista tiene que existir, pero no se califica fila por fila.
 
+| Resultado | Qué demuestra | Dónde está |
+|---|---|---|
+| **El backlog ordenado** | Veinticinco elementos con el índice de valor y riesgo calculado | `PRODUCT_BACKLOG.csv` y salida del script |
+| **Los criterios en Gherkin** | Los cuatro escenarios en las historias que manejan datos | `docs/sprints/criterios/` |
+| **El Sprint Goal** | Formulado antes de seleccionar, y que supera su prueba | `SPRINT_BACKLOG.md` |
+
+### 3.2. Lista de comprobación del taller
+
+Todo esto debe existir al cerrar la sesión.
 
 | # | Resultado esperado | Verificación |
 |---|---|---|
@@ -310,7 +344,6 @@ Se inicia el desarrollo. Estas son las desviaciones que se corrigen sobre la mar
 | 11 | Sprint Backlog completo con el plan de entrega y el acuerdo de la Daily | `SPRINT_BACKLOG.md` |
 | 12 | Tablero configurado con **límites de WIP** y políticas explícitas de paso | Captura |
 | 13 | **Sprint 1 iniciado** con al menos una historia en progreso y su rama creada | Tablero y repositorio |
-
 
 ## Rúbrica procedimental (20 puntos)
 

@@ -8,20 +8,34 @@
 
 ---
 
-## Qué se trabaja en esta sesión
+## La pregunta de esta sesión
 
-- Scrum según la guía y sus desviaciones habituales.
-- Refinamiento y estimación del Product Backlog.
-- Kanban y cuándo conviene.
+Un equipo se declara Scrum. Tiene sprints de dos semanas, tablero, Daily de quince minutos y una Review al final.
+
+El Product Owner son tres personas que no se ponen de acuerdo, el Sprint Backlog lo llena el jefe de proyecto y en el día 8 nadie sabe qué se puede recortar sin perder el sentido del sprint. Las ceremonias están todas y el marco no está.
+
+> **La pregunta que ordena esta sesión.** *¿Qué es lo que hace que un equipo esté haciendo Scrum de verdad?*
+
+## Antes de empezar
+
+| Lo que necesita traer | De dónde sale |
+|---|---|
+| La arquitectura decidida y el ADR-001 del equipo | Semana 02 |
+| La propuesta de valor y el alcance del producto | Semana 01 |
+| Nociones de gestión de proyectos | Cursos previos de la carrera |
+| La composición y las competencias del propio equipo | Trabajo del equipo |
+
+> **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿Ese equipo hace Scrum? ¿Qué le sobra y qué le falta? ¿Quién decide qué entra en el sprint?* No se corrige nada todavía.
 
 ## Distribución del tiempo
 
-| Bloque | Minutos |
+| Momento | Minutos |
 |---|---|
-| Scrum según la guía y sus desviaciones habituales | 25 |
-| Refinamiento y estimación del Product Backlog | 20 |
-| Kanban y cuándo conviene | 15 |
-| Cierre | 5 |
+| El caso del equipo con todas las ceremonias y la exploración inicial | 8 |
+| **Bloque 1.** Scrum según la guía y sus desviaciones habituales | 20 |
+| **Bloque 2.** Refinamiento y estimación del Product Backlog · con su microaplicación | 20 |
+| **Bloque 3.** Kanban y cuándo conviene | 12 |
+| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
 | **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
@@ -52,9 +66,11 @@ flowchart TD
 
 ---
 
-## Scrum según la guía y sus desviaciones habituales
+## Bloque 1 · Scrum según la guía y sus desviaciones habituales
 
-**Scrum es un marco, no una metodología.** La *Scrum Guide 2020* lo define como un marco liviano que ayuda a generar valor mediante soluciones adaptativas para problemas complejos. Es **deliberadamente incompleto** define solo lo indispensable y deja el resto a la inteligencia del equipo.
+> **La pregunta del bloque.** *¿Qué exige la guía y qué le añadió la industria encima?*
+
+**Scrum es un marco, no una metodología.** La *Scrum Guide 2020* lo define como un marco liviano que ayuda a generar valor mediante soluciones adaptativas para problemas complejos. Es **deliberadamente incompleto** — define solo lo indispensable y deja el resto a la inteligencia del equipo.
 
 **Los tres pilares del control empírico.**
 
@@ -81,7 +97,7 @@ flowchart TD
 | Evento | Duración máxima (sprint de 2 semanas) | Propósito | Deformación frecuente |
 |---|---|---|---|
 | **El Sprint** | 2 semanas | Contenedor de los demás eventos; produce un incremento utilizable | Se extiende «una semanita más» — **prohibido** |
-| **Sprint Planning** | 4 h | Responder: *¿por qué es valioso este sprint? ¿qué se puede hacer? ¿cómo se hará?* | Se reduce a repartir tareas sin definir el Sprint Goal |
+| **Sprint Planning** | 4 h | **Responder.** *¿Por qué es valioso este sprint? ¿qué se puede hacer? ¿cómo se hará?* | Se reduce a repartir tareas sin definir el Sprint Goal |
 | **Daily Scrum** | **15 min**, misma hora y lugar | Inspeccionar el avance hacia el Sprint Goal y adaptar el plan del día | Se convierte en un reporte de estado al Scrum Master |
 | **Sprint Review** | 2 h | Inspeccionar el incremento **con los interesados** y adaptar el backlog | Se convierte en una demostración de diapositivas sin software funcionando |
 | **Sprint Retrospective** | 1.5 h | Inspeccionar **cómo trabajó el equipo** y comprometer una mejora | Se omite «porque no hay tiempo» — **es la que hace mejorar** |
@@ -112,7 +128,11 @@ flowchart TD
 
 > **Por qué importa.** La *Scrum Guide* **no dice cómo se escribe un elemento del Product Backlog.** Solo exige que el backlog sea una lista **ordenada** y **emergente**, y que sus elementos estén lo bastante refinados para caber en un sprint. La historia de usuario y la épica son **una forma** de cumplirlo, no la única. Un equipo que ordena su backlog con casos de uso o con especificaciones también hace Scrum. En este curso se usan historias y épicas porque son las que va a encontrar en cualquier equipo y en cualquier herramienta.
 
-## Refinamiento y estimación del Product Backlog
+> **El error frecuente del bloque.** Tener un Product Owner que en realidad es un comité. La guía es explícita — es **una persona**, y nadie puede obligar a los Developers a trabajar sobre requisitos distintos de los del Sprint Backlog que ellos mismos definieron. Un comité de tres que no se pone de acuerdo produce un backlog sin orden y un sprint sin objetivo.
+
+## Bloque 2 · Refinamiento y estimación del Product Backlog
+
+> **La pregunta del bloque.** *¿Para qué sirve estimar, si el número nunca acierta?*
 
 **La historia de usuario** —formato y calidad:
 
@@ -143,9 +163,9 @@ Criterios de aceptación (Gherkin):
 | Historia defectuosa | Defecto | Corrección |
 |---|---|---|
 | «Como usuario quiero una base de datos» | Sin valor de usuario | Es una tarea técnica dentro de una historia con valor |
-| «Como usuario quiero gestionar mi perfil» | Demasiado grande | Dividir: ver perfil · editar nombre · cambiar foto · eliminar cuenta |
+| «Como usuario quiero gestionar mi perfil» | Demasiado grande | **Dividir.** Ver perfil · editar nombre · cambiar foto · eliminar cuenta |
 | «Como usuario quiero que la app sea rápida» | No verificable | «La lista de pedidos carga en menos de 1,5 s con 100 elementos, en un dispositivo de gama media» |
-| «Como desarrollador quiero refactorizar» | No es historia de usuario | Es deuda técnica: entra al backlog como tal, con su justificación de valor |
+| «Como desarrollador quiero refactorizar» | No es historia de usuario | Es deuda técnica entra al backlog como tal, con su justificación de valor |
 
 **Estimación relativa con puntos de historia.** No se estima en horas — se estima en **tamaño relativo**, que integra complejidad, esfuerzo e incertidumbre.
 
@@ -157,7 +177,7 @@ Criterios de aceptación (Gherkin):
 | 5 | Complejo o con alguna incertidumbre |
 | 8 | Complejo **e** incierto |
 | 13 | **Demasiado grande: se divide antes de entrar al sprint** |
-| ? | Falta información: requiere una investigación acotada (*spike*) |
+| ? | **Falta información.** Requiere una investigación acotada (*spike*) |
 
 **Planning Poker.** Se estima en conjunto; **la discusión importa más que el número**. Cuando dos integrantes dan estimaciones muy distintas, es porque entienden la historia de forma distinta. **Esa conversación es el valor del ejercicio**.
 
@@ -172,7 +192,7 @@ Criterios de aceptación (Gherkin):
 | I Independiente | Sí | — |
 | N Negociable | Sí | — |
 | V Valiosa | **Dudoso** | «Ver los menús» ¿de qué local, ordenados cómo, con o sin conexión? |
-| E Estimable | **No** | El equipo estima 3, 8 y 13: no están hablando de lo mismo |
+| E Estimable | **No** | El equipo estima 3, 8 y 13. No están hablando de lo mismo |
 | S Pequeña | **No** | Incluye lista, detalle, imágenes, caché y estado agotado |
 | T Verificable | **No** | No hay criterio que permita decir sí o no |
 
@@ -192,15 +212,19 @@ Criterios de aceptación (Gherkin):
 
 > **El Sprint Goal es lo que permite negociar en el día 8.** Si H-03 resulta el doble de costosa, el equipo puede reducirla a «guardar solo el menú del local favorito» y **el objetivo sigue siendo alcanzable**. Si en cambio se decidiera sacrificar H-01, el sprint pierde sentido aunque se completen las demás historias. **Sin Sprint Goal, todas las historias parecen igual de importantes y se recorta la que sea más difícil**, que suele ser la que sostenía el valor.
 
-**Preguntas para la sesión**
+> **Microaplicación (6 min) · el Sprint Goal del sprint que viene.** Cada equipo escribe **el Sprint Goal de su sprint 1 en una sola frase** y comprueba que permita recortar alguna historia sin perder el sentido. El que no permita recortar nada todavía no es un objetivo, es una lista.
 
-| Pregunta | Qué debe contener una buena respuesta |
+| Caso | Qué debe contener una buena respuesta |
 |---|---|
-| Tres personas estiman 3, 8 y 13. ¿Se promedia? | No. Se conversa: la diferencia significa que entienden cosas distintas por la historia. El valor del Planning Poker es esa conversación, no el número final |
+| Tres personas estiman 3, 8 y 13. ¿Se promedia? | **No. Se conversa.** La diferencia significa que entienden cosas distintas por la historia. El valor del Planning Poker es esa conversación, no el número final |
 | ¿Por qué H-05 con 13 puntos no entra al sprint? | Porque 13 señala que la historia es demasiado grande o demasiado incierta. Se divide, o se hace primero un *spike* acotado para reducir la incertidumbre |
-| El PO pide agregar una historia el día 6. ¿Se puede? | Solo si no compromete el Sprint Goal y el equipo lo acepta. Lo que no puede hacerse es imponerla: los Developers definieron el Sprint Backlog |
+| El PO pide agregar una historia el día 6. ¿Se puede? | Solo si no compromete el Sprint Goal y el equipo lo acepta. Lo que no puede hacerse es imponerla. Los Developers definieron el Sprint Backlog |
 
-## Kanban y cuándo conviene
+> **El error frecuente del bloque.** Promediar las estimaciones dispares. Cuando dos integrantes estiman 3 y 13 es porque entienden la historia de forma distinta, y **esa conversación es el valor del ejercicio**. El promedio la cancela y deja al equipo con un número que nadie sostiene.
+
+## Bloque 3 · Kanban y cuándo conviene
+
+> **La pregunta del bloque.** *¿Por qué un tablero lleno puede significar que no se avanza?*
 
 | | **Scrum** | **Kanban** |
 |---|---|---|
@@ -231,10 +255,24 @@ Criterios de aceptación (Gherkin):
            │          │ por dev  │          │           │
 ```
 
-## Cierre
+## Cierre · qué se lleva de aquí
+
+**La respuesta a la pregunta con la que abrimos.** Los tres pilares del control empírico y los compromisos de los artefactos, no las ceremonias. El equipo del caso tiene todos los eventos y no tiene ninguno de los dos — su Product Owner es un comité, su Sprint Backlog lo llena alguien de fuera y **no tiene Sprint Goal**, que es justo lo que permite decidir qué se recorta en el día 8.
+
+**Las tres ideas que deben quedar.**
+
+| Idea | Por qué importa en el ejercicio profesional |
+|---|---|
+| Scrum es deliberadamente incompleto y define solo lo indispensable | Historias, épicas y Planning Poker son útiles y no son Scrum; conviene saberlo antes de discutirlo con un cliente |
+| El Sprint Goal es el artefacto más ignorado y el más útil | Sin él todas las historias parecen igual de importantes y se recorta la que sostenía el valor |
+| El límite de trabajo en curso es lo que convierte un tablero lleno en un incremento | Seis historias en progreso y ninguna terminada es acumulación, no avance |
+
+**Volviendo a la exploración del inicio.** Se releen las respuestas del inicio. La mayoría responde que ese equipo sí hace Scrum porque tiene las ceremonias. Tener los eventos y no tener el objetivo del sprint es exactamente lo que la guía llama **Scrum de apariencia**.
+
+**Lo que sigue.** La [dinámica de esta sesión](2-DINAMICA.md) refina historias reales del backlog propio con INVEST y formula el Sprint Goal del sprint 1. El taller monta después el tablero con su límite de trabajo en curso.
+
 
 **Pregunta de cierre.** *si al día 8 del sprint una historia resulta el doble de costosa, ¿qué se sacrifica?* La respuesta correcta —reducir el alcance de esa historia manteniendo el Sprint Goal— solo es posible si el Sprint Goal existe y está bien formulado.
-
 ---
 
 ---

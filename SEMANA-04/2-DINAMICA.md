@@ -43,6 +43,12 @@ flowchart LR
 > **«El pedido que se creó dos veces»**
 > Su equipo toma **un solo endpoint de escritura** de su aplicación y lo deja bien contratado — método, código de éxito, **idempotencia**, tres errores traducidos a mensaje de usuario, y el `GET` que lo acompaña con su paginación y su caché.
 
+| | |
+|---|---|
+| **Su papel** | **Desarrollador que responde por el endpoint** cuando el cliente reclama que le cobraron dos veces |
+| **Misión** | Dejar el endpoint contratado con idempotencia y tres errores traducidos a mensaje que el usuario entienda |
+| **Restricción** | **La clave de idempotencia se genera antes del primer intento.** Reintentar con una clave nueva no es reintentar, es pedir otra vez |
+
 Es el problema que la teoría señala como el propio del móvil. *El usuario envía, pierde la señal antes de la respuesta, la app reintenta y se crean dos pedidos.* Todo lo demás de hoy sirve para que eso no ocurra.
 
 ## Cómo se desarrolla · 35 minutos
@@ -98,7 +104,7 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 |---|---|
 | **El endpoint de escritura** | `POST /reservas` · éxito **`201 Created`** · acompañado de la cabecera `Location: /reservas/8417` |
 | **Idempotencia** | `POST` **no es idempotente**. Se resuelve con la cabecera `Idempotency-Key`, un identificador único que la app genera **una vez por reserva** y reenvía en cada reintento. Si el servidor ya procesó esa clave, devuelve **el mismo `201` y la misma reserva**, sin crear una segunda |
-| **El `GET` que lo acompaña** | `GET /reservas?cursor=&limit=20`, paginación **por cursor** porque la lista crece por arriba y el desplazamiento por número de página se salta o repite filas. `Cache-Control: private, max-age=60` con `ETag`: la lista del usuario cambia poco, y servirla de la caché ahorra datos y batería |
+| **El `GET` que lo acompaña** | `GET /reservas?cursor=&limit=20`, paginación **por cursor** porque la lista crece por arriba y el desplazamiento por número de página se salta o repite filas. `Cache-Control: private, max-age=60` con `ETag`. La lista del usuario cambia poco, y servirla de la caché ahorra datos y batería |
 
 *Los tres errores*
 

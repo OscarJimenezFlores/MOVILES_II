@@ -22,9 +22,9 @@
 
 Es la guía de arranque para **Flutter**. Sirve para dejar el entorno funcionando y construir el primer artefacto con asistencia de un agente de código, antes de la Semana 01.
 
-**No** es un curso de Dart ni de Flutter. Y no es una guía para que el agente escriba la app por usted: es para que aprenda a **dirigir** al agente y a **rechazar** lo que produce mal. Esa es la competencia que el curso evalúa, no la velocidad de tecleo.
+**No** es un curso de Dart ni de Flutter. Y no es una guía para que el agente escriba la app por usted. Es para que aprenda a **dirigir** al agente y a **rechazar** lo que produce mal. Esa es la competencia que el curso evalúa, no la velocidad de tecleo.
 
-> **Verificación de vigencia.** Las versiones y pasos de esta guía se contrastaron con la documentación oficial en **septiembre de 2026**. Flutter y Antigravity cambian rápido: si un menú no coincide, gana la documentación oficial, no esta guía. Las fuentes están al final.
+> **Verificación de vigencia.** Las versiones y pasos de esta guía se contrastaron con la documentación oficial en **septiembre de 2026**. Flutter y Antigravity cambian rápido — si un menú no coincide, gana la documentación oficial, no esta guía. Las fuentes están al final.
 
 ## Antes de empezar
 
@@ -43,7 +43,7 @@ Es la guía de arranque para **Flutter**. Sirve para dejar el entorno funcionand
 
 ## Parte 1 · Instalar Google Antigravity
 
-Antigravity es el entorno de desarrollo con agentes de Google. Tiene dos vistas: el **Editor**, que es un editor de código convencional, y el **Agent Manager**, donde se lanzan y supervisan agentes que trabajan en paralelo.
+Antigravity es el entorno de desarrollo con agentes de Google. Tiene dos vistas — el **Editor**, que es un editor de código convencional, y el **Agent Manager**, donde se lanzan y supervisan agentes que trabajan en paralelo.
 
 ### 1.1 Descarga e instalación
 
@@ -86,7 +86,7 @@ En la configuración inicial Antigravity pregunta *«¿quién conduce?»* y ofre
 | **Settings → Customizations** | Añade servidores MCP |
 | Icono de engranaje del proyecto | **Security Preset**, **Agent Behaviour**, **Local Permissions** y **MCP Tools** |
 
-### 1.5 Los artefactos: donde está el valor académico
+### 1.5 Los artefactos · donde está el valor académico
 
 Antigravity no solo escribe código. Produce artefactos que **usted debe leer y evaluar**:
 
@@ -99,13 +99,13 @@ Antigravity no solo escribe código. Produce artefactos que **usted debe leer y 
 | **Code diffs** | Los cambios revisables | Revisar línea por línea lo que toca seguridad o datos |
 | **Screenshots** | La interfaz antes y después | Comparar con lo que pidió |
 
-> **Regla del curso.** El `Implementation Plan` y el `Walkthrough` de cada historia se guardan en el repositorio, en `docs/agentes/`. Son evidencia evaluable: demuestran que usted dirigió el trabajo y no solo lo aceptó.
+> **Regla del curso.** El `Implementation Plan` y el `Walkthrough` de cada historia se guardan en el repositorio, en `docs/agentes/`. Son evidencia evaluable demuestran que usted dirigió el trabajo y no solo lo aceptó.
 
 ---
 
 ## Parte 2 · Instalar Flutter
 
-**Versión estable actual: Flutter 3.47.**
+**Versión estable actual. Flutter 3.47.**
 
 ### 2.1 El SDK
 
@@ -126,8 +126,8 @@ Aunque no vaya a programar en Android Studio, **hace falta** para el SDK, el emu
 
 1. Instale la **última versión estable** desde https://developer.android.com/studio
 2. Abra el **SDK Manager**:
-   - Desde el diálogo de bienvenida: **More Actions → SDK Manager**
-   - Con un proyecto abierto: **Tools → SDK Manager**
+   - Desde el diálogo de bienvenida **More Actions → SDK Manager**
+   - Con un proyecto abierto **Tools → SDK Manager**
 3. En la pestaña **SDK Platforms**, marque **API Level 36** y pulse **Apply**.
 4. En la pestaña **SDK Tools**, asegúrese de tener instalados:
 
@@ -176,7 +176,7 @@ flutter emulators && flutter devices
 
 Todo lo relacionado con Android debe salir **sin errores**, y debe aparecer al menos un dispositivo con plataforma **android**.
 
-> **Sobre iOS.** Compilar y publicar para iOS exige **macOS con Xcode**. Si su equipo no tiene un Mac, publique en **Google Play**, que es lo que el curso exige: al menos una tienda oficial. No es una versión reducida del trabajo; es la decisión de alcance que tomaría cualquier equipo con esa restricción, y así debe justificarse en el `ADR`.
+> **Sobre iOS.** Compilar y publicar para iOS exige **macOS con Xcode**. Si su equipo no tiene un Mac, publique en **Google Play**, que es lo que el curso exige. Al menos una tienda oficial. No es una versión reducida del trabajo; es la decisión de alcance que tomaría cualquier equipo con esa restricción, y así debe justificarse en el `ADR`.
 
 ---
 
@@ -196,7 +196,7 @@ flutter run
 
 Debe ver la app de ejemplo corriendo en el emulador. Si llegó hasta aquí, el entorno está listo.
 
-### 3.2 La primera tarea al agente: cómo se pide
+### 3.2 La primera tarea al agente · cómo se pide
 
 Un encargo mal formulado produce código plausible y equivocado. Compare:
 
@@ -206,7 +206,7 @@ Un encargo mal formulado produce código plausible y equivocado. Compare:
 | «Conecta la API.» | «Implementa el cliente HTTP contra el contrato de `docs/api/openapi.yaml`. Usa un tiempo de espera de 10 s. Ante un 429 respeta la cabecera `Retry-After`. Ante 4xx no reintentes. Deja los errores tipados, no `Exception` genérica.» |
 | «Arregla el bug.» | «La lista se duplica al rotar la pantalla. Sospecho del ciclo de vida del estado. Muéstrame primero el plan; no cambies nada hasta que lo apruebe.» |
 
-**Las tres reglas del encargo:**
+**Las tres reglas del encargo.**
 
 1. **Diga la restricción, no solo la funcionalidad.** El agente no adivina que la contraseña no va al log.
 2. **Pida el plan antes que el código** cuando toque arquitectura, datos personales o seguridad.
@@ -226,7 +226,7 @@ Un agente de código comete errores sistemáticos. Estos son los que aparecen en
 | **Manejo de errores** | ¿Captura todo con un `catch` genérico y sigue como si nada? |
 | **Pruebas** | ¿Las pruebas que escribió comprueban algo, o solo que el código no explota? |
 
-> **Lo que se entrega no es lo que el agente produjo: es lo que usted aprobó.** La rúbrica evalúa la decisión, no la generación.
+> **Lo que se entrega no es lo que el agente produjo. Es lo que usted aprobó.** La rúbrica evalúa la decisión, no la generación.
 
 ### 3.4 Dejar rastro del trabajo con el agente
 
@@ -241,7 +241,7 @@ docs/agentes/
 Plantilla de `AG-<historia>.md`:
 
 ```markdown
-# Historia: <ID y título>
+# Historia · <ID y título>
 
 ## Encargo dado al agente
 <el texto exacto que se le pidió>

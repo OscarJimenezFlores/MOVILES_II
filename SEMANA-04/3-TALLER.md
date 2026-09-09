@@ -17,9 +17,11 @@ flowchart TD
     PC["<b>Paso C</b><br/>Mapeo de errores y repositorio<br/><i>20 min</i>"]
     PD["<b>Paso D</b><br/>Pruebas con mock server<br/><i>10 min</i>"]
     PE["<b>Paso E</b><br/>Inspección del tráfico real<br/><i>5 min</i>"]
-    PA --> PB --> PC --> PD --> PE
+    PF["<b>Paso F</b><br/>Validar y corregir<br/><i>25 min</i>"]
+    PG["<b>Paso G</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
+    PA --> PB --> PC --> PD --> PE --> PF --> PG
     classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE paso;
+    class PA,PB,PC,PD,PE,PF,PG paso;
 ```
 
 ## Qué entregas
@@ -38,6 +40,14 @@ flowchart TD
 ---
 
 **La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
+
+## El reto
+
+| | |
+|---|---|
+| **Situación** | La red falla, el servidor devuelve errores raros y el usuario pierde datos. Una capa de datos que solo funciona con buena conexión no sirve. |
+| **Misión** | Construir la capa de datos con contrato, mapeo de errores a fallos de dominio, idempotencia y una fuente única de verdad que funcione sin conexión. |
+| **Criterio de éxito** | La app funciona sin conexión, demostrado en video, y la clave de idempotencia se genera una vez y se reutiliza en los reintentos. |
 
 ## 1. Información sobre el evento práctico
 
@@ -90,6 +100,13 @@ Implementación de la capa de datos de la aplicación con consumo de servicios R
 ---
 
 ## 2. Procedimiento o Metodología
+
+**El código de cada paso está en la guía de su stack.** El enunciado, los tiempos y los resultados esperados son los mismos para las dos; lo que cambia es la implementación.
+
+| Stack | Guía |
+|---|---|
+| **Flutter** | [Taller 04 · Implementación en Flutter](3-TALLER-FLUTTER.md) |
+| **Kotlin Multiplatform** | [Taller 04 · Implementación en KMP](3-TALLER-KOTLIN.md) |
 
 ### Paso A — Contrato en OpenAPI
 
@@ -391,7 +408,21 @@ Avance de las historias del Sprint 1. El equipo sostiene su **Daily de 15 minuto
 
 ---
 
+### Paso F — Validar y corregir (25 min)
 
+El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
+
+1. Comprobar con `strings` sobre el artefacto que **ningún secreto** quedó embebido.
+2. Verificar que el registro de peticiones enmascara las cabeceras sensibles y que solo está activo en depuración.
+3. Ejecutar el escenario sin conexión y comprobar que la interfaz sigue leyendo de la base local, que es la fuente única de verdad.
+
+> Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
+
+### Paso G — Registrar la evidencia y cerrar (15 min)
+
+Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
+
+---
 
 ## 3. Resultados
 
@@ -416,9 +447,19 @@ Avance de las historias del Sprint 1. El equipo sostiene su **Daily de 15 minuto
 >
 > **El informe es lo que se califica; el repositorio es lo que lo prueba.** Cada resultado de la sección 3 del informe lleva la URL con la que se verifica, y **un resultado sin su URL se califica como no logrado**, por bien redactado que esté. Lo que no se puede abrir no se puede dar por hecho.
 
-### 3.1. Tabla de resultados
+### 3.1. Los tres resultados que se califican
 
+Son los que la rúbrica evalúa. El resto de la lista tiene que existir, pero no se califica fila por fila.
 
+| Resultado | Qué demuestra | Dónde está |
+|---|---|---|
+| **El mapeo a fallos de dominio** | Toda excepción de red o de servidor convertida en un fallo que la capa de dominio entiende | Código |
+| **La idempotencia** | La clave generada una vez y reutilizada en los reintentos, con su prueba | Prueba en verde |
+| **El funcionamiento sin conexión** | Demostrado en video, con la interfaz leyendo de la base local | Evidencia |
+
+### 3.2. Lista de comprobación del taller
+
+Todo esto debe existir al cerrar la sesión.
 
 | # | Resultado esperado | Verificación |
 |---|---|---|
@@ -428,7 +469,7 @@ Avance de las historias del Sprint 1. El equipo sostiene su **Daily de 15 minuto
 | 4 | Registro de peticiones **con cabeceras sensibles enmascaradas** y solo en depuración | Código y salida del registro |
 | 5 | Mapeo completo de excepciones a **fallos de dominio** | Código |
 | 6 | Repositorio con estrategia de sincronización **declarada y justificada** por historia | Código y documentación |
-| 7 | **Fuente única de verdad**: la interfaz observa la base local | Código |
+| 7 | **Fuente única de verdad**. La interfaz observa la base local | Código |
 | 8 | Paginación implementada, por cursor o por desplazamiento | Demostración |
 | 9 | **Idempotencia**: la clave se genera una vez y se reutiliza en los reintentos | Prueba en verde |
 | 10 | Reintento con retroceso exponencial **solo** para los códigos admitidos | Pruebas en verde |
@@ -436,7 +477,6 @@ Avance de las historias del Sprint 1. El equipo sostiene su **Daily de 15 minuto
 | 12 | **Demostración del funcionamiento sin conexión**, en video | Evidencia |
 | 13 | Inspección del tráfico con las seis verificaciones | Capturas de mitmproxy |
 | 14 | Historias del Sprint 1 avanzando, con la Daily realizada | Tablero |
-
 
 ## Rúbrica procedimental (20 puntos)
 

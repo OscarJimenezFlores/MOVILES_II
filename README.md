@@ -138,14 +138,14 @@ La app es del equipo de principio a fin. Los talleres no imponen qué construir.
 
 | Semana | El taller construye | Lo decide |
 |---|---|---|
-| **01** | Entorno, equipo Scrum, Lean Canvas, repositorio | **El equipo**: qué app, para quién, con qué stack |
+| **01** | Entorno, equipo Scrum, Lean Canvas, repositorio | **El equipo** — qué app, para quién, con qué stack |
 | **02** | Esqueleto por capas y ADR | **El equipo**: arquitectura y gestión de estado |
-| **03** | Product Goal, Product Backlog y Sprint 1 | **El equipo**: sus 25+ historias, su orden, sus criterios |
+| **03** | Product Goal, Product Backlog y Sprint 1 | **El equipo** — sus 25+ historias, su orden, sus criterios |
 | **04** | Capa de datos de su app | **El equipo**: su contrato de API y sus entidades |
 | **05** | *Ejercicio sobre un servicio SOAP provisto* | Única semana que no toca la app. Ver el aviso del taller |
 | **06** | Serialización y persistencia de su app | **El equipo**: qué se guarda y con qué estrategia |
-| **07–12** | Ubicación, permisos, privacidad, cifrado, autenticación, TLS **de su app** | **El equipo**: qué permisos necesita, qué datos trata, cómo los protege |
-| **13–16** | Evaluación del stack, interfaz adaptativa, pruebas, publicación **de su app** | **El equipo**: su ficha de tienda, su cobertura, su release |
+| **07–12** | Ubicación, permisos, privacidad, cifrado, autenticación, TLS **de su app** | **El equipo** — qué permisos necesita, qué datos trata, cómo los protege |
+| **13–16** | Evaluación del stack, interfaz adaptativa, pruebas, publicación **de su app** | **El equipo** — su ficha de tienda, su cobertura, su release |
 | **17** | Cierre, documentación y sustentación | **El equipo** |
 
 **Dieciséis de los diecisiete talleres construyen la app del equipo.** Solo la Semana 05 trabaja sobre un servicio provisto, y el taller lo declara al inicio con su razón.
@@ -160,7 +160,7 @@ El taller cubre la parte técnica difícil de cada capa, con el docente presente
 | Laboratorio · avance de sprint | 40 min | **Las historias del backlog propio**, con el docente disponible para consultas |
 | Fuera de sesión | Según el equipo | Lo que el sprint requiera. Se registra en GitHub Projects |
 
-Los 40 minutos de avance asistido son el espacio donde el equipo trabaja **su** backlog y puede consultar. El docente no dirige ese tramo. Observa, responde y toma nota de la contribución individual para la medición del **AG-I03** de las Semanas 06 y 12.
+Los 40 minutos de avance asistido son el espacio donde el equipo trabaja **su** backlog y puede consultar. El docente no dirige ese tramo. Observa, responde y toma nota de la contribución individual de cada integrante, que se valora en las exposiciones de avance de las Semanas 06 y 12.
 
 ## Cómo se elige la app y la tecnología
 

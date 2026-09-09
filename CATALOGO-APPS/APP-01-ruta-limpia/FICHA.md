@@ -30,9 +30,9 @@ En los distritos de la periferia el camión recolector no tiene horario fijo. La
 
 Es la pregunta de cierre de la Semana 01, y la que más propuestas hunde.
 
-> El vecino necesita un aviso **cuando el camión está a diez minutos de su cuadra**. Eso exige notificación push y posición en tiempo real: una página web no avisa a nadie.
+> El vecino necesita un aviso **cuando el camión está a diez minutos de su cuadra**. Eso exige notificación push y posición en tiempo real. Una página web no avisa a nadie.
 
-**Capacidades del móvil que esta app usa de verdad:**
+**Capacidades del móvil que esta app usa de verdad.**
 
 | Capacidad | Por qué la necesita |
 |---|---|
@@ -54,7 +54,7 @@ El alcance está acotado a lo que **cabe en cinco sprints** con un equipo de est
 
 ## 4. Modelo de dominio
 
-Las entidades mínimas. Falta el detalle de atributos: eso lo define el equipo.
+Las entidades mínimas. Falta el detalle de atributos. Eso lo define el equipo.
 
 | Entidad | Rol en el dominio |
 |---|---|
@@ -68,7 +68,7 @@ Las entidades mínimas. Falta el detalle de atributos: eso lo define el equipo.
 
 Es la sección que determina el trabajo de las Semanas 08, 09, 10 y 11.
 
-**Sensibilidad de los datos que trata: Media**
+**Sensibilidad de los datos que trata. Media**
 
 | Dato personal que trata | Base legal a declarar |
 |---|---|
@@ -81,13 +81,13 @@ Es la sección que determina el trabajo de las Semanas 08, 09, 10 y 11.
 | **Ubicación en segundo plano (solo la app del operario)** | Al usar la función que lo requiere | Se ofrece un modo alternativo |
 | **Notificaciones** | Tras la primera acción que generará un aviso, no en el arranque | La app funciona, pero el usuario debe consultar a mano |
 
-> **Ley 29733 y D. S. 016-2024-JUS.** Todo dato personal exige consentimiento previo, informado y expreso. Los datos de salud y los de menores de edad son **datos sensibles** y su tratamiento tiene exigencias reforzadas. La política de privacidad de la Semana 09 no es un trámite: es lo que hace legal a la app.
+> **Ley 29733 y D. S. 016-2024-JUS.** Todo dato personal exige consentimiento previo, informado y expreso. Los datos de salud y los de menores de edad son **datos sensibles** y su tratamiento tiene exigencias reforzadas. La política de privacidad de la Semana 09 no es un trámite. Es lo que hace legal a la app.
 
 ## 6. API simulada
 
 El equipo no depende de un servicio externo. Se levanta un servidor simulado con el contrato en `docs/api/openapi.yaml`.
 
-**Recursos mínimos del contrato:**
+**Recursos mínimos del contrato.**
 
 | Recurso | Métodos |
 |---|---|
@@ -97,13 +97,13 @@ El equipo no depende de un servicio externo. Se levanta un servidor simulado con
 | `/reporte` | `GET` · `POST` · `PUT` · `DELETE` |
 | `/aviso` | `GET` · `POST` · `PUT` · `DELETE` |
 
-> Los códigos de estado que el contrato debe contemplar: `200`, `201`, `400`, `401`, `403`, `404`, `409`, `429` con `Retry-After`, y `500`. El manejo diferenciado de cada uno es lo que se evalúa en la Semana 04.
+> Los códigos de estado que el contrato debe contemplar — `200`, `201`, `400`, `401`, `403`, `404`, `409`, `429` con `Retry-After`, y `500`. El manejo diferenciado de cada uno es lo que se evalúa en la Semana 04.
 
 ## 7. Product Backlog semilla
 
 **25 historias**, cinco por sprint, en [`backlog-semilla.csv`](backlog-semilla.csv).
 
-> **No es el backlog final.** Es el punto de partida para que el Taller 03 no empiece en una hoja en blanco. En ese taller el equipo lo refina: aplica INVEST, divide lo que supere 13 puntos, escribe los criterios de aceptación en Gherkin, y **ordena por valor y riesgo**, no por número de historia. Las historias marcadas con dato personal necesitan además los cuatro escenarios de la Semana 09.
+> **No es el backlog final.** Es el punto de partida para que el Taller 03 no empiece en una hoja en blanco. En ese taller el equipo lo refina — aplica INVEST, divide lo que supere 13 puntos, escribe los criterios de aceptación en Gherkin, y **ordena por valor y riesgo**, no por número de historia. Las historias marcadas con dato personal necesitan además los cuatro escenarios de la Semana 09.
 
 | Columna | Contenido |
 |---|---|
@@ -114,7 +114,7 @@ El equipo no depende de un servicio externo. Se levanta un servidor simulado con
 | `puntos` | Estimación inicial en la escala de Fibonacci. **El equipo la reestima con Planning Poker** |
 | `riesgo` | Alto, Medio o Bajo. Ordena el backlog junto con el valor |
 | `dato_personal` | Si la historia trata datos personales |
-| `criterio_aceptacion` | Vacío a propósito: se escribe en el Taller 03 |
+| `criterio_aceptacion` | **Vacío a propósito.** Se escribe en el Taller 03 |
 
 ---
 

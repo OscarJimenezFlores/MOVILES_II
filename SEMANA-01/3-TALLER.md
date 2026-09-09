@@ -16,9 +16,11 @@ flowchart TD
     PB["<b>Paso B</b><br/>Conformar el equipo Scrum<br/><i>10 min</i>"]
     PC["<b>Paso C</b><br/>Lean Canvas y validación del<br/>problema<br/><i>20 min</i>"]
     PD["<b>Paso D</b><br/>Repositorio e integración<br/>continua<br/><i>20 min</i>"]
-    PA --> PB --> PC --> PD
+    PE["<b>Paso E</b><br/>Validar y corregir<br/><i>25 min</i>"]
+    PF["<b>Paso F</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
+    PA --> PB --> PC --> PD --> PE --> PF
     classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD paso;
+    class PA,PB,PC,PD,PE,PF paso;
 ```
 
 ## Qué entregas
@@ -37,6 +39,14 @@ flowchart TD
 ---
 
 **La sesión de laboratorio dura 100 minutos.** El avance del proyecto lo ejecuta el equipo fuera de la sesión.
+
+## El reto
+
+| | |
+|---|---|
+| **Situación** | El equipo tiene una idea de app y ninguna prueba de que el problema exista. Construir sobre una suposición cuesta un semestre. |
+| **Misión** | Validar el problema con cinco personas reales antes de escribir código, y dejar el repositorio con integración continua en verde. |
+| **Criterio de éxito** | Al menos tres de las cinco entrevistas confirman el problema **con un hecho**, no con una opinión favorable. |
 
 ## 1. Información sobre el evento práctico
 
@@ -81,7 +91,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 | **Xcode** *(solo macOS)* | SDK, simulador y firma para iOS. *Gratuito* | https://developer.apple.com/xcode/ |
 | **Visual Studio Code** | Editor principal del proyecto. *MIT* | https://code.visualstudio.com/download |
 | **Git** | Control de versiones del proyecto. *GPL-2.0* | https://git-scm.com/downloads |
-| **GitHub** | Repositorio remoto, revisión por pares e integración continua. *Nivel gratuito* | https://github.com/signup |
+| **GitHub** | Repositorio remoto, revisión de código dentro del equipo e integración continua. *Nivel gratuito* | https://github.com/signup |
 | **GitHub Actions** | Tubería de integración continua del equipo. *Incluido en el nivel gratuito* | https://docs.github.com/actions |
 | **Flutter SDK** *(según la ruta elegida)* | Base de código única para ambas plataformas. *BSD-3-Clause* | https://docs.flutter.dev/get-started/install |
 | **Kotlin / JDK 17** *(nativo Android)* | Compilación de la aplicación Android. *Apache 2.0 / GPL-2.0 con excepción* | https://adoptium.net/temurin/releases/ |
@@ -111,6 +121,13 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 
 ## 2. Procedimiento o Metodología
 
+**El código de cada paso está en la guía de su stack.** El enunciado, los tiempos y los resultados esperados son los mismos para las dos; lo que cambia es la implementación.
+
+| Stack | Guía |
+|---|---|
+| **Flutter** | [Taller 01 · Implementación en Flutter](3-TALLER-FLUTTER.md) |
+| **Kotlin Multiplatform** | [Taller 01 · Implementación en KMP](3-TALLER-KOTLIN.md) |
+
 ### Paso A — Verificar el entorno
 
 > **Guías de instalación paso a paso.** El entorno se instala **antes** de esta sesión, no durante. Están en [`GUIAS/`](../GUIAS/):
@@ -121,7 +138,6 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 > | **Kotlin Multiplatform** | [Guía práctica · KMP con Google Antigravity](../GUIAS/GUIA-ANTIGRAVITY-KOTLIN.md) |
 >
 > Cada guía lleva de cero a una app corriendo en el emulador — instalación de Antigravity, del SDK, de Android Studio, creación del emulador y el primer artefacto dirigiendo al agente. **La elección de stack es provisional** y se somete a evaluación con datos medidos en el `ADR-004` de la Semana 13.
-
 
 ```bash
 # --- Android ---
@@ -185,7 +201,6 @@ Crear el emulador es parte del paso. En Android Studio, **Device Manager → Cre
 > La elección sigue siendo **libre**. Su equipo puede proponer su propia app. El catálogo está para que sepa **qué profundidad se espera** y para que quien nunca construyó una app no arranque frente a una hoja en blanco. Lo que no puede hacer es entregar uno de los ejemplos tal como está.
 >
 > **Dos equipos no pueden tomar el mismo dominio.** Se registra en la Semana 01, por orden de propuesta aprobada.
-
 
 **C.1 — Lean Canvas** (`docs/producto/LEAN_CANVAS.md`), completado en el orden 1 → 9.
 
@@ -339,13 +354,27 @@ jobs:
 | Completar las entrevistas de validación pendientes | `VALIDACION.md` con 5 entrevistas |
 | Bocetar en Figma las **3 pantallas principales** | Bocetos de baja fidelidad |
 | Listar las **capacidades del móvil** que la app usará | Justificación de por qué es una app |
-| Investigar el **backend**: propio o de terceros | Decisión preliminar |
+| Investigar el **backend**. Propio o de terceros | Decisión preliminar |
 | Investigar los **stacks candidatos** para el ADR (*Architecture Decision Record*, registro de decisión de arquitectura) de la Semana 02 | Tabla comparativa preliminar |
 | Verificar el acceso a macOS y a cuentas de desarrollador | Plan de publicación preliminar |
 
 ---
 
+### Paso E — Validar y corregir (25 min)
 
+El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
+
+1. Comprobar que las cinco entrevistas tienen **cita textual** por entrevistado, no un resumen del equipo.
+2. Verificar que el veredicto de validación se sostiene. Tres de cinco confirmaron con un hecho concreto que ya les ocurrió.
+3. Revisar que la integración continua está en verde y que la verificación de secretos está activa.
+
+> Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
+
+### Paso F — Registrar la evidencia y cerrar (15 min)
+
+Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
+
+---
 
 ## 3. Resultados
 
@@ -370,9 +399,19 @@ jobs:
 >
 > **El informe es lo que se califica; el repositorio es lo que lo prueba.** Cada resultado de la sección 3 del informe lleva la URL con la que se verifica, y **un resultado sin su URL se califica como no logrado**, por bien redactado que esté. Lo que no se puede abrir no se puede dar por hecho.
 
-### 3.1. Tabla de resultados
+### 3.1. Los tres resultados que se califican
 
+Son los que la rúbrica evalúa. El resto de la lista tiene que existir, pero no se califica fila por fila.
 
+| Resultado | Qué demuestra | Dónde está |
+|---|---|---|
+| **El veredicto de validación** | Cinco entrevistas con cita textual y el veredicto sobre el problema | `VALIDACION.md` |
+| **El Lean Canvas** | Los nueve bloques completos, coherentes con lo que las entrevistas devolvieron | `LEAN_CANVAS.md` |
+| **El repositorio con integración continua** | Rama protegida, Pull Request obligatorio y la CI en verde | URL del repositorio y captura de la ejecución |
+
+### 3.2. Lista de comprobación del taller
+
+Todo esto debe existir al cerrar la sesión.
 
 | # | Resultado esperado | Verificación |
 |---|---|---|
@@ -383,14 +422,13 @@ jobs:
 | 5 | Acuerdos de trabajo con los siete puntos | `ACUERDOS.md` |
 | 6 | Lean Canvas con los **nueve bloques** completos | `LEAN_CANVAS.md` |
 | 7 | **Cinco entrevistas de validación** con cita textual por entrevistado | `VALIDACION.md` |
-| 8 | **Veredicto de validación**: ≥ 3 de 5 confirmaron el problema con un hecho | `VALIDACION.md` |
+| 8 | **Veredicto de validación**. ≥ 3 de 5 confirmaron el problema con un hecho | `VALIDACION.md` |
 | 9 | Visión de producto con la estructura completa | `VISION.md` |
 | 10 | Repositorio con la estructura, `.gitignore` y `CONTRIBUTING.md` | URL del repositorio |
 | 11 | Rama `main` protegida, con Pull Request obligatorio | Configuración del repositorio |
 | 12 | **CI en verde**, con la verificación de secretos activa | Captura de la ejecución |
 | 13 | Tres pantallas bocetadas y capacidades del móvil justificadas | Figma y documento |
 | 14 | Tablero del equipo creado | Captura |
-
 
 ## Rúbrica procedimental (20 puntos)
 

@@ -43,6 +43,12 @@ flowchart LR
 > **«Historias que no pasan INVEST»**
 > Cada equipo recibe **doce historias de usuario reales de proyectos móviles**, que están en **Material de trabajo**, y debe — **evaluarlas con INVEST**, **corregir las que fallan**, **dividir las que son demasiado grandes** y **estimarlas con Planning Poker** en vivo.
 
+| | |
+|---|---|
+| **Su papel** | **Product Owner en el refinamiento**, con el sprint empezando mañana |
+| **Misión** | Dejar las doce historias listas para entrar al sprint, corregidas, divididas y estimadas |
+| **Restricción** | **Ninguna historia sale del refinamiento con más de 8 puntos.** Lo que no se pueda dividir se declara como riesgo |
+
 ## Cómo se desarrolla · 35 minutos
 
 | | Bloque | Quién | Minutos |
@@ -151,7 +157,7 @@ Escenario: La actividad del usuario reinicia el contador
 | Historia | «Cerrar la sesión sola tras 15 minutos sin uso» |
 | Estimaciones | Dos integrantes estimaron 3; uno estimó 13 |
 | Qué reveló la discusión | Quien estimó 13 asumía que había que detectar la inactividad en toda la app, pantalla por pantalla. Los otros dos daban por hecho que el marco ofrecía un evento global de interacción. **Sí lo ofrecía**, pero nadie lo había verificado. Se comprobó en la discusión |
-| Qué se hizo | Se verificó el evento global durante la sesión de estimación y se reestimó por unanimidad en 3. La historia no se dividió: el desacuerdo era de información, no de tamaño |
+| Qué se hizo | Se verificó el evento global durante la sesión de estimación y se reestimó por unanimidad en 3. La historia no se dividió. El desacuerdo era de información, no de tamaño |
 
 **Para qué sirve Planning Poker.** No para acertar el número, sino para que aparezcan estas discrepancias. Una estimación unánime a la primera suele significar que nadie preguntó nada.
 

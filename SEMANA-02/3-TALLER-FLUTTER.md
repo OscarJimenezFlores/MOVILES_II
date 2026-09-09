@@ -309,7 +309,7 @@ Se añade a el pipeline de la Semana 01 la verificación de la regla de dependen
 | | Comprobación | Comando |
 |---|---|---|
 | ☐ | La app muestra la lista con datos falsos | `flutter run` |
-| ☐ | Los tres estados se ven: cargando, error y listo | Fuerce el error en el repositorio falso |
+| ☐ | Los tres estados se ven. Cargando, error y listo | Fuerce el error en el repositorio falso |
 | ☐ | `lib/domain/` no importa Flutter | `grep -rn "package:flutter" lib/domain/` |
 | ☐ | La prueba del caso de uso pasa | `flutter test` |
 | ☐ | Análisis limpio | `flutter analyze` |

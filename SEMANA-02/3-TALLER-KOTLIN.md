@@ -295,7 +295,7 @@ Se añade a el pipeline de la Semana 01 la verificación de la regla de dependen
 | | Comprobación | Comando |
 |---|---|---|
 | ☐ | La app muestra la lista con datos falsos | `./gradlew :composeApp:installDebug` |
-| ☐ | Los tres estados se ven: cargando, error y listo | Fuerce el error en el repositorio falso |
+| ☐ | Los tres estados se ven. Cargando, error y listo | Fuerce el error en el repositorio falso |
 | ☐ | `domain/` no importa plataforma | `grep -rn "import android\." .../domain` |
 | ☐ | La prueba del caso de uso pasa | `./gradlew :composeApp:testDebugUnitTest` |
 | ☐ | Formato y análisis limpios | `./gradlew ktlintCheck detekt` |

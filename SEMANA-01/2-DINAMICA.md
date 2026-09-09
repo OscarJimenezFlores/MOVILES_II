@@ -43,6 +43,12 @@ flowchart LR
 > **«Tres apps que no debieron existir»**
 > Cada equipo analiza **tres aplicaciones reales** publicadas en Google Play o en la App Store —una que considere excelente, una mediocre y una que **no debió ser una app**— y las evalúa con las cinco preguntas de producto y las métricas de la sección 1.4.
 
+| | |
+|---|---|
+| **Su papel** | **Analista de producto** que debe recomendar si la app se construye o no se construye |
+| **Misión** | Evaluar las tres aplicaciones con las cinco preguntas y sostener cuál no debió existir |
+| **Restricción** | **«La interfaz es fea» no es un argumento.** Cada juicio se apoya en una de las cinco preguntas o en una métrica |
+
 ## Cómo se desarrolla · 35 minutos
 
 | | Bloque | Quién | Minutos |
@@ -84,7 +90,7 @@ flowchart LR
 | **¿Qué capacidad del móvil aprovecha?** | **Ninguna.** No usa notificaciones, ni ubicación, ni cámara, ni funciona sin conexión. Es una página web dentro de un contenedor, con el mismo contenido que el sitio |
 | ¿Por qué se abriría una segunda vez? | No hay motivo. El horario cambia una vez por trimestre. Una página web guardada en la pantalla de inicio resuelve lo mismo sin ocupar 24 MB |
 | Calificación y volumen de reseñas | 2,4 con 87 reseñas. Las tres más votadas dicen que el horario está desactualizado |
-| **Veredicto y por qué** | No debió ser una app. El costo de instalarla, mantenerla en dos tiendas y actualizarla no se justifica frente a una página web adaptable. El indicador que lo confirma es la retención: las reseñas mencionan que se instala, se consulta una vez y se desinstala |
+| **Veredicto y por qué** | No debió ser una app. El costo de instalarla, mantenerla en dos tiendas y actualizarla no se justifica frente a una página web adaptable. El indicador que lo confirma es la retención. Las reseñas mencionan que se instala, se consulta una vez y se desinstala |
 
 *La lección aplicada*
 

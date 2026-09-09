@@ -22,11 +22,11 @@
 
 Es la guía de arranque para **Kotlin Multiplatform**. Deja el entorno funcionando y construye el primer artefacto con asistencia de un agente de código, antes de la Semana 01.
 
-**No** es un curso de Kotlin. Y no es una guía para que el agente escriba la app por usted: es para que aprenda a **dirigirlo** y a **rechazar** lo que produce mal. Esa es la competencia que el curso evalúa.
+**No** es un curso de Kotlin. Y no es una guía para que el agente escriba la app por usted. Es para que aprenda a **dirigirlo** y a **rechazar** lo que produce mal. Esa es la competencia que el curso evalúa.
 
 > **Verificación de vigencia.** Versiones y pasos contrastados con la documentación oficial en **septiembre de 2026**. Si un menú no coincide, gana la documentación oficial. Fuentes al final.
 
-## Flutter o Kotlin Multiplatform: cómo se elige
+## Flutter o Kotlin Multiplatform · cómo se elige
 
 Las dos stacks llegan al mismo destino —una app publicada— por caminos distintos. La elección se hace en la Semana 01, es **provisional**, y se somete a evaluación con datos medidos en la Semana 13 (`ADR-004`).
 
@@ -39,7 +39,7 @@ Las dos stacks llegan al mismo destino —una app publicada— por caminos disti
 | Acceso a lo nativo | Por canales de plataforma | Directo, sin puente |
 | Requisitos del equipo | Ninguno especial | Ver la advertencia sobre iOS |
 
-> **Si el equipo ya sabe Kotlin y Android, KMP evita aprender un lenguaje nuevo.** Si el equipo viene de cero y quiere el camino más corto a algo funcionando, Flutter suele serlo. Ninguna de las dos es «mejor»: lo que el curso califica es que la decisión esté **justificada y medida**, no cuál eligieron.
+> **Si el equipo ya sabe Kotlin y Android, KMP evita aprender un lenguaje nuevo.** Si el equipo viene de cero y quiere el camino más corto a algo funcionando, Flutter suele serlo. Ninguna de las dos es «mejor». Lo que el curso califica es que la decisión esté **justificada y medida**, no cuál eligieron.
 
 ---
 
@@ -53,13 +53,13 @@ Las dos stacks llegan al mismo destino —una app publicada— por caminos disti
 | Cuenta de Google | Para iniciar sesión en Antigravity |
 | Navegador Chrome | Requerido por el comando `/browser` |
 
-> **Advertencia sobre iOS, léala antes de elegir este stack.** El destino **iOS de KMP exige macOS con Xcode instalado y abierto al menos una vez**. Sin un Mac no hay compilación para iOS, y no existe alternativa. Si el equipo no tiene Mac, esto **no** impide trabajar con KMP: se desarrolla y publica para **Android en Google Play**, que es lo que el curso exige —al menos una tienda oficial— y el módulo `iosMain` queda preparado pero sin compilar. Esa restricción se declara en el `ADR-004` como lo haría cualquier equipo profesional.
+> **Advertencia sobre iOS, léala antes de elegir este stack.** El destino **iOS de KMP exige macOS con Xcode instalado y abierto al menos una vez**. Sin un Mac no hay compilación para iOS, y no existe alternativa. Si el equipo no tiene Mac, esto **no** impide trabajar con KMP. Se desarrolla y publica para **Android en Google Play**, que es lo que el curso exige —al menos una tienda oficial— y el módulo `iosMain` queda preparado pero sin compilar. Esa restricción se declara en el `ADR-004` como lo haría cualquier equipo profesional.
 
 ---
 
 ## Parte 1 · Instalar Google Antigravity
 
-Antigravity es el entorno de desarrollo con agentes de Google. Tiene dos vistas: el **Editor**, un editor de código convencional, y el **Agent Manager**, donde se lanzan y supervisan agentes en paralelo.
+Antigravity es el entorno de desarrollo con agentes de Google. Tiene dos vistas — el **Editor**, un editor de código convencional, y el **Agent Manager**, donde se lanzan y supervisan agentes en paralelo.
 
 ### 1.1 Descarga e instalación
 
@@ -95,7 +95,7 @@ Se cambia en los ajustes del proyecto, en **Agent Behaviour**.
 | **Settings → Customizations** | Servidores MCP |
 | Engranaje del proyecto | **Security Preset**, **Agent Behaviour**, **Local Permissions**, **MCP Tools** |
 
-### 1.4 Los artefactos: donde está el valor académico
+### 1.4 Los artefactos · donde está el valor académico
 
 | Artefacto | Qué contiene | Qué debe hacer usted |
 |---|---|---|
@@ -114,7 +114,7 @@ Se cambia en los ajustes del proyecto, en **Agent Behaviour**.
 
 ### 2.1 El IDE
 
-KMP necesita un IDE con su complemento. **Antigravity no lo reemplaza**: se usa Android Studio o IntelliJ IDEA para el proyecto y el emulador, y Antigravity como entorno de agentes sobre la misma carpeta.
+KMP necesita un IDE con su complemento. **Antigravity no lo reemplaza**. Se usa Android Studio o IntelliJ IDEA para el proyecto y el emulador, y Antigravity como entorno de agentes sobre la misma carpeta.
 
 | Herramienta | Versión mínima |
 |---|---|
@@ -143,13 +143,13 @@ Es obligatoria. Sin ella el proyecto no compila para Android.
 export ANDROID_HOME=~/Library/Android/sdk
 ```
 
-**Windows, PowerShell:**
+**Windows, PowerShell.**
 
 ```powershell
 [Environment]::SetEnvironmentVariable('ANDROID_HOME', '<ruta del SDK>', 'Machine')
 ```
 
-**Windows, CMD:**
+**Windows, CMD.**
 
 ```cmd
 setx ANDROID_HOME "<ruta del SDK>"
@@ -159,14 +159,14 @@ setx ANDROID_HOME "<ruta del SDK>"
 
 En Android Studio, **More Actions → SDK Manager**, o **Tools → SDK Manager**:
 
-- **SDK Platforms**: marque el nivel de API vigente y aplique.
-- **SDK Tools**: **Build-Tools**, **Command-line Tools**, **Emulator**, **Platform-Tools**.
+- **SDK Platforms**. Marque el nivel de API vigente y aplique.
+- **SDK Tools** — **Build-Tools**, **Command-line Tools**, **Emulator**, **Platform-Tools**.
 
-Para el emulador: **More Actions → Virtual Device Manager** → **Create Virtual Device** → **Phone** → definición del dispositivo → **Next** → imagen del sistema (**x86** o **ARM** según su procesador) → **Additional settings → Emulated Performance → Graphics: Hardware** → **Finish**.
+Para el emulador **More Actions → Virtual Device Manager** → **Create Virtual Device** → **Phone** → definición del dispositivo → **Next** → imagen del sistema (**x86** o **ARM** según su procesador) → **Additional settings → Emulated Performance → Graphics. Hardware** → **Finish**.
 
 > **Dispositivo de referencia del curso.** Todo el equipo mide sobre **el mismo perfil de emulador**, de gama media. Las métricas de la Semana 15 no significan nada si cada quien mide en un aparato distinto. Acuerden el perfil en la Semana 01 y anótenlo en `docs/entorno/`.
 
-### 2.6 Comprobación en macOS: KDoctor
+### 2.6 Comprobación en macOS · KDoctor
 
 Solo en macOS, y solo si va a intentar el destino iOS. Se instala con Homebrew y se ejecuta desde el terminal:
 
@@ -187,17 +187,17 @@ Reporta lo que falta. El fallo más común es `JAVA_HOME`, que indica dónde est
 
 ### 3.1 Con el asistente del IDE
 
-**En Android Studio:**
+**En Android Studio.**
 
 1. **File → New → New project**
 2. En la plantilla **Phone and Tablet**, elija **Kotlin Multiplatform**
 3. Seleccione las plataformas y pulse **Finish**
 
-**En IntelliJ IDEA:**
+**En IntelliJ IDEA.**
 
 1. **File → New → Project**
 2. Elija **Kotlin Multiplatform**
-3. Seleccione las plataformas: Android, iOS, Desktop, Web, Server
+3. **Seleccione las plataformas.** Android, iOS, Desktop, Web, Server
 4. Elija **JetBrains Runtime** como JDK
 5. **Create**
 
@@ -238,7 +238,7 @@ Un encargo mal formulado produce código plausible y equivocado:
 | «Conecta la API.» | «Implementa el cliente Ktor contra `docs/api/openapi.yaml`, en `commonMain`. Tiempo de espera de 10 s. Ante 429 respeta `Retry-After`. Ante 4xx no reintentes. Errores tipados con `sealed class`, no `Exception`.» |
 | «Arregla el bug.» | «La lista se duplica al rotar. Sospecho del `ViewModel` en `androidMain`. Muéstrame el plan primero; no cambies nada hasta que lo apruebe.» |
 
-**Las tres reglas del encargo:**
+**Las tres reglas del encargo.**
 
 1. **Diga la restricción, no solo la funcionalidad.**
 2. **Pida el plan antes que el código** cuando toque arquitectura, datos personales o seguridad.
@@ -261,7 +261,7 @@ Y una propia de KMP:
 | **`expect`/`actual`** | ¿Declaró un `expect` sin su `actual` en cada destino? |
 | **Pruebas** | ¿Comprueban algo o solo que no explota? |
 
-> **Lo que se entrega no es lo que el agente produjo: es lo que usted aprobó.**
+> **Lo que se entrega no es lo que el agente produjo. Es lo que usted aprobó.**
 
 ### 4.3 Dejar rastro
 
@@ -272,7 +272,7 @@ docs/agentes/
 ```
 
 ```markdown
-# Historia: <ID y título>
+# Historia · <ID y título>
 
 ## Encargo dado al agente
 <el texto exacto>

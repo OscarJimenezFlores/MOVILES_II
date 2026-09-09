@@ -43,6 +43,12 @@ flowchart LR
 > **«El cambio que duele»**
 > Cada equipo recibe **el código de una pantalla real mal arquitecturada**, que está en **Material de trabajo** —lógica de negocio, llamada HTTP y formato de fecha dentro de la vista— y debe. **Identificar los problemas**, **rediseñarla en MVVM** y **estimar el costo de tres cambios** en la versión actual frente a la rediseñada.
 
+| | |
+|---|---|
+| **Su papel** | **Desarrollador que hereda la pantalla** y tiene tres cambios que entregar esta semana |
+| **Misión** | Rediseñarla en MVVM y estimar el costo de los tres cambios en las dos versiones |
+| **Restricción** | **La estimación va en horas** y hay que decir qué parte del código obliga a tocar cada una. Sin eso es una opinión |
+
 ## Cómo se desarrolla · 35 minutos
 
 | | Bloque | Quién | Minutos |

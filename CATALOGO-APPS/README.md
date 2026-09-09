@@ -22,7 +22,7 @@
 
 El curso **no le asigna** una app. Su equipo propone la suya en la Semana 01 y la construye durante todo el semestre.
 
-Este catálogo existe por una razón concreta: para muchos estudiantes esta es la primera app que van a construir de principio a fin, y **una hoja en blanco en la primera semana no enseña nada**. Aquí hay diez dominios desarrollados hasta el nivel que el curso exige, para que vea la profundidad esperada antes de decidir.
+Este catálogo existe por una razón concreta — para muchos estudiantes esta es la primera app que van a construir de principio a fin, y **una hoja en blanco en la primera semana no enseña nada**. Aquí hay diez dominios desarrollados hasta el nivel que el curso exige, para que vea la profundidad esperada antes de decidir.
 
 | Puede | No puede |
 |---|---|
@@ -46,7 +46,7 @@ Este catálogo existe por una razón concreta: para muchos estudiantes esta es l
 | **09** | [Campo Presente](APP-09-campo-presente/FICHA.md) | Asistencia de personal de campo | supervisor de cuadrilla | **Alta — dato laboral y biométrico si se usa rostro** |
 | **10** | [Frontera Clara](APP-10-frontera-clara/FICHA.md) | Trámite de paso de frontera | usuario frecuente | Media |
 
-Están escogidos para cubrir **capacidades móviles distintas**: notificación por proximidad, ubicación en segundo plano, funcionamiento sin conexión, cámara con coordenada, lectura de código de barras y contenido descargable. Y **niveles de exigencia legal distintos**: desde datos de baja sensibilidad hasta datos de salud y de menores de edad, que es el caso más exigente que trata la Ley 29733.
+Están escogidos para cubrir **capacidades móviles distintas** — notificación por proximidad, ubicación en segundo plano, funcionamiento sin conexión, cámara con coordenada, lectura de código de barras y contenido descargable. Y **niveles de exigencia legal distintos** desde datos de baja sensibilidad hasta datos de salud y de menores de edad, que es el caso más exigente que trata la Ley 29733.
 
 ## Qué contiene cada ficha
 
@@ -64,7 +64,7 @@ Están escogidos para cubrir **capacidades móviles distintas**: notificación p
 
 > **¿Por qué su idea tiene que ser una app y no una página web?**
 
-Si la respuesta no nombra una **capacidad propia del móvil** —notificación push, ubicación en segundo plano, cámara con coordenada, funcionamiento sin conexión, sensores— la propuesta se reformula esa misma semana. No es un capricho: una app que podría ser una web no justifica un semestre de desarrollo móvil, y no da evidencia del atributo que el curso mide.
+Si la respuesta no nombra una **capacidad propia del móvil** —notificación push, ubicación en segundo plano, cámara con coordenada, funcionamiento sin conexión, sensores— la propuesta se reformula esa misma semana. No es un capricho. Una app que podría ser una web no justifica un semestre de desarrollo móvil, y no da evidencia del atributo que el curso mide.
 
 Los diez ejemplos responden esa pregunta en su sección 2. Léala antes de proponer la suya.
 
