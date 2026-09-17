@@ -185,8 +185,9 @@ Todo trabajo del curso se entrega en **PDF**, con la carátula de la UPT y los c
 |---|---|---|
 | [Dinámica de aula](PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) | Lo que el grupo resolvió en la sesión de aula | `SI988-S<NN>-DINAMICA-Grupo<N>.pdf` |
 | [Taller de laboratorio](PLANTILLAS/SI988-PLANTILLA-TALLER.docx) | El informe del taller, en formato EPIS | `SI988-S<NN>-TALLER-Grupo<N>.pdf` |
+| [Informe de Daily Scrum](DAILY/SI988-MODELO-INFORME-DAILY.docx) | Lo que el **Scrum Master** registra de cada daily del sprint | `SI988-S<NN>-DAILY-<DD>-Grupo<N>.pdf` |
 
-Las reglas completas de entrega están en [`PLANTILLAS/`](PLANTILLAS/).
+Las reglas completas de entrega están en [`PLANTILLAS/`](PLANTILLAS/), y las del informe de daily en [`DAILY/`](DAILY/), que trae el modelo y un [ejemplo resuelto](DAILY/SI988-EJEMPLO-INFORME-DAILY.docx).
 
 ## Plan de evaluación
 

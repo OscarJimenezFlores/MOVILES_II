@@ -54,12 +54,15 @@ venv/
 
 # ---------------------------------------------------------------------------
 # Exámenes de unidad. No se publican — el alumno los recibe en la sesión.
-# Cubre el banco teórico, el examen práctico y sus dos solucionarios.
+# Viven en SEMANA-NN-EXAMENES: banco teórico, XML de Moodle, práctico y claves.
 # ---------------------------------------------------------------------------
+SEMANA-*-EXAMENES/
+**/SEMANA-*-EXAMENES/
 4-EXAMEN-TEORICO.md
 5-EXAMEN-PRACTICO.md
 **/4-EXAMEN-*.md
 **/5-EXAMEN-*.md
+**/4-EXAMEN-*.xml
 
 # ---------------------------------------------------------------------------
 # Plan de Assessment ICACIT. Material institucional del docente, con registros
