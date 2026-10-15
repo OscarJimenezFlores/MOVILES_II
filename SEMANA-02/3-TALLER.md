@@ -2,26 +2,11 @@
 
 # Taller de laboratorio 02 · Esqueleto por capas, decisiones de arquitectura y Definition of Done
 
-**SI-988 · Soluciones Móviles II** · Semana 02 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 02 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Evaluar los stacks y decidir<br/><i>15 min</i>"]
-    PB["<b>Paso B</b><br/>Redactar los ADR<br/><i>10 min</i>"]
-    PC["<b>Paso C</b><br/>Esqueleto y funcionalidad<br/>vertical<br/><i>25 min</i>"]
-    PD["<b>Paso D</b><br/>Definition of Done y CI<br/>ampliada<br/><i>10 min</i>"]
-    PE["<b>Paso E</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PF["<b>Paso F</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF paso;
-```
 
 ## Qué entregas
 
@@ -32,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 02» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Avance de proyecto lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | Elegir el stack por preferencia condena al equipo a defender esa preferencia todo el semestre. La decisión hay que poder deshacerla. |
-| **Misión** | Evaluar los stacks con una prueba de humo sobre la capacidad crítica, redactar los dos ADR y levantar una funcionalidad vertical que atraviese las tres capas. |
-| **Criterio de éxito** | El ADR del stack incluye un **plan de salida**, y el dominio no importa nada de datos ni de presentación. |
+El avance de Avance de proyecto lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -64,16 +41,12 @@ Construcción del esqueleto de la aplicación con separación de capas y una fun
 - Formalizar la **Definition of Done** verificable del equipo.
 - Ampliar la **CI** para que verifique la DoD automáticamente.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil.
 - **RA2** Propone el plan de desarrollo de su app con metodologías ágiles.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -84,7 +57,7 @@ Construcción del esqueleto de la aplicación con separación de capas y una fun
 | Herramientas de prueba del stack elegido | JUnit · XCTest · flutter_test · Jest |
 | **Mermaid** o draw.io | Diagrama de arquitectura |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -298,7 +271,7 @@ jobs:
 
 ---
 
-### Paso E — Validar y corregir (25 min)
+### Paso E — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -308,7 +281,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso F — Registrar la evidencia y cerrar (15 min)
+### Paso F — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

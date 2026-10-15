@@ -67,12 +67,12 @@ flowchart LR
 
 | Entregable | Formato y nombre del archivo | Vence |
 |---|---|---|
-| **Dinámica de aula** · Tres apps que no debieron existir | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S01-DINAMICA-Grupo<N>.pdf` | Antes de cerrar la sesión de teoría |
-| **Informe del taller de laboratorio N.º 01** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S01-TALLER-Grupo<N>.pdf` | 48 h después del taller |
+| **Dinámica de aula** · Tres apps que no debieron existir | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S01-DINAMICA-Grupo<N>.pdf` | Según lo programado en el aula virtual |
+| **Informe del taller de laboratorio N.º 01** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S01-TALLER-Grupo<N>.pdf` | Según lo programado en el aula virtual |
 | Repositorio con CI en verde | URL, con el docente como colaborador | Fin del taller |
-| Lean Canvas, validación y visión del producto | Commit en el repositorio | 48 h después del taller |
+| Lean Canvas, validación y visión del producto | Commit en el repositorio | Según lo programado en el aula virtual |
 
-> Ambos se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
+> La dinámica y el informe del taller se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
 
 ## Cómo se evalúa
 

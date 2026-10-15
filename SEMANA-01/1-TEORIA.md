@@ -14,31 +14,9 @@ Un equipo presenta su idea. Una aplicación para restaurantes, con reservas, res
 
 Tres preguntas la desarman. Quién la usa exactamente, qué hace hoy esa persona sin la app, y por qué tiene que ser una app y no una página web. La tercera no tiene respuesta.
 
-> **La pregunta que ordena esta sesión.** *¿Qué justifica que una idea sea una aplicación móvil y no una página web?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| Programación móvil, una pantalla y su lógica | Soluciones Móviles I |
-| Consumo básico de un servicio web | Cursos previos de la carrera |
-| Nociones de control de versiones con Git | Cursos previos de la carrera |
-| Una idea de producto, aunque esté sin depurar | Trabajo previo del equipo |
+> **¿Qué justifica que una idea sea una aplicación móvil y no una página web?**
 
 > **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿Qué le falta a esa idea? ¿Cuántas de las seis funcionalidades caben en cinco sprints? ¿Por qué tendría que ser una app?* No se corrige nada todavía.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| El caso de la app de restaurantes y la exploración inicial | 8 |
-| Prueba de entrada | 8 |
-| **Bloque 1.** Qué distingue a Soluciones Móviles II | 8 |
-| **Bloque 2.** El panorama técnico y la decisión de stack | 18 |
-| **Bloque 3.** La propuesta de valor con el Lean Canvas · con su microaplicación | 10 |
-| Encuadre del curso | 8 |
-| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
-| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -75,9 +53,9 @@ flowchart TD
 
 Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de partida. **Ejes.** Ciclo de vida de una actividad y de un *view controller*, gestión de estado, asincronía y concurrencia, consumo de una API REST, control de versiones con ramas, pruebas unitarias, y firma de una aplicación. El resultado agregado define los refuerzos de las semanas 2 a 4.
 
-## Bloque 1 · Qué distingue a Soluciones Móviles II
+## 1. Qué distingue a Soluciones Móviles II
 
-> **La pregunta del bloque.** *¿Qué cambia cuando la app tiene que salir a producción?*
+> **¿Qué cambia cuando la app tiene que salir a producción?**
 
 **El salto respecto de Soluciones Móviles I.**
 
@@ -103,9 +81,9 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 
 > **El error frecuente del bloque.** Empezar por el código. La mayoría de las aplicaciones que se abandonan no fallan por su tecnología, fallan porque **nadie las necesitaba**. Las cinco preguntas del producto se responden antes de la primera línea, y la tercera elimina la mitad de las propuestas.
 
-## Bloque 2 · El panorama técnico y la decisión de stack
+## 2. El panorama técnico y la decisión de stack
 
-> **La pregunta del bloque.** *¿Qué decide realmente el stack, la tecnología o el equipo?*
+> **¿Qué decide realmente el stack, la tecnología o el equipo?**
 
 **Las cuatro rutas y su decisión real.**
 
@@ -141,9 +119,9 @@ Instrumento diagnóstico de 20 preguntas, sin nota, para calibrar el punto de pa
 
 > **El error frecuente del bloque.** Elegir el stack por preferencia técnica. La decisión la deciden las restricciones —qué sabe el equipo hoy, cuántos sprints puede gastar aprendiendo y **si tiene acceso a un equipo macOS**—, y esa última es la que más condiciona a los equipos de este curso.
 
-## Bloque 3 · La propuesta de valor con el Lean Canvas
+## 3. La propuesta de valor con el Lean Canvas
 
-> **La pregunta del bloque.** *¿Qué se mide en una app, si no son las descargas?*
+> **¿Qué se mide en una app, si no son las descargas?**
 
 El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa en el orden numerado, que no es el orden visual:
 
@@ -187,7 +165,7 @@ El **Lean Canvas** condensa el modelo del producto en nueve bloques. Se completa
 
 > **La primera versión no era una idea mala. Era una idea sin dueño.** «Restaurantes y clientes» no es un segmento, «la mejor app» no es una propuesta de valor y seis funcionalidades no caben en cinco sprints. **La versión que sobrevive es más pequeña, y por eso es la única publicable en 17 semanas.**
 
-> **Microaplicación (5 min) · las tres preguntas sobre la idea propia.** Cada equipo responde por escrito tres preguntas sobre su propia idea — **quién la usa exactamente, qué hace hoy esa persona sin ella y qué capacidad del móvil aprovecha**. La tercera decide si la idea sigue en pie.
+> **Microaplicación (5 min). Las tres preguntas sobre la idea propia.** Cada equipo responde por escrito tres preguntas sobre su propia idea — **quién la usa exactamente, qué hace hoy esa persona sin ella y qué capacidad del móvil aprovecha**. La tercera decide si la idea sigue en pie.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -201,7 +179,7 @@ Reglas del proyecto, composición de los equipos, roles Scrum y calendario de lo
 
 **Pregunta de cierre.** *¿por qué su idea tiene que ser una app y no una página web?* La propuesta que no responde esta pregunta con una capacidad propia del móvil se reformula esta misma semana.
 
-## Cierre · qué se lleva de aquí
+## Cierre
 
 **La respuesta a la pregunta con la que abrimos.** Una capacidad que solo el móvil ofrece — **ubicación, cámara, sensores, notificaciones, uso sin conexión, biometría o estar en el bolsillo a toda hora**. La app de restaurantes se salva si el valor está en la notificación de las 12:15 y en abrirla sin conexión en la calle. Si la respuesta es «para que se vea moderno», la idea se reformula esta misma semana.
 

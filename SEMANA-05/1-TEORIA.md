@@ -14,29 +14,9 @@ Una app consume el servicio de una entidad pública. El servicio responde HTTP 2
 
 Dentro del cuerpo de la respuesta viene un `Fault` que dice que el contribuyente no existe. La app guardó el trámite como aceptado, el usuario recibió su confirmación y el trámite no se hizo.
 
-> **La pregunta que ordena esta sesión.** *¿Por qué un servicio puede responder «todo bien» y haber fallado?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| El consumo de servicios REST y el mapeo de códigos de estado | Semana 04 |
-| La capa de datos y el manejo de errores de la app | Semana 04 |
-| La arquitectura por capas del proyecto | Semana 02 |
-| Nociones de XML | Cursos previos de la carrera |
+> **¿Por qué un servicio puede responder «todo bien» y haber fallado?**
 
 > **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿Dónde falló esa app? ¿Es un error del servicio o del cliente? ¿Por qué un curso de móviles enseña SOAP en 2026?* No se corrige nada todavía.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| El caso del trámite que no se hizo y la exploración inicial | 8 |
-| **Bloque 1.** Por qué un curso de móviles enseña SOAP | 12 |
-| **Bloque 2.** El protocolo SOAP y su estructura | 22 |
-| **Bloque 3.** Comparación operativa para un cliente móvil · con su microaplicación | 18 |
-| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
-| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -71,9 +51,9 @@ flowchart LR
 
 ---
 
-## Bloque 1 · Por qué un curso de móviles enseña SOAP
+## 1. Por qué un curso de móviles enseña SOAP
 
-> **La pregunta del bloque.** *¿Dónde se va a encontrar SOAP en el ejercicio profesional?*
+> **¿Dónde se va a encontrar SOAP en el ejercicio profesional?**
 
 **La razón práctica.** SOAP no es una tecnología del pasado. Es la que sostiene la integración con **bancos, aseguradoras, entidades del Estado, ERP corporativos y sistemas de facturación**. Un desarrollador móvil que solo sabe consumir REST **no puede integrar la app con el sistema de la empresa que lo contrata**.
 
@@ -91,9 +71,9 @@ flowchart LR
 
 > **El error frecuente del bloque.** Dar por hecho que SOAP es historia. La banca, los seguros, la administración pública y los sistemas de gestión empresarial lo siguen exponiendo, y **el integrador no elige el protocolo del servicio que consume**. Se elige cómo aislarlo detrás de la capa de datos, y eso sí es una decisión del equipo.
 
-## Bloque 2 · El protocolo SOAP y su estructura
+## 2. El protocolo SOAP y su estructura
 
-> **La pregunta del bloque.** *¿Dónde vive el error en una respuesta SOAP?*
+> **¿Dónde vive el error en una respuesta SOAP?**
 
 **SOAP** es un protocolo de intercambio de mensajes basado en XML, definido por el W3C. A diferencia de REST, **es un protocolo con reglas estrictas**, no un estilo.
 
@@ -164,9 +144,9 @@ flowchart LR
 
 > **El error frecuente del bloque.** Verificar únicamente el código de estado. Es el caso de hoy — SOAP transporta sus errores **dentro del cuerpo**, en el elemento `Fault`, y una respuesta fallida viaja con HTTP 200 con toda normalidad. La comprobación correcta abre el sobre antes de dar nada por bueno.
 
-## Bloque 3 · Comparación operativa para un cliente móvil
+## 3. Comparación operativa para un cliente móvil
 
-> **La pregunta del bloque.** *¿Qué cuesta SOAP en un dispositivo con batería y datos limitados?*
+> **¿Qué cuesta SOAP en un dispositivo con batería y datos limitados?**
 
 | Dimensión | **SOAP** | **REST** | Consecuencia en móvil |
 |---|---|---|---|
@@ -235,7 +215,7 @@ Sobre 1 000 consultas diarias durante 30 días:
 
 > **La fila decisiva no es la del tamaño. Es la del cambio de WSDL.** Con la opción A, cada cambio del proveedor obliga a **una publicación en dos tiendas y a esperar que el usuario actualice** —días o semanas en los que la app está rota para quien no actualizó—. Con la opción B, el arreglo se despliega en horas y ningún usuario se entera. **El BFF no se justifica por los bytes. Se justifica porque la app móvil es lo único del sistema que no se puede corregir en caliente.**
 
-> **Microaplicación (6 min) · el servicio heredado que le toca consumir.** Cada equipo escribe **la comprobación que su app haría sobre una respuesta SOAP**, en el orden correcto, y dice en qué capa vive. La respuesta no debería tocar la pantalla en ningún momento.
+> **Microaplicación (6 min). El servicio heredado que le toca consumir.** Cada equipo escribe **la comprobación que su app haría sobre una respuesta SOAP**, en el orden correcto, y dice en qué capa vive. La respuesta no debería tocar la pantalla en ningún momento.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -243,7 +223,7 @@ Sobre 1 000 consultas diarias durante 30 días:
 | ¿Cuándo se acepta consumir SOAP directo desde la app? | Cuando no hay backend propio ni posibilidad de tenerlo, el servicio no exige certificado cliente y el volumen es bajo. Y se registra como deuda técnica con su ADR (*Architecture Decision Record*, registro de decisión de arquitectura) |
 | ¿El BFF no agrega un punto de falla más? | Sí, y a cambio quita el peor. La imposibilidad de corregir la app instalada. Se mitiga con un BFF simple, sin estado y con la misma disponibilidad que el servicio de origen |
 
-## Cierre · qué se lleva de aquí
+## Cierre
 
 **La respuesta a la pregunta con la que abrimos.** Porque el código de estado describe el transporte y no la operación. SOAP lleva su error **dentro del sobre**, y un `Fault` viaja con HTTP 200 sin que nada lo delate desde fuera. Un cliente que solo mira el código da por hecho un trámite que no ocurrió, y el usuario se entera semanas después.
 

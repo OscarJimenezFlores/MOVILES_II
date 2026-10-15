@@ -14,26 +14,9 @@ Una app de pedidos muestra al usuario un total de S/ 24.90 y el backend le cobra
 
 El código está bien escrito, las pruebas pasan y el equipo no reproduce el defecto en el emulador. El total viaja en el JSON como número decimal, y ni el móvil ni el servidor lo redondean igual.
 
-> **La pregunta que ordena el material de esta unidad.** *¿Por qué un formato tan simple como JSON rompe aplicaciones en producción?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| El consumo de servicios REST y el contrato del endpoint | Semana 04 |
-| SOAP y el error que viaja dentro del cuerpo | Semana 05 |
-| La capa de datos y el mapeo entre DTO y entidad | Semana 02 |
-| Los eventos de Scrum y el compromiso de cada artefacto | Semana 03 |
+> **¿Por qué un formato tan simple como JSON rompe aplicaciones en producción?**
 
 > **Autocomprobación, antes de leer el material.** Antes de leer, anote su respuesta a tres preguntas. *¿Dónde se pierde ese céntimo? ¿Qué tipo debería tener el dinero en un JSON? ¿Por qué el defecto no aparece en el emulador?* Al terminar el material, vuelva a sus respuestas.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| Exposición de avance de la Unidad I | 60 |
-| Examen teórico de Unidad I | 40 |
-| **Total de la sesión de aula** | **100** |
 
 ## Mapa de la sesión
 
@@ -71,7 +54,7 @@ flowchart TD
 
 > **No se dicta en clase.** Los 100 minutos de aula de esta semana se reparten entre la exposición de avance y el examen teórico. Este material —55 minutos de desarrollo— **se estudia por cuenta propia antes de la sesión y entra en el examen teórico de la Unidad I**. Está aquí completo, no resumido. Es el mismo desarrollo que tendría en aula.
 
-### JSON · lo que parece simple y no lo es
+### JSON parece simple y no lo es
 
 **JSON** está definido por el RFC 8259 y por el estándar ECMA-404. Su aparente simplicidad esconde decisiones que rompen aplicaciones en producción.
 
@@ -142,7 +125,7 @@ flowchart TD
 
 > **Ninguno de los cinco falla en el emulador del equipo que lo escribió.** Aparecen con un identificador grande, con un usuario en otra zona horaria, con un total de tres cifras o el día que el backend agrega un campo — es decir, **en producción y con usuarios reales**. Por eso el contrato del dato se acuerda con el backend antes del sprint, no después del primer reporte.
 
-> **Autoevaluación (6 min) · los cinco campos de riesgo de su propio contrato.** Abra la respuesta real de un endpoint de su app y marque **qué campos son dinero, cuáles son fechas con zona horaria y cuáles son identificadores**. Esos tres tipos concentran los defectos que no aparecen en el emulador.
+> **Autoevaluación (6 min). Los cinco campos de riesgo de su propio contrato.** Abra la respuesta real de un endpoint de su app y marque **qué campos son dinero, cuáles son fechas con zona horaria y cuáles son identificadores**. Esos tres tipos concentran los defectos que no aparecen en el emulador.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -152,7 +135,7 @@ flowchart TD
 
 > **El error frecuente.** Representar el dinero como número decimal. Es el defecto del caso y no se reproduce en el emulador porque necesita un total de tres cifras o una plataforma que redondee distinto. **En dinero nunca se usa coma flotante** — viaja en céntimos como entero, y la conversión ocurre en un solo punto de la app.
 
-### Sprint Review y Retrospective · cómo se hacen bien
+### Cómo se hacen bien la Sprint Review y la Retrospective
 
 **Sprint Review — es una inspección, no una presentación.**
 
@@ -193,7 +176,7 @@ Formato **«Empezar · Dejar de · Continuar»**, y la regla que la hace útil:
 
 > **Cinco acciones de mejora equivalen a ninguna**, porque ninguna tiene dueño ni cabe en el sprint. **Una sola acción, en el backlog, con responsable y criterio de verificación, es lo que convierte la retrospectiva en el evento que hace mejorar al equipo** — y es también el primero que se sacrifica «porque no hay tiempo», justo cuando más falta hace.
 
-> **Autoevaluación (6 min) · la única acción de mejora del sprint.** Escriba **una sola acción de mejora** para su sprint 1, con responsable y criterio de verificación, y colóquela en el backlog. Cinco acciones sin dueño equivalen a ninguna.
+> **Autoevaluación (6 min). La única acción de mejora del sprint.** Escriba **una sola acción de mejora** para su sprint 1, con responsable y criterio de verificación, y colóquela en el backlog. Cinco acciones sin dueño equivalen a ninguna.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -228,7 +211,7 @@ El Examen de Unidad se rinde en dos partes, y juntas valen el 25 % de la nota de
 | **Práctico** | Laboratorio | 100 min | Detectar el código que **parece** correcto, que es lo que la inteligencia artificial no distingue por el alumno | Laboratorio de cómputo, **con inteligencia artificial permitida** y declarada |
 
 
-## Cierre · qué se lleva de esta unidad
+## Cierre
 
 **La respuesta a la pregunta del material.** Porque JSON no tiene tipos para lo que las aplicaciones necesitan. No distingue entero de decimal, no define zona horaria y no acota la precisión de un número, de modo que **el contrato del dato hay que acordarlo fuera del formato**. El céntimo del caso se pierde entre dos redondeos legítimos, y ninguno de los dos está mal.
 

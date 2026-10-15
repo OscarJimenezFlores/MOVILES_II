@@ -8,21 +8,7 @@
 
 ---
 
-> **Esta actividad no se resuelve en aula.** La semana de cierre de unidad dedica sus 100 minutos de aula a la **exposición de avance (60 min)** y al **examen teórico (40 min)**. La dinámica se prepara durante la semana y **se entrega antes de la sesión**. Es el insumo con el que el equipo arma su exposición.
-
-## Cómo funciona la actividad
-
-```mermaid
-flowchart LR
-    C["<b>Consigna</b><br/>Lo que aprendimos<br/>construyendo"]
-    P["<b>Producto</b><br/>el resultado de la actividad,<br/>en la plantilla de dinámica"]
-    E["<b>Exposición</b><br/>de avance de la unidad,<br/>sin diapositivas"]
-    G["<b>Entrega</b><br/>PDF entregado<br/>antes de la sesión"]
-    R["<b>Rúbrica</b><br/>nota cognitiva"]
-    C --> P --> G --> E --> R
-    classDef d fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class C,P,E,G,R d;
-```
+> **Esta actividad no se resuelve en aula.** La semana de cierre de unidad dedica el aula a la **exposición de avance** y al **examen teórico**. La dinámica se prepara durante la semana y **se entrega antes de la sesión**. Es el insumo con el que el equipo arma su exposición.
 
 ## Qué entregas
 
@@ -33,7 +19,7 @@ flowchart LR
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT y los apellidos, nombres y códigos de todos los integrantes |
 | **Qué va dentro** | El producto de cierre de unidad que se describe más abajo, desarrollado por el grupo con la evidencia acumulada en la unidad |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 06» |
-| **Cuándo vence** | Al cierre de la unidad, antes del examen |
+| **Cuándo vence** | Según lo programado en el aula virtual, antes del examen de la unidad |
 | **Exposición** | En la **exposición de avance de la unidad**, dentro de esta misma sesión. El grupo lee y explica su resultado ante el aula. No se usan diapositivas |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
@@ -85,16 +71,6 @@ flowchart LR
 **Paso 4 · Comprometer el cambio.** Qué se hará distinto en el Sprint 2, redactado como una regla que se pueda incumplir. Una regla que nadie puede incumplir no es una regla.
 
 **Paso 5 · Fijar la verificación.** Cómo se sabrá, al cerrar el Sprint 2, si el cambio se aplicó. Es lo que se revisará en la Semana 12.
-
-## Material de trabajo
-
-**Este producto no se resuelve en aula y no necesita material nuevo.** Se construye con lo que el equipo ya produjo en las Semanas 01 a 05 sobre su propio proyecto.
-
-| Para qué | De dónde sale |
-|---|---|
-| Lo que falló y cuándo | Tablero del sprint, historial de la integración continua y registro de la Daily |
-| El costo en tiempo | `SPRINT_BACKLOG.md` y la velocidad calculada al cierre del sprint |
-| Las decisiones que lo causaron | Los ADR y los acuerdos de trabajo de la Semana 01 |
 
 ## Producto
 
@@ -153,6 +129,16 @@ Se aplica sobre el producto de cierre de unidad y sobre la exposición de avance
 | **La lección técnica** | Se identifica el error más caro del sprint, con la evidencia de cuánto costó | Se identifica sin cuantificar | Una lección genérica sobre trabajo en equipo |
 | **La corrección adoptada** | La acción de mejora queda comprometida, con responsable y sprint en el que se verifica | Comprometida sin responsable | Una intención sin acción |
 | **La exposición de avance** | Todo el equipo domina el producto y responde sin buscar quién sabe | Responde siempre el mismo integrante | El equipo no puede explicar su propio incremento |
+
+## Anexo · Material de trabajo
+
+**Este producto no se resuelve en aula y no necesita material nuevo.** Se construye con lo que el equipo ya produjo en las Semanas 01 a 05 sobre su propio proyecto.
+
+| Para qué | De dónde sale |
+|---|---|
+| Lo que falló y cuándo | Tablero del sprint, historial de la integración continua y registro de la Daily |
+| El costo en tiempo | `SPRINT_BACKLOG.md` y la velocidad calculada al cierre del sprint |
+| Las decisiones que lo causaron | Los ADR y los acuerdos de trabajo de la Semana 01 |
 
 ---
 

@@ -2,26 +2,11 @@
 
 # Taller de laboratorio 08 · Flujo completo de permisos con degradación elegante
 
-**SI-988 · Soluciones Móviles II** · Semana 08 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 08 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Declarar los permisos y sus<br/>textos<br/><i>10 min</i>"]
-    PB["<b>Paso B</b><br/>Abstraer los permisos tras una<br/>interfaz de dominio<br/><i>15 min</i>"]
-    PC["<b>Paso C</b><br/>El flujo de los cuatro<br/>momentos<br/><i>20 min</i>"]
-    PD["<b>Paso D</b><br/>Verificación de los ocho<br/>escenarios en dispositivo<br/><i>15 min</i>"]
-    PE["<b>Paso E</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PF["<b>Paso F</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF paso;
-```
 
 ## Qué entregas
 
@@ -32,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 08» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 2 lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | La app pide todos los permisos al abrirse y el usuario dice que no. A partir de ahí, o la app funciona degradada o no funciona. |
-| **Misión** | Construir el flujo de los cuatro momentos, con explicación previa, degradación con alternativa concreta y una sola insistencia tras la denegación. |
-| **Criterio de éxito** | Ningún permiso se solicita al abrir la app, y cada denegación ofrece una alternativa que permite seguir usándola. |
+El avance de Sprint 2 lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -65,16 +42,12 @@ Implementación del flujo profesional de solicitud de permisos con explicación 
 - Solicitar el **permiso de segundo plano** en una interacción separada, si aplica.
 - Verificar en el emulador los **cinco escenarios que reproduce**, y dejar planificados los tres restantes para la verificación en teléfono real fuera de la sesión.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Desarrolla la geolocalización en una app móvil.
 - **RA2** Implementa y gestiona los permisos de geolocalización en una app móvil.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -86,7 +59,7 @@ Implementación del flujo profesional de solicitud de permisos con explicación 
 | Emulador de Android | Entorno del laboratorio. Reproduce cinco de los ocho escenarios de permiso |
 | Biblioteca de permisos del stack | permission_handler · react-native-permissions · Accompanist Permissions |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -303,7 +276,7 @@ Desarrollo de las historias del Sprint 2. Se sostiene la Daily y se verifica el 
 
 ---
 
-### Paso E — Validar y corregir (25 min)
+### Paso E — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -313,7 +286,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso F — Registrar la evidencia y cerrar (15 min)
+### Paso F — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

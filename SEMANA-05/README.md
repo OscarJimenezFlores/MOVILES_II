@@ -67,11 +67,11 @@ flowchart LR
 
 | Entregable | Formato y nombre del archivo | Vence |
 |---|---|---|
-| **Dinámica de aula** · El mismo dato, dos protocolos | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S05-DINAMICA-Grupo<N>.pdf` | Antes de cerrar la sesión de teoría |
-| **Informe del taller de laboratorio N.º 05** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S05-TALLER-Grupo<N>.pdf` | 48 h después del taller |
-| BFF, mediciones y ADR-003 | Commit en el repositorio | 48 h después del taller |
+| **Dinámica de aula** · El mismo dato, dos protocolos | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S05-DINAMICA-Grupo<N>.pdf` | Según lo programado en el aula virtual |
+| **Informe del taller de laboratorio N.º 05** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S05-TALLER-Grupo<N>.pdf` | Según lo programado en el aula virtual |
+| BFF, mediciones y ADR-003 | Commit en el repositorio | Según lo programado en el aula virtual |
 
-> Ambos se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
+> La dinámica y el informe del taller se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
 
 ## Cómo se evalúa
 

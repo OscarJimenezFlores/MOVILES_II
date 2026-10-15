@@ -2,26 +2,11 @@
 
 # Taller de laboratorio 01 · Entornos, equipo Scrum, Lean Canvas y repositorio con integración continua
 
-**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 01 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Verificar el entorno<br/><i>10 min</i>"]
-    PB["<b>Paso B</b><br/>Conformar el equipo Scrum<br/><i>10 min</i>"]
-    PC["<b>Paso C</b><br/>Lean Canvas y validación del<br/>problema<br/><i>20 min</i>"]
-    PD["<b>Paso D</b><br/>Repositorio e integración<br/>continua<br/><i>20 min</i>"]
-    PE["<b>Paso E</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PF["<b>Paso F</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF paso;
-```
 
 ## Qué entregas
 
@@ -32,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 01» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance del proyecto lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | El equipo tiene una idea de app y ninguna prueba de que el problema exista. Construir sobre una suposición cuesta un semestre. |
-| **Misión** | Validar el problema con cinco personas reales antes de escribir código, y dejar el repositorio con integración continua en verde. |
-| **Criterio de éxito** | Al menos tres de las cinco entrevistas confirman el problema **con un hecho**, no con una opinión favorable. |
+El avance del proyecto lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -63,16 +40,12 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 - Establecer el **repositorio** con estructura, ramas protegidas y convenciones.
 - Configurar la **integración continua mínima** que verifique cada cambio desde la Semana 01.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil.
 - **RA2** Propone el plan de desarrollo de su app con metodologías ágiles.
 
-### 1.5. Recursos (equipos, materiales, programas y otros)
+### 1.4. Recursos (equipos, materiales, programas y otros)
 
 **Equipos y sistema operativo**
 
@@ -108,7 +81,7 @@ Preparación del entorno de desarrollo móvil, conformación del equipo Scrum, f
 
 > **Verificación previa.** Ejecuta `git --version`, `java -version` y, según la ruta elegida, `flutter doctor` o `node --version`. Quien llegue sin el entorno instalado pierde la mitad de la sesión.
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -360,7 +333,7 @@ jobs:
 
 ---
 
-### Paso E — Validar y corregir (25 min)
+### Paso E — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -370,7 +343,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso F — Registrar la evidencia y cerrar (15 min)
+### Paso F — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

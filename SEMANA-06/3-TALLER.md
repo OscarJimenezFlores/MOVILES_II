@@ -2,24 +2,11 @@
 
 # Taller de laboratorio 06 · JSON robusto, persistencia offline y cierre del Sprint 1
 
-**SI-988 · Soluciones Móviles II** · Semana 06 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 06 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Serialización robusta<br/><i>35 min</i>"]
-    PB["<b>Paso B</b><br/>Persistencia y funcionamiento<br/>sin conexión<br/><i>25 min</i>"]
-    PC["<b>Paso C</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PD["<b>Paso D</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD paso;
-```
 
 ## Qué entregas
 
@@ -30,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 06» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio de la semana, se desarrolle el taller dentro de ella o fuera de ella |
+| **Cuándo vence** | Según lo programado en el aula virtual. El plazo se cuenta desde la sesión de laboratorio de la semana, se desarrolle el taller dentro de ella o fuera de ella |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 Review y Retrospective lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | El servidor cambia un campo y la app deja de funcionar en producción. O peor redondea un céntimo y la cuenta no cuadra. |
-| **Misión** | Hacer la serialización robusta ante lo inesperado, guardar el dinero en céntimos con aritmética exacta y verificar que todo sigue funcionando con el artefacto ofuscado. |
-| **Criterio de éxito** | Las siete pruebas de serialización pasan **y** la serialización funciona en el artefacto de release, donde la ofuscación suele romperla. |
+El avance de Sprint 1 Review y Retrospective lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -63,16 +42,12 @@ Implementación de serialización JSON robusta frente a los seis problemas carac
 - Ejecutar la **Sprint 1 Retrospective** y comprometer **una** acción de mejora.
 - Calcular la **velocidad** del equipo y planificar el Sprint 2.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil.
 - **RA2** Propone el plan de desarrollo de su app con metodologías ágiles.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -83,7 +58,7 @@ Implementación de serialización JSON robusta frente a los seis problemas carac
 | **Scrum Guide 2020** | https://scrumguides.org/ |
 | Interesados invitados | Al menos **dos personas externas al equipo** para la Review |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -265,15 +240,15 @@ interface RecursoDao {
 
 > Lo que no alcance a completarse en la sesión lo ejecuta el equipo durante la semana, y llega al siguiente taller con el incremento listo. El docente lo revisa en el repositorio y en el tablero, no en clase.
 
-**B.1 — Sprint 1 Review (50 min).** Con **al menos dos interesados externos** al equipo:
+**B.1 — Sprint 1 Review.** Con **al menos dos interesados externos** al equipo:
 
-| Momento | Duración | Contenido |
-|---|---|---|
-| El Sprint Goal | 3 min | Se enuncia y se responde si se alcanzó |
-| **Demostración** | 20 min | **Software funcionando**, en el emulador del laboratorio o en un teléfono real si el equipo lo trae. Un integrante usa la app; otro narra |
-| Lo no terminado | 5 min | Con honestidad qué falta y por qué |
-| Reacción de los interesados | 15 min | Se registra literalmente lo que dicen |
-| Adaptación del backlog | 7 min | Qué cambia en el Product Backlog con lo aprendido |
+| Momento | Contenido |
+|---|---|
+| El Sprint Goal | Se enuncia y se responde si se alcanzó |
+| **Demostración** | **Software funcionando**, en el emulador del laboratorio o en un teléfono real si el equipo lo trae. Un integrante usa la app; otro narra |
+| Lo no terminado | Con honestidad qué falta y por qué |
+| Reacción de los interesados | Se registra literalmente lo que dicen |
+| Adaptación del backlog | Qué cambia en el Product Backlog con lo aprendido |
 
 `docs/sprints/sprint-01/REVIEW.md`:
 
@@ -287,13 +262,13 @@ interface RecursoDao {
 | **Reacciones registradas** | Citas literales |
 | Cambios al Product Backlog | Historias agregadas, modificadas o retiradas |
 
-**B.2 — Sprint 1 Retrospective (50 min).**
+**B.2 — Sprint 1 Retrospective.**
 
-1. **Directiva primaria** leída en voz alta (2 min).
-2. **Recolección** (15 min). Cada integrante escribe en silencio bajo «Empezar · Dejar de · Continuar». En silencio para que las primeras opiniones no condicionen a las demás.
-3. **Agrupación y votación** (10 min). Se agrupan los temas afines y cada integrante vota tres.
-4. **Análisis del tema más votado** (15 min). Cinco porqués hasta la causa raíz.
-5. **Compromiso** (8 min) — **una sola acción**, con responsable y criterio de verificación.
+1. **Directiva primaria** leída en voz alta.
+2. **Recolección**. Cada integrante escribe en silencio bajo «Empezar · Dejar de · Continuar». En silencio para que las primeras opiniones no condicionen a las demás.
+3. **Agrupación y votación**. Se agrupan los temas afines y cada integrante vota tres.
+4. **Análisis del tema más votado**. Cinco porqués hasta la causa raíz.
+5. **Compromiso** — **una sola acción**, con responsable y criterio de verificación.
 
 `docs/sprints/sprint-01/RETROSPECTIVE.md`:
 
@@ -309,7 +284,7 @@ interface RecursoDao {
 | **Criterio de verificación** | Cómo sabremos en el Sprint 2 que funcionó |
 | Elemento del Sprint Backlog 2 | La acción entra como elemento del backlog |
 
-**B.3 — Cálculo de velocidad y planificación del Sprint 2 (20 min).**
+**B.3 — Cálculo de velocidad y planificación del Sprint 2.**
 
 ```python
 # scripts/velocidad.py
@@ -333,7 +308,7 @@ git tag -a sprint-1 -m "Sprint 1 completado - incremento entregable"
 
 ---
 
-### Paso C — Validar y corregir (25 min)
+### Paso C — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -343,7 +318,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso D — Registrar la evidencia y cerrar (15 min)
+### Paso D — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

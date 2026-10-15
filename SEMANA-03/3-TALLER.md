@@ -2,27 +2,11 @@
 
 # Taller de laboratorio 03 · Product Goal, Product Backlog, estimación y Sprint 1 Planning
 
-**SI-988 · Soluciones Móviles II** · Semana 03 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 03 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Product Goal y estructura del<br/>backlog<br/><i>10 min</i>"]
-    PB["<b>Paso B</b><br/>Construir y ordenar el Product<br/>Backlog<br/><i>15 min</i>"]
-    PC["<b>Paso C</b><br/>Refinamiento y criterios de<br/>aceptación<br/><i>10 min</i>"]
-    PD["<b>Paso D</b><br/>Planning Poker y Sprint 1<br/>Planning<br/><i>20 min</i>"]
-    PE["<b>Paso E</b><br/>Tablero con límites de trabajo<br/>en curso<br/><i>5 min</i>"]
-    PF["<b>Paso F</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PG["<b>Paso G</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF --> PG
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF,PG paso;
-```
 
 ## Qué entregas
 
@@ -33,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 03» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | Un backlog ordenado por gusto produce un sprint que entrega lo fácil y deja el riesgo para el final, cuando ya no hay tiempo. |
-| **Misión** | Ordenar el backlog por valor y riesgo con un índice calculado, refinar con criterios en Gherkin y formular el Sprint Goal antes de elegir historias. |
-| **Criterio de éxito** | El Sprint Goal se formuló antes de seleccionar las historias y supera su prueba, y ninguna historia de trece puntos quedó sin dividir. |
+El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -66,16 +42,12 @@ Construcción de los artefactos de Scrum del proyecto — formulación del Produ
 - Configurar el **tablero con límites de trabajo en curso**.
 - **Iniciar el Sprint 1**.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil.
 - **RA2** Propone el plan de desarrollo de su app con metodologías ágiles.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -86,7 +58,7 @@ Construcción de los artefactos de Scrum del proyecto — formulación del Produ
 | ADR-001 y ADR-002 | Semana 02 |
 | **Mermaid** | Diagrama del flujo de trabajo |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -276,7 +248,7 @@ Se inicia el desarrollo. Estas son las desviaciones que se corrigen sobre la mar
 
 ---
 
-### Paso F — Validar y corregir (25 min)
+### Paso F — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -286,7 +258,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso G — Registrar la evidencia y cerrar (15 min)
+### Paso G — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

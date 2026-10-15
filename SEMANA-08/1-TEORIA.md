@@ -14,29 +14,9 @@ Una app pide, en la primera pantalla y sin explicar nada, ubicación precisa y u
 
 La app no vuelve a mostrar el diálogo, porque el sistema ya no lo permite. La funcionalidad principal queda inutilizable, el usuario no encuentra cómo arreglarlo y desinstala. El equipo pidió más y obtuvo menos.
 
-> **La pregunta que ordena esta sesión.** *¿Cuántas oportunidades tiene una app de pedir un permiso?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| La ubicación, su precisión y su costo energético | Semana 07 |
-| La decisión que la ubicación alimenta en la app propia | Semana 07 |
-| El flujo de pantallas del incremento actual | Trabajo del equipo |
-| Las políticas de las tiendas vistas en el encuadre | Semana 01 |
+> **¿Cuántas veces puede una app pedir un permiso antes de perder al usuario?**
 
 > **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿Qué hizo mal esa app? ¿Cuándo se pide un permiso? ¿Qué debería pasar si el usuario dice que no?* No se corrige nada todavía.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| El caso del permiso denegado y la exploración inicial | 8 |
-| **Bloque 1.** El modelo de permisos y qué protege | 18 |
-| **Bloque 2.** Cómo se pide un permiso sin perder al usuario · con su microaplicación | 22 |
-| **Bloque 3.** Degradación de funciones cuando falta el permiso | 12 |
-| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
-| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -70,9 +50,9 @@ flowchart TD
 
 ---
 
-## Bloque 1 · El modelo de permisos y qué protege
+## 1. El modelo de permisos y qué protege
 
-> **La pregunta del bloque.** *¿A quién protege el permiso, al sistema o al usuario?*
+> **¿A quién protege el permiso, al sistema o al usuario?**
 
 **El permiso no protege al sistema. Protege al usuario.** Cada permiso otorga acceso a un dato o a una capacidad que puede afectar la privacidad o la seguridad de la persona.
 
@@ -127,9 +107,9 @@ incluso mientras la app está en ejecución.
 
 > **El error frecuente del bloque.** Comprobar el permiso solo al iniciar la app. **El permiso concedido ayer puede no estarlo hoy**, porque el usuario pudo revocarlo desde los ajustes del sistema. Se verifica antes de cada uso, y la app debe funcionar con lo que reciba, incluso con una ubicación aproximada cuando pidió la precisa.
 
-## Bloque 2 · Cómo se pide un permiso sin perder al usuario
+## 2. Cómo se pide un permiso sin perder al usuario
 
-> **La pregunta del bloque.** *¿Qué convierte una solicitud en una concesión?*
+> **¿Qué convierte una solicitud en una concesión?**
 
 **El dato que ordena el diseño.** Un usuario que deniega un permiso **rara vez lo vuelve a conceder**, porque el sistema deja de mostrar el diálogo. **La primera solicitud es casi la única oportunidad.**
 
@@ -182,7 +162,7 @@ incluso mientras la app está en ejecución.
 
 > **La columna de la izquierda pide más y obtiene menos.** Pide precisa y segundo plano de golpe —lo que además atrae revisión adicional de las tiendas—, sin decir para qué, y a la primera negativa deja al usuario sin app. La derecha pide lo mínimo, en el momento en que la razón es obvia, **y sigue funcionando aunque le digan que no**. Un permiso no se gana insistiendo. Se gana pidiéndolo cuando el usuario ya quería lo que el permiso habilita.
 
-> **Microaplicación (6 min) · el momento exacto de la solicitud.** Cada equipo señala **en qué pantalla de su app pedirá cada permiso** y escribe la frase de la explicación previa. Si la razón no cabe en una línea, el momento elegido es el equivocado.
+> **Microaplicación (6 min). El momento exacto de la solicitud.** Cada equipo señala **en qué pantalla de su app pedirá cada permiso** y escribe la frase de la explicación previa. Si la razón no cabe en una línea, el momento elegido es el equivocado.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -192,9 +172,9 @@ incluso mientras la app está en ejecución.
 
 > **El error frecuente del bloque.** Pedir el permiso en la primera pantalla y sin explicación previa. Un usuario que deniega **rara vez vuelve a conceder**, porque el sistema deja de mostrar el diálogo. La pantalla previa existe para proteger ese único intento, y su «Ahora no» no es una derrota — el diálogo del sistema ni siquiera llegó a gastarse.
 
-## Bloque 3 · Degradación de funciones cuando falta el permiso
+## 3. Degradación de funciones cuando falta el permiso
 
-> **La pregunta del bloque.** *¿Qué puede seguir haciendo el usuario si deniega?*
+> **¿Qué puede seguir haciendo el usuario si deniega?**
 
 **La pregunta de diseño.** *¿Qué puede seguir haciendo el usuario si deniega?*
 
@@ -217,7 +197,7 @@ incluso mientras la app está en ejecución.
 
 Si un permiso es **esencial** —una app de navegación sin ubicación—, la app puede explicar que no puede funcionar, pero debe hacerlo **con una pantalla clara y un camino a ajustes**, nunca con un cierre abrupto.
 
-## Cierre · qué se lleva de aquí
+## Cierre
 
 **La respuesta a la pregunta con la que abrimos.** Prácticamente una. El sistema deja de mostrar el diálogo tras la denegación, así que **la primera solicitud es casi la única oportunidad**. Por eso se pide lo mínimo, en el momento en que la razón resulta obvia, detrás de una explicación propia, y la app sigue funcionando aunque le digan que no. Un permiso no se gana insistiendo.
 

@@ -69,13 +69,13 @@ flowchart LR
 
 | Entregable | Formato y nombre del archivo | Vence |
 |---|---|---|
-| **Dinámica de aula** · Lo que aprendimos construyendo | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S06-DINAMICA-Grupo<N>.pdf` | Antes de iniciar la sesión de aula |
-| **Informe del taller de laboratorio N.º 06** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S06-TALLER-Grupo<N>.pdf` | 48 h después de la sesión de laboratorio |
+| **Dinámica de aula** · Lo que aprendimos construyendo | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S06-DINAMICA-Grupo<N>.pdf` | Según lo programado en el aula virtual |
+| **Informe del taller de laboratorio N.º 06** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S06-TALLER-Grupo<N>.pdf` | Según lo programado en el aula virtual |
 | **Examen teórico de Unidad I** | Presencial, 40 min, Preguntas de alternativas | Sesión de aula |
 | **Examen práctico de Unidad I** | 100 min, individual, con inteligencia artificial permitida y declarada | Sesión de laboratorio, si el docente le asigna la sesión |
-| **Incremento del Sprint 1**, Review y Retrospective | Repositorio con la etiqueta `sprint-1` | 48 h después de la sesión de laboratorio |
+| **Incremento del Sprint 1**, Review y Retrospective | Repositorio con la etiqueta `sprint-1` | Según lo programado en el aula virtual |
 
-> Ambos se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
+> La dinámica y el informe del taller se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
 
 ## Cómo se evalúa
 

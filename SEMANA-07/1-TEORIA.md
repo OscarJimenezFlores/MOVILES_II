@@ -14,30 +14,9 @@ Una app de delivery pide ubicación de máxima precisión cada cinco segundos, �
 
 Los usuarios la desinstalan a la semana. En las reseñas no dicen por qué — dicen que el teléfono se calienta. La app consume más batería que todo el resto del sistema junto.
 
-> **La pregunta que ordena esta sesión.** *¿Cuánta precisión de ubicación necesita realmente esta funcionalidad?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| El contrato del dato y el manejo de errores de la capa de datos | Semanas 04 y 06 |
-| La arquitectura por capas del proyecto | Semana 02 |
-| El incremento del sprint 1 y su Definition of Done | Semanas 03 y 06 |
-| Nociones de coordenadas geográficas | Conocimiento general |
+> **¿Cuánta precisión de ubicación necesita de verdad la funcionalidad que van a construir?**
 
 > **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿Qué hizo mal ese equipo? ¿Cómo se decide cada cuánto pedir la ubicación? ¿Qué debería mostrar el mapa?* No se corrige nada todavía.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| El caso del teléfono que se calienta y la exploración inicial | 8 |
-| Retroalimentación del cierre de la Unidad I | 7 |
-| **Bloque 1.** Cómo sabe un teléfono dónde está | 15 |
-| **Bloque 2.** Precisión, error y lo que hay que mostrar al usuario · con su microaplicación | 18 |
-| **Bloque 3.** Mapas y geocercas | 12 |
-| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
-| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -77,9 +56,9 @@ Devolución del examen y de las diapositivas «Lo que aprendimos construyendo».
 
 Se revisa que cada equipo haya incorporado su **acción de mejora** al Sprint Backlog 2.
 
-## Bloque 1 · Cómo sabe un teléfono dónde está
+## 1. Cómo sabe un teléfono dónde está
 
-> **La pregunta del bloque.** *¿Elige el desarrollador la fuente de ubicación?*
+> **¿Elige el desarrollador la fuente de ubicación?**
 
 **Las cuatro fuentes de ubicación**, y por qué el sistema las combina:
 
@@ -114,9 +93,9 @@ Se revisa que cada equipo haya incorporado su **acción de mejora** al Sprint Ba
 
 > **El error frecuente del bloque.** Solicitar máxima precisión «por si acaso». Es el caso de hoy. **El desarrollador no elige la fuente, declara la precisión que necesita**, y el sistema decide cómo obtenerla al menor costo energético. Pedir de más no mejora la funcionalidad y vacía la batería.
 
-## Bloque 2 · Precisión, error y lo que hay que mostrar al usuario
+## 2. Precisión, error y lo que hay que mostrar al usuario
 
-> **La pregunta del bloque.** *¿Qué se le debe mostrar al usuario sobre una estimación con error?*
+> **¿Qué se le debe mostrar al usuario sobre una estimación con error?**
 
 **Toda lectura de ubicación es una estimación con incertidumbre.** El objeto de ubicación incluye siempre un **radio de precisión**. El sistema afirma que el usuario está dentro de ese círculo con una confianza determinada.
 
@@ -171,7 +150,7 @@ Ambas **requieren red** y suelen tener **límites de uso** en los servicios grat
 
 > **Las dos configuraciones producen exactamente el mismo orden de locales, y una cuesta siete veces más batería.** El usuario no ve la diferencia de precisión; sí ve que el teléfono se calienta y se descarga, **y desinstala sin dejar una reseña que explique por qué**. La precisión no es una virtud. Es un costo que se paga solo cuando la decisión lo exige.
 
-> **Microaplicación (6 min) · la decisión antes que la precisión.** Cada equipo escribe **la decisión que la ubicación alimenta en su app** —ordenar locales, validar una entrega, disparar un aviso— y solo después la precisión que esa decisión exige. Casi siempre bastan treinta metros.
+> **Microaplicación (6 min). La decisión antes que la precisión.** Cada equipo escribe **la decisión que la ubicación alimenta en su app** —ordenar locales, validar una entrega, disparar un aviso— y solo después la precisión que esa decisión exige. Casi siempre bastan treinta metros.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -181,9 +160,9 @@ Ambas **requieren red** y suelen tener **límites de uso** en los servicios grat
 
 > **El error frecuente del bloque.** Dibujar el punto sin el círculo de precisión. Toda lectura de ubicación es una estimación con incertidumbre, y **mostrar un punto exacto cuando el radio es de ochocientos metros es mentirle al usuario**. Produce reclamos en cuanto la app toma una decisión sobre esa ubicación.
 
-## Bloque 3 · Mapas y geocercas
+## 3. Mapas y geocercas
 
-> **La pregunta del bloque.** *¿Con qué tolerancia de tiempo se puede contar en una geocerca?*
+> **¿Con qué tolerancia de tiempo se puede contar en una geocerca?**
 
 **Opciones de mapa y sus condiciones.**
 
@@ -216,7 +195,7 @@ Ambas **requieren red** y suelen tener **límites de uso** en los servicios grat
 
 > **Las geocercas no son un temporizador.** Un equipo que espera precisión de segundos con ellas construirá una funcionalidad que parece rota. Se usan para eventos con tolerancia de minutos.
 
-## Cierre · qué se lleva de aquí
+## Cierre
 
 **La respuesta a la pregunta con la que abrimos.** La que exija la decisión que la ubicación alimenta, y casi nunca es la máxima. Ordenar locales por cercanía se resuelve con treinta metros y una lectura cada varios minutos. **Las dos configuraciones producen el mismo orden y una cuesta siete veces más batería**, con la diferencia de que el usuario no percibe la precisión y sí percibe que el teléfono se descarga.
 

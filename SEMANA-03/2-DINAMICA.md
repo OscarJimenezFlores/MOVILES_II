@@ -2,25 +2,11 @@
 
 # Dinámica de aula · Historias que no pasan INVEST
 
-**SI-988 · Soluciones Móviles II** · Semana 03 · Actividad en aula, **dentro de los 100 min de la sesión de teoría** · calificación **cognitiva**
+**SI-988 · Soluciones Móviles II** · Semana 03 · Actividad en aula, **dentro de la sesión de teoría** · calificación **cognitiva**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Cómo funciona la actividad
-
-```mermaid
-flowchart LR
-    C["<b>Consigna</b><br/>Historias que no pasan<br/>INVEST"]
-    P["<b>Producto</b><br/>el resultado de la actividad,<br/>en la plantilla de dinámica"]
-    E["<b>Exposición</b><br/>el grupo lee y explica<br/>su resultado, sin diapositivas"]
-    G["<b>Entrega</b><br/>PDF formateado,<br/>después de la clase"]
-    R["<b>Rúbrica</b><br/>nota cognitiva"]
-    C --> P --> E --> G --> R
-    classDef d fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class C,P,E,G,R d;
-```
 
 ## Qué entregas
 
@@ -31,7 +17,7 @@ flowchart LR
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT y los apellidos, nombres y códigos de todos los integrantes |
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 03» |
-| **Cuándo vence** | Hasta 24 h después de la sesión de teoría. La tabla se resuelve en aula; el PDF se formatea y se sube después |
+| **Cuándo vence** | Según lo programado en el aula virtual. La tabla se resuelve en aula; el PDF se formatea y se sube después |
 | **Exposición** | En la ronda de cierre de **esta misma sesión**. El grupo **lee y explica su resultado** ante el aula, con el documento a la vista. No se usan diapositivas |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
@@ -48,58 +34,6 @@ flowchart LR
 | **Su papel** | **Product Owner en el refinamiento**, con el sprint empezando mañana |
 | **Misión** | Dejar las doce historias listas para entrar al sprint, corregidas, divididas y estimadas |
 | **Restricción** | **Ninguna historia sale del refinamiento con más de 8 puntos.** Lo que no se pueda dividir se declara como riesgo |
-
-## Cómo se desarrolla · 35 minutos
-
-| | Bloque | Quién | Minutos |
-|---|---|---|---|
-| **1** | **Las doce.** Evaluadas con las seis letras, marcando el defecto principal de cada una | Equipo | 10 |
-| **2** | **Corrección.** Reescritas las que fallan, conservando el valor de usuario | Equipo | 9 |
-| **3** | **División y estimación.** Las dos más grandes, divididas, con criterios en Gherkin y su estimación | Equipo | 8 |
-| **4** | **Ronda en aula.** Una estimación en la que el equipo discrepó, y por qué discrepaban | Todos | 8 |
-
-## Material de trabajo
-
-Trabaja sobre estas doce historias. Están tomadas de tableros reales de proyectos móviles, con su redacción original.
-
-| # | Historia original |
-|---|---|
-| 1 | Como usuario quiero que la app tenga un buen rendimiento. |
-| 2 | Como comprador quiero ver el detalle de un producto para decidir si lo compro. |
-| 3 | Implementar la base de datos local. |
-| 4 | Como usuario quiero registrarme, iniciar sesión, recuperar mi contraseña, editar mi perfil y cerrar sesión. |
-| 5 | Como administrador quiero un panel de control. |
-| 6 | Como comprador quiero buscar productos por nombre para encontrarlos rápido. |
-| 7 | Como usuario quiero que la app sea bonita y moderna. |
-| 8 | Como repartidor quiero ver mi ruta del día para saber a dónde ir primero. |
-| 9 | Refactorizar el módulo de pagos. |
-| 10 | Como comprador quiero pagar con tarjeta, con billetera digital, contra entrega y con transferencia. |
-| 11 | Como usuario quiero recibir una notificación cuando mi pedido cambie de estado. |
-| 12 | Como comprador quiero que el carrito se conserve si cierro la app, para no armarlo de nuevo. |
-
-**El criterio INVEST**
-
-| Letra | Significa | Cómo se comprueba |
-|---|---|---|
-| **I** · Independiente | Se puede construir sin esperar a otra | ¿Se puede poner en cualquier sprint sin bloquearse? |
-| **N** · Negociable | Describe el qué, no el cómo | ¿Deja margen para decidir la solución técnica? |
-| **V** · Valiosa | El beneficio es para el usuario, no para el equipo | ¿Puedo explicarle a un usuario qué gana? |
-| **E** · Estimable | El equipo sabe lo suficiente para dimensionarla | ¿Alguien puede poner un número sin adivinar? |
-| **S** · Pequeña | Cabe holgadamente en un sprint | ¿Se termina en menos de la mitad del sprint? |
-| **T** · Verificable | Tiene criterio de aceptación comprobable | ¿Puedo escribir un escenario que pase o falle? |
-
-**Formato de criterio de aceptación exigido**
-
-```gherkin
-Escenario: <nombre del escenario>
-  Dado <estado inicial>
-    Y <condición adicional>
-  Cuando <acción del usuario>
-  Entonces <resultado observable>
-    Y <resultado adicional>
-```
-
-**Escala de estimación.** Serie de Fibonacci — 1, 2, 3, 5, 8, 13, 21. Una historia estimada en 13 o más se divide antes de entrar al sprint.
 
 ## Producto
 
@@ -171,7 +105,6 @@ Escenario: La actividad del usuario reinicia el contador
 
 ## Reglas
 
-- 35 min en aula, dentro de la sesión de teoría.
 - Las historias corregidas deben tener **criterios de aceptación verificables en Gherkin**.
 - Ninguna historia dividida puede superar los **5 puntos**.
 - Es **obligatorio** documentar una discrepancia de estimación y lo que reveló. Es el valor del Planning Poker.
@@ -185,6 +118,49 @@ Escenario: La actividad del usuario reinicia el contador
 | **Calidad de la corrección** | Corregidas conservando el valor de usuario, con criterios verificables | Corregidas con criterios ambiguos | Reescritas sin corregir el defecto |
 | **División** | División vertical, cada parte entrega valor por sí sola | División por capas técnicas | División arbitraria |
 | **Estimación** | Discrepancia documentada con lo que reveló la discusión | Estimaciones consensuadas sin registrar la discusión | Estimación por promedio |
+
+## Anexo · Material de trabajo
+
+Trabaja sobre estas doce historias. Están tomadas de tableros reales de proyectos móviles, con su redacción original.
+
+| # | Historia original |
+|---|---|
+| 1 | Como usuario quiero que la app tenga un buen rendimiento. |
+| 2 | Como comprador quiero ver el detalle de un producto para decidir si lo compro. |
+| 3 | Implementar la base de datos local. |
+| 4 | Como usuario quiero registrarme, iniciar sesión, recuperar mi contraseña, editar mi perfil y cerrar sesión. |
+| 5 | Como administrador quiero un panel de control. |
+| 6 | Como comprador quiero buscar productos por nombre para encontrarlos rápido. |
+| 7 | Como usuario quiero que la app sea bonita y moderna. |
+| 8 | Como repartidor quiero ver mi ruta del día para saber a dónde ir primero. |
+| 9 | Refactorizar el módulo de pagos. |
+| 10 | Como comprador quiero pagar con tarjeta, con billetera digital, contra entrega y con transferencia. |
+| 11 | Como usuario quiero recibir una notificación cuando mi pedido cambie de estado. |
+| 12 | Como comprador quiero que el carrito se conserve si cierro la app, para no armarlo de nuevo. |
+
+**El criterio INVEST**
+
+| Letra | Significa | Cómo se comprueba |
+|---|---|---|
+| **I** · Independiente | Se puede construir sin esperar a otra | ¿Se puede poner en cualquier sprint sin bloquearse? |
+| **N** · Negociable | Describe el qué, no el cómo | ¿Deja margen para decidir la solución técnica? |
+| **V** · Valiosa | El beneficio es para el usuario, no para el equipo | ¿Puedo explicarle a un usuario qué gana? |
+| **E** · Estimable | El equipo sabe lo suficiente para dimensionarla | ¿Alguien puede poner un número sin adivinar? |
+| **S** · Pequeña | Cabe holgadamente en un sprint | ¿Se termina en menos de la mitad del sprint? |
+| **T** · Verificable | Tiene criterio de aceptación comprobable | ¿Puedo escribir un escenario que pase o falle? |
+
+**Formato de criterio de aceptación exigido**
+
+```gherkin
+Escenario: <nombre del escenario>
+  Dado <estado inicial>
+    Y <condición adicional>
+  Cuando <acción del usuario>
+  Entonces <resultado observable>
+    Y <resultado adicional>
+```
+
+**Escala de estimación.** Serie de Fibonacci — 1, 2, 3, 5, 8, 13, 21. Una historia estimada en 13 o más se divide antes de entrar al sprint.
 
 ---
 

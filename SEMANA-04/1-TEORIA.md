@@ -14,29 +14,9 @@ Un usuario pulsa «confirmar pedido» en el metro. La señal cae, la app no reci
 
 Se crean dos pedidos. El servidor recibió las dos peticiones y las dos eran válidas. Nadie escribió el código que falla, y el defecto está igual en producción.
 
-> **La pregunta que ordena esta sesión.** *¿Qué tiene que hacer una app cuando no sabe si su petición llegó?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| La arquitectura por capas y el mapeo entre DTO y entidad | Semana 02 |
-| El backlog refinado y el Sprint Goal del sprint | Semana 03 |
-| Consumo básico de servicios web | Cursos previos de la carrera |
-| Nociones de HTTP y de JSON | Cursos previos de la carrera |
+> **¿Qué tiene que hacer una app cuando no sabe si su petición llegó?**
 
 > **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿De quién es la culpa de los dos pedidos? ¿Cómo se evita? ¿Debe la app reintentar sola?* No se corrige nada todavía.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| El caso de los dos pedidos y la exploración inicial | 8 |
-| **Bloque 1.** Qué es REST y qué se implementa en la práctica | 17 |
-| **Bloque 2.** La capa de datos de una app móvil · con su microaplicación | 22 |
-| **Bloque 3.** Rendimiento, batería y consumo de datos en el móvil | 13 |
-| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
-| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -66,9 +46,9 @@ flowchart TD
 
 ---
 
-## Bloque 1 · Qué es REST y qué se implementa en la práctica
+## 1. Qué es REST y qué se implementa en la práctica
 
-> **La pregunta del bloque.** *¿Qué parte de REST se cumple de verdad en los servicios que va a consumir?*
+> **¿Qué parte de REST se cumple de verdad en los servicios que va a consumir?**
 
 **REST es un estilo arquitectónico**, no un protocolo. Definido por Roy Fielding, se apoya en seis restricciones. La mayoría de las APIs llamadas «REST» cumplen tres o cuatro.
 
@@ -112,9 +92,9 @@ flowchart TD
 
 > **El error frecuente del bloque.** Tratar el código de estado como un detalle del servidor. Cada código tiene un significado para el cliente, y **un 409 no se le muestra al usuario igual que un 500** — uno se corrige cambiando el dato y el otro solo se puede reintentar. Un cliente que trata todo error igual convierte problemas distintos en el mismo mensaje inútil.
 
-## Bloque 2 · La capa de datos de una app móvil
+## 2. La capa de datos de una app móvil
 
-> **La pregunta del bloque.** *¿De quién es la responsabilidad de que una operación no se duplique?*
+> **¿De quién es la responsabilidad de que una operación no se duplique?**
 
 **El principio de fuente única de verdad.** La interfaz nunca consulta la red directamente. Consulta al **repositorio**, que decide de dónde vienen los datos.
 
@@ -196,7 +176,7 @@ La variación aleatoria evita que miles de clientes reintenten simultáneamente.
 
 > **Reintentar un `422` es el error más caro de esta semana**, porque no falla. Reintenta indefinidamente una petición que **nunca** va a tener éxito, consumiendo batería y datos del usuario mientras la pantalla muestra un girador eterno. **La regla es de una línea. Solo se reintenta 408, 429 y 5xx.**
 
-> **Microaplicación (6 min) · la operación que no puede repetirse.** Cada equipo identifica **la operación de su app que no puede ejecutarse dos veces** y escribe cómo la haría idempotente. Casi siempre es un pago, un registro o un envío.
+> **Microaplicación (6 min). La operación que no puede repetirse.** Cada equipo identifica **la operación de su app que no puede ejecutarse dos veces** y escribe cómo la haría idempotente. Casi siempre es un pago, un registro o un envío.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -206,9 +186,9 @@ La variación aleatoria evita que miles de clientes reintenten simultáneamente.
 
 > **El error frecuente del bloque.** Reintentar sin clave de idempotencia. Es el caso de hoy y no lo resuelve el servidor solo — **la clave la genera el cliente antes del primer intento**, porque es el único que sabe que los dos envíos son el mismo pedido.
 
-## Bloque 3 · Rendimiento, batería y consumo de datos en el móvil
+## 3. Rendimiento, batería y consumo de datos en el móvil
 
-> **La pregunta del bloque.** *¿Qué gasta más en un móvil, los datos o la radio encendida?*
+> **¿Qué gasta más en un móvil, los datos o la radio encendida?**
 
 | Preocupación | Por qué importa en móvil | Práctica |
 |---|---|---|
@@ -225,7 +205,7 @@ La variación aleatoria evita que miles de clientes reintenten simultáneamente.
 | **Por desplazamiento** (`?page=2&size=20`) | Simple | Datos estables |
 | **Por cursor** (`?after=<id>&limit=20`) | El servidor devuelve el cursor del siguiente bloque | **Datos que cambian**. Evita elementos duplicados o saltados |
 
-## Cierre · qué se lleva de aquí
+## Cierre
 
 **La respuesta a la pregunta con la que abrimos.** Reintentar, y hacerlo con **una clave de idempotencia que genera el cliente antes del primer envío**. El servidor no puede distinguir dos pedidos idénticos de un reintento, porque desde su lado son indistinguibles. Solo la app sabe que es la misma intención del usuario, y esa clave es la manera de decírselo.
 

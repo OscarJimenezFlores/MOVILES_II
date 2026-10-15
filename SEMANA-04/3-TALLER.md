@@ -2,27 +2,11 @@
 
 # Taller de laboratorio 04 · Capa de datos con cliente HTTP, repositorio, caché y manejo de errores
 
-**SI-988 · Soluciones Móviles II** · Semana 04 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 04 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Contrato en OpenAPI<br/><i>10 min</i>"]
-    PB["<b>Paso B</b><br/>Cliente HTTP e interceptores<br/><i>15 min</i>"]
-    PC["<b>Paso C</b><br/>Mapeo de errores y repositorio<br/><i>20 min</i>"]
-    PD["<b>Paso D</b><br/>Pruebas con mock server<br/><i>10 min</i>"]
-    PE["<b>Paso E</b><br/>Inspección del tráfico real<br/><i>5 min</i>"]
-    PF["<b>Paso F</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PG["<b>Paso G</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF --> PG
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF,PG paso;
-```
 
 ## Qué entregas
 
@@ -33,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 04» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | La red falla, el servidor devuelve errores raros y el usuario pierde datos. Una capa de datos que solo funciona con buena conexión no sirve. |
-| **Misión** | Construir la capa de datos con contrato, mapeo de errores a fallos de dominio, idempotencia y una fuente única de verdad que funcione sin conexión. |
-| **Criterio de éxito** | La app funciona sin conexión, demostrado en video, y la clave de idempotencia se genera una vez y se reutiliza en los reintentos. |
+El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -66,16 +42,12 @@ Implementación de la capa de datos de la aplicación con consumo de servicios R
 - Implementar **reintento con retroceso exponencial** solo para los códigos que lo admiten.
 - Escribir las **pruebas del repositorio** con mock server.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil.
 - **RA2** Propone el plan de desarrollo de su app con metodologías ágiles.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -88,7 +60,7 @@ Implementación de la capa de datos de la aplicación con consumo de servicios R
 | **mitmproxy** | Inspección del tráfico real |
 | **Postman** o **Bruno** | Prueba manual de los endpoints |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -408,7 +380,7 @@ Avance de las historias del Sprint 1. El equipo sostiene su **Daily de 15 minuto
 
 ---
 
-### Paso F — Validar y corregir (25 min)
+### Paso F — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -418,7 +390,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso G — Registrar la evidencia y cerrar (15 min)
+### Paso G — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

@@ -2,25 +2,11 @@
 
 # Dinámica de aula · El pedido que se creó dos veces
 
-**SI-988 · Soluciones Móviles II** · Semana 04 · Actividad en aula, **dentro de los 100 min de la sesión de teoría** · calificación **cognitiva**
+**SI-988 · Soluciones Móviles II** · Semana 04 · Actividad en aula, **dentro de la sesión de teoría** · calificación **cognitiva**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Cómo funciona la actividad
-
-```mermaid
-flowchart LR
-    C["<b>Consigna</b><br/>El pedido que se creó dos<br/>veces"]
-    P["<b>Producto</b><br/>las tablas de la plantilla,<br/>resueltas en aula"]
-    E["<b>Exposición</b><br/>el grupo lee y explica<br/>su resultado, sin diapositivas"]
-    G["<b>Entrega</b><br/>PDF formateado,<br/>después de la clase"]
-    R["<b>Rúbrica</b><br/>nota cognitiva"]
-    C --> P --> E --> G --> R
-    classDef d fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class C,P,E,G,R d;
-```
 
 ## Qué entregas
 
@@ -31,7 +17,7 @@ flowchart LR
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT y los apellidos, nombres y códigos de todos los integrantes |
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 04» |
-| **Cuándo vence** | Hasta 24 h después de la sesión de teoría. La tabla se resuelve en aula; el PDF se formatea y se sube después |
+| **Cuándo vence** | Según lo programado en el aula virtual. La tabla se resuelve en aula; el PDF se formatea y se sube después |
 | **Exposición** | En la ronda de cierre de **esta misma sesión**. El grupo **lee y explica su resultado** ante el aula, con el documento a la vista. No se usan diapositivas |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
@@ -50,34 +36,6 @@ flowchart LR
 | **Restricción** | **La clave de idempotencia se genera antes del primer intento.** Reintentar con una clave nueva no es reintentar, es pedir otra vez |
 
 Es el problema que la teoría señala como el propio del móvil. *El usuario envía, pierde la señal antes de la respuesta, la app reintenta y se crean dos pedidos.* Todo lo demás de hoy sirve para que eso no ocurra.
-
-## Cómo se desarrolla · 35 minutos
-
-| | Bloque | Quién | Minutos |
-|---|---|---|---|
-| **1** | **El endpoint.** Método, ruta, código de éxito y la cabecera que lo acompaña | Equipo | 9 |
-| **2** | **Idempotencia y errores.** Cómo se evita el duplicado, y tres errores con su `Failure`, su mensaje y si se reintenta | Equipo | 10 |
-| **3** | **El `GET` que lo acompaña.** Paginación por cursor y valor de `Cache-Control`, con la razón | Equipo | 8 |
-| **4** | **Ronda en aula.** Tres equipos leen su mensaje de error del `422`. El aula juzga si un usuario lo entendería | Todos | 8 |
-
-## Material de trabajo
-
-**Se trabaja sobre la aplicación propia del equipo.** Elija **el endpoint de escritura más importante de su app** — el que crea la cosa que da sentido a la aplicación —el pedido, la reserva, el reporte, la visita, la publicación—. Uno solo.
-
-**Si su equipo todavía no tiene la API definida**, tome una de estas seis y dígalo al empezar. No baja la nota.
-
-| # | Aplicación | El endpoint de escritura |
-|---|---|---|
-| 1 | Reserva de canchas deportivas | Crear una reserva de cancha para una fecha y una hora |
-| 2 | Registro de visitas de campo | Cerrar una visita con sus fotos y la firma del cliente |
-| 3 | Pedido a bodega | Enviar el pedido con sus líneas de producto |
-| 4 | Reporte ciudadano de incidencias | Enviar un reporte con foto y ubicación |
-| 5 | Control de asistencia con QR | Registrar la marca de entrada de un trabajador |
-| 6 | Venta de pasajes interprovinciales | Confirmar la compra de un asiento |
-
-**Los seis `Failure` de dominio de la teoría**, que son los únicos que se usan hoy:
-
-`SinConexion` · `NoAutorizado` · `NoEncontrado` · `ErrorServidor` · `TiempoAgotado` · `ErrorValidacion`
 
 ## Producto
 
@@ -127,7 +85,6 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 
 ## Reglas
 
-- 35 min en aula, dentro de la sesión de teoría.
 - **Un solo endpoint de escritura.** No tres.
 - El `Failure` debe ser uno de los **seis de la teoría**. No se inventan nombres nuevos.
 - El mensaje al usuario no lleva **ninguna** palabra técnica. Ni el código, ni el nombre del campo, ni «servidor».
@@ -143,6 +100,25 @@ Es el problema que la teoría señala como el propio del móvil. *El usuario env
 | **Idempotencia** | Nombra la cabecera y describe **qué hace el servidor** ante la clave repetida | Menciona el problema sin decir qué hace el servidor | No lo aborda |
 | **Los tres errores** | Los tres con `Failure` de la teoría, mensaje sin lenguaje técnico y decisión de reintento coherente | Dos así resueltos | Muestra el código HTTP al usuario |
 | **Caché y paginación** | Ambas decididas y con su razón en una línea | Una de las dos con razón | Declaradas sin razón |
+
+## Anexo · Material de trabajo
+
+**Se trabaja sobre la aplicación propia del equipo.** Elija **el endpoint de escritura más importante de su app** — el que crea la cosa que da sentido a la aplicación —el pedido, la reserva, el reporte, la visita, la publicación—. Uno solo.
+
+**Si su equipo todavía no tiene la API definida**, tome una de estas seis y dígalo al empezar. No baja la nota.
+
+| # | Aplicación | El endpoint de escritura |
+|---|---|---|
+| 1 | Reserva de canchas deportivas | Crear una reserva de cancha para una fecha y una hora |
+| 2 | Registro de visitas de campo | Cerrar una visita con sus fotos y la firma del cliente |
+| 3 | Pedido a bodega | Enviar el pedido con sus líneas de producto |
+| 4 | Reporte ciudadano de incidencias | Enviar un reporte con foto y ubicación |
+| 5 | Control de asistencia con QR | Registrar la marca de entrada de un trabajador |
+| 6 | Venta de pasajes interprovinciales | Confirmar la compra de un asiento |
+
+**Los seis `Failure` de dominio de la teoría**, que son los únicos que se usan hoy:
+
+`SinConexion` · `NoAutorizado` · `NoEncontrado` · `ErrorServidor` · `TiempoAgotado` · `ErrorValidacion`
 
 ---
 

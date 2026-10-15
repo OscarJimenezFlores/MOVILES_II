@@ -67,11 +67,11 @@ flowchart LR
 
 | Entregable | Formato y nombre del archivo | Vence |
 |---|---|---|
-| **Dinámica de aula** · El cambio que duele | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S02-DINAMICA-Grupo<N>.pdf` | Antes de cerrar la sesión de teoría |
-| **Informe del taller de laboratorio N.º 02** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S02-TALLER-Grupo<N>.pdf` | 48 h después del taller |
-| ADR-001, ADR-002, DoD y funcionalidad vertical | Commit en el repositorio, CI en verde | 48 h después del taller |
+| **Dinámica de aula** · El cambio que duele | PDF desde la [plantilla de dinámica](../PLANTILLAS/SI988-PLANTILLA-DINAMICA.docx) · `SI988-S02-DINAMICA-Grupo<N>.pdf` | Según lo programado en el aula virtual |
+| **Informe del taller de laboratorio N.º 02** | PDF en formato EPIS desde la [plantilla de taller](../PLANTILLAS/SI988-PLANTILLA-TALLER.docx) · `SI988-S02-TALLER-Grupo<N>.pdf` | Según lo programado en el aula virtual |
+| ADR-001, ADR-002, DoD y funcionalidad vertical | Commit en el repositorio, CI en verde | Según lo programado en el aula virtual |
 
-> Ambos se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
+> La dinámica y el informe del taller se entregan en **PDF**, con la carátula de la UPT y los códigos de todos los integrantes. Las plantillas obligatorias están en [`PLANTILLAS/`](../PLANTILLAS/).
 
 ## Cómo se evalúa
 

@@ -14,29 +14,9 @@ Un equipo se declara Scrum. Tiene sprints de dos semanas, tablero, Daily de quin
 
 El Product Owner son tres personas que no se ponen de acuerdo, el Sprint Backlog lo llena el jefe de proyecto y en el día 8 nadie sabe qué se puede recortar sin perder el sentido del sprint. Las ceremonias están todas y el marco no está.
 
-> **La pregunta que ordena esta sesión.** *¿Qué es lo que hace que un equipo esté haciendo Scrum de verdad?*
-
-## Antes de empezar
-
-| Lo que necesita traer | De dónde sale |
-|---|---|
-| La arquitectura decidida y el ADR-001 del equipo | Semana 02 |
-| La propuesta de valor y el alcance del producto | Semana 01 |
-| Nociones de gestión de proyectos | Cursos previos de la carrera |
-| La composición y las competencias del propio equipo | Trabajo del equipo |
+> **¿Qué hace que un equipo esté haciendo Scrum de verdad y no solo reuniones diarias?**
 
 > **Exploración (5 min), antes de cualquier definición.** El aula responde antes de la teoría y se anota. *¿Ese equipo hace Scrum? ¿Qué le sobra y qué le falta? ¿Quién decide qué entra en el sprint?* No se corrige nada todavía.
-
-## Distribución del tiempo
-
-| Momento | Minutos |
-|---|---|
-| El caso del equipo con todas las ceremonias y la exploración inicial | 8 |
-| **Bloque 1.** Scrum según la guía y sus desviaciones habituales | 20 |
-| **Bloque 2.** Refinamiento y estimación del Product Backlog · con su microaplicación | 20 |
-| **Bloque 3.** Kanban y cuándo conviene | 12 |
-| Cierre, respuesta a la pregunta de la sesión y puente a la dinámica | 5 |
-| **Total de la sesión de aula** | **65** |
 
 ## Mapa de la sesión
 
@@ -66,9 +46,9 @@ flowchart TD
 
 ---
 
-## Bloque 1 · Scrum según la guía y sus desviaciones habituales
+## 1. Scrum según la guía y sus desviaciones habituales
 
-> **La pregunta del bloque.** *¿Qué exige la guía y qué le añadió la industria encima?*
+> **¿Qué exige la guía y qué le añadió la industria encima?**
 
 **Scrum es un marco, no una metodología.** La *Scrum Guide 2020* lo define como un marco liviano que ayuda a generar valor mediante soluciones adaptativas para problemas complejos. Es **deliberadamente incompleto** — define solo lo indispensable y deja el resto a la inteligencia del equipo.
 
@@ -130,9 +110,9 @@ flowchart TD
 
 > **El error frecuente del bloque.** Tener un Product Owner que en realidad es un comité. La guía es explícita — es **una persona**, y nadie puede obligar a los Developers a trabajar sobre requisitos distintos de los del Sprint Backlog que ellos mismos definieron. Un comité de tres que no se pone de acuerdo produce un backlog sin orden y un sprint sin objetivo.
 
-## Bloque 2 · Refinamiento y estimación del Product Backlog
+## 2. Refinamiento y estimación del Product Backlog
 
-> **La pregunta del bloque.** *¿Para qué sirve estimar, si el número nunca acierta?*
+> **¿Para qué sirve estimar, si el número nunca acierta?**
 
 **La historia de usuario** —formato y calidad:
 
@@ -212,7 +192,7 @@ Criterios de aceptación (Gherkin):
 
 > **El Sprint Goal es lo que permite negociar en el día 8.** Si H-03 resulta el doble de costosa, el equipo puede reducirla a «guardar solo el menú del local favorito» y **el objetivo sigue siendo alcanzable**. Si en cambio se decidiera sacrificar H-01, el sprint pierde sentido aunque se completen las demás historias. **Sin Sprint Goal, todas las historias parecen igual de importantes y se recorta la que sea más difícil**, que suele ser la que sostenía el valor.
 
-> **Microaplicación (6 min) · el Sprint Goal del sprint que viene.** Cada equipo escribe **el Sprint Goal de su sprint 1 en una sola frase** y comprueba que permita recortar alguna historia sin perder el sentido. El que no permita recortar nada todavía no es un objetivo, es una lista.
+> **Microaplicación (6 min). El Sprint Goal del sprint que viene.** Cada equipo escribe **el Sprint Goal de su sprint 1 en una sola frase** y comprueba que permita recortar alguna historia sin perder el sentido. El que no permita recortar nada todavía no es un objetivo, es una lista.
 
 | Caso | Qué debe contener una buena respuesta |
 |---|---|
@@ -222,9 +202,9 @@ Criterios de aceptación (Gherkin):
 
 > **El error frecuente del bloque.** Promediar las estimaciones dispares. Cuando dos integrantes estiman 3 y 13 es porque entienden la historia de forma distinta, y **esa conversación es el valor del ejercicio**. El promedio la cancela y deja al equipo con un número que nadie sostiene.
 
-## Bloque 3 · Kanban y cuándo conviene
+## 3. Kanban y cuándo conviene
 
-> **La pregunta del bloque.** *¿Por qué un tablero lleno puede significar que no se avanza?*
+> **¿Por qué un tablero lleno puede significar que no se avanza?**
 
 | | **Scrum** | **Kanban** |
 |---|---|---|
@@ -255,7 +235,7 @@ Criterios de aceptación (Gherkin):
            │          │ por dev  │          │           │
 ```
 
-## Cierre · qué se lleva de aquí
+## Cierre
 
 **La respuesta a la pregunta con la que abrimos.** Los tres pilares del control empírico y los compromisos de los artefactos, no las ceremonias. El equipo del caso tiene todos los eventos y no tiene ninguno de los dos — su Product Owner es un comité, su Sprint Backlog lo llena alguien de fuera y **no tiene Sprint Goal**, que es justo lo que permite decidir qué se recorta en el día 8.
 

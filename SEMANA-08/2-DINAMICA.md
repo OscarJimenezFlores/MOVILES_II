@@ -2,25 +2,11 @@
 
 # Dinámica de aula · El flujo que convence
 
-**SI-988 · Soluciones Móviles II** · Semana 08 · Actividad en aula, **dentro de los 100 min de la sesión de teoría** · calificación **cognitiva**
+**SI-988 · Soluciones Móviles II** · Semana 08 · Actividad en aula, **dentro de la sesión de teoría** · calificación **cognitiva**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Cómo funciona la actividad
-
-```mermaid
-flowchart LR
-    C["<b>Consigna</b><br/>El flujo que convence"]
-    P["<b>Producto</b><br/>el resultado de la actividad,<br/>en la plantilla de dinámica"]
-    E["<b>Exposición</b><br/>el grupo lee y explica<br/>su resultado, sin diapositivas"]
-    G["<b>Entrega</b><br/>PDF formateado,<br/>después de la clase"]
-    R["<b>Rúbrica</b><br/>nota cognitiva"]
-    C --> P --> E --> G --> R
-    classDef d fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class C,P,E,G,R d;
-```
 
 ## Qué entregas
 
@@ -31,7 +17,7 @@ flowchart LR
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT y los apellidos, nombres y códigos de todos los integrantes |
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 08» |
-| **Cuándo vence** | Hasta 24 h después de la sesión de teoría. La tabla se resuelve en aula; el PDF se formatea y se sube después |
+| **Cuándo vence** | Según lo programado en el aula virtual. La tabla se resuelve en aula; el PDF se formatea y se sube después |
 | **Exposición** | En la ronda de cierre de **esta misma sesión**. El grupo **lee y explica su resultado** ante el aula, con el documento a la vista. No se usan diapositivas |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
@@ -48,15 +34,6 @@ flowchart LR
 | **Su papel** | **Diseñador del flujo de permisos** ante un usuario que la primera vez ya dijo que no |
 | **Misión** | Diseñar los cuatro momentos y la degradación completa para cada estado de denegación |
 | **Restricción** | **Ningún permiso se pide al abrir la app.** Y toda denegación deja una alternativa que permite seguir usándola |
-
-## Cómo se desarrolla · 35 minutos
-
-| | Bloque | Quién | Minutos |
-|---|---|---|---|
-| **1** | **El permiso más importante.** Los cuatro momentos, con **los textos reales redactados**, no descritos | Equipo | 10 |
-| **2** | **La matriz.** Cada permiso con su momento contextual y su texto de propósito para iOS | Equipo | 9 |
-| **3** | **La degradación.** Qué hace la app en cada estado de denegación, incluida la denegación permanente | Equipo | 8 |
-| **4** | **Ronda en aula.** Se lee un texto de explicación previa. El aula decide si aceptaría el permiso | Todos | 8 |
 
 ## Producto
 
@@ -113,7 +90,6 @@ NSCameraUsageDescription
 
 ## Reglas
 
-- 35 min en aula, dentro de la sesión de teoría.
 - Los textos deben estar **redactados**, no descritos. «Explicar el uso» no se califica.
 - El texto de propósito de iOS debe ser **específico**. Los genéricos son motivo de rechazo en revisión.
 - **Ningún permiso puede pedirse al abrir la app**, salvo que el equipo justifique la excepción.

@@ -2,25 +2,11 @@
 
 # Dinámica de aula · Tres apps que no debieron existir
 
-**SI-988 · Soluciones Móviles II** · Semana 01 · Actividad en aula, **dentro de los 100 min de la sesión de teoría** · calificación **cognitiva**
+**SI-988 · Soluciones Móviles II** · Semana 01 · Actividad en aula, **dentro de la sesión de teoría** · calificación **cognitiva**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Cómo funciona la actividad
-
-```mermaid
-flowchart LR
-    C["<b>Consigna</b><br/>Tres apps que no debieron<br/>existir"]
-    P["<b>Producto</b><br/>el resultado de la actividad,<br/>en la plantilla de dinámica"]
-    E["<b>Exposición</b><br/>el grupo lee y explica<br/>su resultado, sin diapositivas"]
-    G["<b>Entrega</b><br/>PDF formateado,<br/>después de la clase"]
-    R["<b>Rúbrica</b><br/>nota cognitiva"]
-    C --> P --> E --> G --> R
-    classDef d fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class C,P,E,G,R d;
-```
 
 ## Qué entregas
 
@@ -31,7 +17,7 @@ flowchart LR
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT y los apellidos, nombres y códigos de todos los integrantes |
 | **Qué va dentro** | Lo que el grupo resolvió en aula. Las tablas de la sección **Producto** van completas, con los textos redactados, y cada decisión va justificada |
 | **Dónde se sube** | Aula virtual, tarea «Dinámica · Semana 01» |
-| **Cuándo vence** | Hasta 24 h después de la sesión de teoría. La tabla se resuelve en aula; el PDF se formatea y se sube después |
+| **Cuándo vence** | Según lo programado en el aula virtual. La tabla se resuelve en aula; el PDF se formatea y se sube después |
 | **Exposición** | En la ronda de cierre de **esta misma sesión**. El grupo **lee y explica su resultado** ante el aula, con el documento a la vista. No se usan diapositivas |
 
 > No se califica un trabajo entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con las tablas del producto vacías.
@@ -48,15 +34,6 @@ flowchart LR
 | **Su papel** | **Analista de producto** que debe recomendar si la app se construye o no se construye |
 | **Misión** | Evaluar las tres aplicaciones con las cinco preguntas y sostener cuál no debió existir |
 | **Restricción** | **«La interfaz es fea» no es un argumento.** Cada juicio se apoya en una de las cinco preguntas o en una métrica |
-
-## Cómo se desarrolla · 35 minutos
-
-| | Bloque | Quién | Minutos |
-|---|---|---|---|
-| **1** | **Las tres apps.** Ya elegidas e instaladas antes de la sesión. Quién tiene el problema y qué hacía antes ese usuario | Equipo | 9 |
-| **2** | **La capacidad del móvil.** Cuál aprovecha cada una, **o declarar que ninguna** — que es el caso de la que no debió existir | Equipo | 9 |
-| **3** | **Veredicto y lección.** El veredicto de cada una y las seis decisiones para el producto propio | Equipo | 9 |
-| **4** | **Ronda en aula.** La app que no debió existir, de tres equipos, con la evidencia de su ficha de tienda | Todos | 8 |
 
 ## Producto
 
@@ -114,7 +91,6 @@ flowchart LR
 
 ## Reglas
 
-- 35 min en aula, dentro de la sesión de teoría.
 - **Las tres aplicaciones se eligen y se instalan antes de la sesión.** Buscarlas en la tienda durante la clase consume el tiempo del análisis, que es lo que se califica.
 - Las tres aplicaciones deben estar **publicadas y ser verificables**. Se cita el enlace a su ficha.
 - La evidencia debe provenir de la **ficha de tienda y de las reseñas**, no de la opinión del equipo.

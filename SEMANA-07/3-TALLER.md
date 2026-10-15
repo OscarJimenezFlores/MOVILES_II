@@ -2,26 +2,11 @@
 
 # Taller de laboratorio 07 · Ubicación, mapa y geocercas con herramientas libres
 
-**SI-988 · Soluciones Móviles II** · Semana 07 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 07 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Abstraer la ubicación tras una<br/>interfaz de dominio<br/><i>15 min</i>"]
-    PB["<b>Paso B</b><br/>Implementación con prioridad<br/>proporcional<br/><i>15 min</i>"]
-    PC["<b>Paso C</b><br/>Mapa con MapLibre y radio de<br/>precisión<br/><i>20 min</i>"]
-    PD["<b>Paso D</b><br/>Geocerca y medición de batería<br/><i>10 min</i>"]
-    PE["<b>Paso E</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PF["<b>Paso F</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF paso;
-```
 
 ## Qué entregas
 
@@ -32,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 07» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 2 lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | La ubicación llega tarde, imprecisa o no llega. Una app que asume que siempre habrá GPS deja fuera al usuario en el peor momento. |
-| **Misión** | Abstraer la ubicación tras una interfaz de dominio, validar el radio de precisión antes de entregar el dato y ofrecer entrada manual en los cinco escenarios de error. |
-| **Criterio de éxito** | El ViewModel se prueba con un doble, sin dispositivo, y el mapa dibuja el círculo de precisión, no solo el punto. |
+El avance de Sprint 2 lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -65,16 +42,12 @@ Implementación de la capa de ubicación de la aplicación con proveedor fusiona
 - Registrar una **geocerca** y verificar su disparo.
 - Medir el **consumo de batería** de la estrategia elegida.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Desarrolla la geolocalización en una app móvil.
 - **RA2** Implementa y gestiona los permisos de geolocalización en una app móvil.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -86,7 +59,7 @@ Implementación de la capa de ubicación de la aplicación con proveedor fusiona
 | Emulador con ubicación simulada | Entorno del laboratorio. Android Studio permite fijar coordenadas y reproducir rutas |
 | Herramienta de perfilado de batería | Android Studio Energy Profiler · Xcode Instruments |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -314,7 +287,7 @@ geocercas.registrar(
 
 ---
 
-### Paso E — Validar y corregir (25 min)
+### Paso E — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -324,7 +297,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso F — Registrar la evidencia y cerrar (15 min)
+### Paso F — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 

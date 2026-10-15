@@ -2,27 +2,11 @@
 
 # Taller de laboratorio 05 · Consumo comparado de un servicio SOAP y uno REST
 
-**SI-988 · Soluciones Móviles II** · Semana 05 · Sesión 2 en laboratorio · 100 min · calificación **procedimental**
+**SI-988 · Soluciones Móviles II** · Semana 05 · Sesión 2 en laboratorio · calificación **procedimental**
 
 > ¿Un término no le resulta claro? Está definido en el [glosario técnico del curso](../GLOSARIO.md).
 
 ---
-
-## Secuencia del taller
-
-```mermaid
-flowchart TD
-    PA["<b>Paso A</b><br/>Levantar el servicio y<br/>leer el WSDL<br/><i>8 min</i>"]
-    PB["<b>Paso B</b><br/>Primera llamada desde<br/>la terminal<br/><i>7 min</i>"]
-    PC["<b>Paso C</b><br/>Consumo SOAP desde la app<br/>y medición<br/><i>15 min</i>"]
-    PD["<b>Paso D</b><br/>El BFF que traduce<br/>SOAP a REST<br/><i>20 min</i>"]
-    PE["<b>Paso E</b><br/>Consumo del BFF y<br/>comparación<br/><i>10 min</i>"]
-    PF["<b>Paso F</b><br/>Validar y corregir<br/><i>25 min</i>"]
-    PG["<b>Paso G</b><br/>Registrar y cerrar<br/><i>15 min</i>"]
-    PA --> PB --> PC --> PD --> PE --> PF --> PG
-    classDef paso fill:#E8F1FB,stroke:#16285C,stroke-width:1px,color:#16285C;
-    class PA,PB,PC,PD,PE,PF,PG paso;
-```
 
 ## Qué entregas
 
@@ -33,21 +17,13 @@ flowchart TD
 | **Formato** | PDF exportado desde la plantilla en Word, con la carátula de la UPT, el índice actualizado y las capturas numeradas |
 | **Qué va dentro** | Las secciones de la plantilla. La **5. Resultados y evidencias** se califica contra la tabla de resultados esperados de esta guía, y **cada resultado necesita la evidencia que lo demuestre**. No se copian de aquí los objetivos, la duración ni los resultados de aprendizaje |
 | **Dónde se sube** | Aula virtual, tarea «Taller · Semana 05» |
-| **Cuándo vence** | 48 horas después de la sesión de laboratorio |
+| **Cuándo vence** | Según lo programado en el aula virtual |
 
 > No se califica un informe entregado en `.docx`, sin carátula, sin los códigos de los integrantes o con resultados declarados sin evidencia.
 
 ---
 
-**La sesión de laboratorio dura 100 minutos.** El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
-
-## El reto
-
-| | |
-|---|---|
-| **Situación** | El servicio legado habla SOAP y la app no debería enterarse. La pregunta es si conviene traducir en el servidor o cargar con XML en el móvil. |
-| **Misión** | Consumir el servicio de las dos formas, medir seis métricas en ambas y decidir con la medición, no con la intuición. |
-| **Criterio de éxito** | El ADR-003 se sostiene en las mediciones propias, y las credenciales del servicio legado nunca salen del servidor. |
+El avance de Sprint 1 lo ejecuta el equipo fuera de la sesión.
 
 ## 1. Información sobre el evento práctico
 
@@ -64,16 +40,12 @@ Consumo de un servicio SOAP real desde la aplicación móvil, comparación medid
 - Manejar correctamente el **`Fault`** de SOAP, incluido el caso de HTTP 200 con error.
 - Documentar la decisión de integración en un **ADR (*Architecture Decision Record*, registro de decisión de arquitectura)**.
 
-### 1.3. Tiempo de duración
-
-**100 minutos.**
-
-### 1.4. Resultados de Aprendizaje (RA)
+### 1.3. Resultados de Aprendizaje (RA)
 
 - **RA1** Analiza e interpreta los conceptos avanzados de desarrollo móvil.
 - **RA2** Propone el plan de desarrollo de su app con metodologías ágiles.
 
-### 1.5. Recursos
+### 1.4. Recursos
 
 | Recurso | Detalle |
 |---|---|
@@ -86,7 +58,7 @@ Consumo de un servicio SOAP real desde la aplicación móvil, comparación medid
 | **zeep** (Python) o equivalente | Cliente SOAP del BFF |
 | **mitmproxy** | Medición del tráfico real |
 
-### 1.6. Seguridad
+### 1.5. Seguridad
 
 > **Dónde se trabaja.** El taller se hace en el **laboratorio de la universidad, sobre el emulador**. Cuando un escenario no se reproduce fielmente en el emulador, la verificación en un teléfono real la hace el equipo **fuera de la sesión** y adjunta el video como anexo. Ningún resultado del taller depende de tener un teléfono en clase.
 
@@ -272,7 +244,7 @@ Complete `docs/api/MEDICIONES.md` con datos medidos, no estimados:
 | Dependencias añadidas a la app | | | |
 | ¿El error llega con código HTTP correcto? | **No** | | |
 
-### Paso F — Validar y corregir (25 min)
+### Paso F — Validar y corregir
 
 El resultado no vale por estar hecho, sino por resistir una comprobación. Se ejecutan estas tres y **se corrige lo que falle antes de cerrar la sesión**.
 
@@ -282,7 +254,7 @@ El resultado no vale por estar hecho, sino por resistir una comprobación. Se ej
 
 > Lo que no se pueda corregir hoy se anota en la sección **Problemas y mejoras** de la evidencia, con lo que faltó y por qué. Un resultado parcial documentado con honestidad vale más que uno declarado sin prueba.
 
-### Paso G — Registrar la evidencia y cerrar (15 min)
+### Paso G — Registrar la evidencia y cerrar
 
 Se versiona lo producido, se anota la URL de cada resultado y se responde en dos frases la pregunta de transferencia — **qué riesgo correría una organización real si esto se hiciera mal**.
 
